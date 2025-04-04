@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Consultancy - Professional CIDB Solutions</title>
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo" data-lang-key="logo">Sky Consultancy</div>
+      <ul class="nav-links">
+        <li><a href="#services" data-lang-key="services">Services</a></li>
+        <li><a href="#about" data-lang-key="about">About</a></li>
+        <li><a href="#faq" data-lang-key="faq">FAQ</a></li>
+        <li><a href="#contact" data-lang-key="contact">Contact</a></li>
+      </ul>
+      <div>
+        <a href="#cta" class="cta-btn" data-lang-key="getStarted">Get Started</a>
+        <button id="language-toggle" class="language-btn">中文</button>
+      </div>
+    </nav>    
+    <div class="hero" data-aos="fade-in">
+      <h1 data-lang-key="heroTitle">Your Trusted Partner for CIDB Solutions</h1>
+      <!-- <p data-lang-key="heroSubtitle">Streamline your construction compliance with our expert services.</p> -->
+      <a href="#contact" class="cta-btn" data-lang-key="contactUs">Contact Us Today</a>
+      <p data-lang-key="heroSubtitle">HI Pig ZiQi, Click here</p>
+      <a href="forfun.html" class="cta-btn" data-lang-key="Forfun">CLICK ME !!!</a>
+    </div>
+  </header>
+
+  <section id="services" data-aos="fade-up">
+    <h2 data-lang-key="ourServices">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <h3 data-lang-key="service1Title">CIDB Company Registration (G1-G7)</h3>
+        <p data-lang-key="service1Desc">Efficient licensing solutions for contractors of all scales.</p>
+      </div>
+      <div class="service-item">
+        <h3 data-lang-key="service2Title">Green Card Registration</h3>
+        <p data-lang-key="service2Desc">Secure your workers’ credentials with ease.</p>
+      </div>
+      <div class="service-item">
+        <h3 data-lang-key="service3Title">Blacklist Resolution</h3>
+        <p data-lang-key="service3Desc">Get back on track with our expert assistance.</p>
+      </div>
+      <div class="service-item">
+        <h3 data-lang-key="service4Title">Project Declaration</h3>
+        <p data-lang-key="service4Desc">Stay compliant and avoid unnecessary penalties.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2 data-lang-key="aboutUs">About Us</h2>
+    <p data-lang-key="aboutDesc">Sky Consultancy specializes in simplifying the CIDB compliance process for contractors in Malaysia. With a team of experienced professionals, we ensure your business runs smoothly and meets all regulatory requirements.</p>
+  </section>
+
+  <section id="faq" data-aos="fade-up">
+    <h2 data-lang-key="faqTitle">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h4 data-lang-key="faq1Title" onclick="toggleFaq(this)">What is CIDB registration?</h4>
+        <p class="hidden" data-lang-key="faq1Desc">CIDB registration is a mandatory requirement for contractors operating in Malaysia.</p>
+      </div>
+      <div class="faq-item">
+        <h4 data-lang-key="faq2Title" onclick="toggleFaq(this)">How long does the process take?</h4>
+        <p class="hidden" data-lang-key="faq2Desc">Typically, the process takes 2-4 weeks depending on the service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2 data-lang-key="contactUsTitle">Contact Us</h2>
+    <form action="submit_form.php" method="post">
+      <label for="name" data-lang-key="nameLabel">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email" data-lang-key="emailLabel">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message" data-lang-key="messageLabel">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit" data-lang-key="sendMessage">Send Message</button>
+    </form>
+    <p data-lang-key="contactDetails">Or reach us at: <a href="mailto:steven@skyconsultancymns.com">steven@skyconsultancymns.com</a> | 012-558 3398</p>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p data-lang-key="footer">© 2024 Sky Consultancy. All Rights Reserved.</p>
+  </footer>
+
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+  <script src="../javascript/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
