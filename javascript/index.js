@@ -7,9 +7,8 @@ const translations = {
       contact: "Contact",
       getStarted: "Get Started",
       heroTitle: "Your Trusted Partner for CIDB Solutions",
-      heroSubtitle: "HIHI PIG ZIQI, CLICK HERE!!!",
+      heroSubtitle: "Simplify your building compliance process with our professional services.",
       contactUs: "Contact Us Today",
-      forfun: "Click ME !!!",
       ourServices: "Our Services",
       service1Title: "CIDB Company Registration (G1-G7)",
       service1Desc: "Efficient licensing solutions for contractors of all scales.",
@@ -31,7 +30,7 @@ const translations = {
       emailLabel: "Email:",
       messageLabel: "Message:",
       sendMessage: "Send Message",
-      contactDetails: "Or reach us at: finityconsult@gmail.com | 017-2913517",
+      contactDetails: "Or reach us at: steven@skyconsultancymns.com | 012-5583398",
       footer: "© 2024 Sky Consultancy. All Rights Reserved.",
     },
     zh: {
@@ -65,7 +64,7 @@ const translations = {
       emailLabel: "电子邮箱:",
       messageLabel: "留言:",
       sendMessage: "发送留言",
-      contactDetails: "联系我们: finityconsult@gmail.com | 017-2913517",
+      contactDetails: "联系我们: steven@skyconsultancymns.com | 012-5583398",
       footer: "© 2024 天谕咨询。版权所有。",
     }
   };
