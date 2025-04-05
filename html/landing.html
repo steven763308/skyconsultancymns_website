@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Consultancy - CIDB Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .logo {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .hero-subtitle {
+      margin: 15px 0;
+    }
+    .cta-btn {
+      padding: 12px 25px;
+      background: #FFD700;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background: #FFC107;
+    }
+    .language-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: #007BFF;
+      padding: 8px 15px;
+      border: 1px solid #007BFF;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .why-us {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+    .why-box {
+      flex: 1 1 300px;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      width: 100%;
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .whatsapp-btn {
+      display: block;
+      margin: 20px auto;
+      background: #25D366;
+      text-align: center;
+      padding: 12px 25px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button id="language-toggle" class="language-btn">中文</button>
+  <header>
+    <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo">
+    <h1 class="hero-title" data-lang-key="heroTitle">Your Trusted Partner for CIDB Solutions</h1>
+    <p class="hero-subtitle" data-lang-key="heroSubtitle">Expertise and Experience You Can Rely On</p>
+    <a href="#contact" class="cta-btn" data-lang-key="contactUs">Contact Us</a>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <h2 data-lang-key="whyChoose">Why Choose Sky Consultancy?</h2>
+    <div class="why-us">
+      <div class="why-box" data-lang-key="proService">
+        <h3>Professional Service</h3>
+        <p>Experienced team handling all CIDB registration processes smoothly.</p>
+      </div>
+      <div class="why-box" data-lang-key="expTeam">
+        <h3>Years of Experience</h3>
+        <p>Trusted by over 300+ contractors nationwide since 2015.</p>
+      </div>
+      <div class="why-box">
+        <h3>Fast Turnaround</h3>
+        <p>Quick and accurate documentation to help you meet deadlines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2 data-lang-key="contactUs">Get in Touch</h2>
+    <a href="https://wa.me/60125583398" class="whatsapp-btn">WhatsApp Us</a>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <label data-lang-key="name">Name:</label>
+      <input type="text" name="name" required>
+
+      <label data-lang-key="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label data-lang-key="serviceInterest">Interested Service:</label>
+      <select name="service">
+        <option value="CIDB Registration">CIDB Registration</option>
+        <option value="Green Card">Green Card</option>
+        <option value="Blacklist Removal">Blacklist Removal</option>
+        <option value="Project Declaration">Project Declaration</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <label data-lang-key="message">Message:</label>
+      <textarea name="message" rows="4"></textarea>
+
+      <button type="submit" data-lang-key="send">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p data-lang-key="footer">© 2024 Sky Consultancy. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    const langToggle = document.getElementById("language-toggle");
+    const elements = document.querySelectorAll("[data-lang-key]");
+    let isEnglish = true;
+    const translations = {
+      zh: {
+        heroTitle: "您值得信赖的 CIDB 合作伙伴",
+        heroSubtitle: "专业与经验，助您快速合规",
+        contactUs: "立即联系",
+        whyChoose: "为什么选择我们？",
+        proService: "专业服务",
+        expTeam: "多年经验",
+        contactUs: "联系我们",
+        name: "姓名：",
+        email: "邮箱：",
+        serviceInterest: "感兴趣的服务：",
+        message: "留言：",
+        send: "发送",
+        footer: "© 2024 Sky Consultancy 版权所有"
+      }
+    };
+    langToggle.addEventListener("click", () => {
+      isEnglish = !isEnglish;
+      langToggle.textContent = isEnglish ? "中文" : "EN";
+      elements.forEach(el => {
+        const key = el.getAttribute("data-lang-key");
+        if (!isEnglish && translations.zh[key]) el.textContent = translations.zh[key];
+        else if (isEnglish) el.textContent = el.getAttribute("data-default") || el.textContent;
+      });
+    });
+    // Save default content
+    elements.forEach(el => {
+      el.setAttribute("data-default", el.textContent);
+    });
+  </script>
+</body>
+</html>
