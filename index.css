@@ -1,82 +1,98 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.wrapper{
+
+/* Wrapper to force footer at bottom */
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #f2f2f2;
+  background-color: #f2f2f2;
 }
-.main-content{
+
+.main-content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 20px;
+  text-align: center;
 }
+
 .container {
   max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.logo{
-    margin-bottom: 20px;
+
+.logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
 }
+
 h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
+  color: #333;
 }
+
 p {
   font-size: 1.2em;
   margin-bottom: 1.5em;
   color: #555;
 }
+
 .btn-group {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
+
 .btn {
   padding: 12px 20px;
-  min-width: 120px;
-  max-width: 100%;
-  min-height: 40px;
-  max-height: 100%;
+  min-width: 140px;
   border: none;
   border-radius: 8px;
-  font-size: 1.2em;
+  font-size: 1em;
   cursor: pointer;
   text-decoration: none;
   color: white;
   transition: 0.3s;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px; /*gap between icon & word (Button)*/
+  justify-content: center;
+  gap: 10px;
 }
-.btn i{
-    font-size: 1.2em;
+
+.btn i {
+  font-size: 1.2em;
 }
+
+/* Button Colors */
 .btn-whatsapp {
   background-color: #25D366;
 }
 .btn-whatsapp:hover {
   background-color: #1ebd5b;
 }
+
 .btn-facebook {
-  background-color: #0072C6;
+  background-color: #1877F2;
 }
-.btn-email:hover {
-  background-color: #005a9e;
+.btn-facebook:hover {
+  background-color: #145ecf;
 }
+
 .btn-email {
   background-color: #214c6b;
 }
@@ -84,29 +100,32 @@ p {
   background-color: #005a9e;
 }
 
-/*Footer*/
-footer{
-    text-align: center;
-    padding: 5px 0;
-    background-color: rgba(150, 144, 144, 0.6);
-    color: #ccc;
-    font-size: 0.8em;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 0.85em;
+  color: #777;
 }
 
-/*Responsive Design*/
-@media(max-width: 600px){
-  h1{
+/* Responsive Media Query */
+@media (max-width: 600px) {
+  h1 {
     font-size: 2em;
   }
-  .btn-group{
+
+  p {
+    font-size: 1em;
+  }
+
+  .btn-group {
     flex-direction: column;
     gap: 15px;
   }
-  .btn{
+
+  .btn {
     width: 100%;
-    justify-content: center;
-  }
-  .container{
-    padding: 0 15px;
+    font-size: 1em;
   }
 }
