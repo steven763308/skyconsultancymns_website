@@ -4,6 +4,11 @@ html, body{
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -40,19 +45,25 @@ p {
   flex-wrap: wrap;
 }
 .btn {
-  padding: 12px 24px;
-  width: 80px;
+  padding: 12px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  min-height: 40px;
+  max-height: 100%;
   border: none;
   border-radius: 8px;
-  font-size: 1em;
+  font-size: 1.2em;
   cursor: pointer;
   text-decoration: none;
   color: white;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /*gap between icon & word (Button)*/
 }
 .btn i{
-    font-size: 1.5em;
-
+    font-size: 1.2em;
 }
 .btn-whatsapp {
   background-color: #25D366;
@@ -80,4 +91,23 @@ footer{
     background-color: rgba(150, 144, 144, 0.6);
     color: #ccc;
     font-size: 0.8em;
+    align-items: bottom;
+}
+
+/*Responsive Design*/
+@media(max-width: 600px){
+  h1{
+    font-size: 2em;
+  }
+  .btn-group{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn{
+    width: 100%;
+    justify-content: center;
+  }
+  .container{
+    padding: 0 15px;
+  }
 }
