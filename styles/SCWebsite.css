@@ -55,6 +55,14 @@ html, body {
     text-decoration: none;
     font-size: 1.2em;
   }
+  
+  .nav-bar button{
+    background-color: #63a0cf;
+    min-width: 80px;
+    max-width: 100%;
+    min-height: 30px;
+    border-radius: 8px;
+  }
 
   .nav-bar.active{
     right: 0;
@@ -67,8 +75,7 @@ html, body {
     align-items: center;
     padding: 20px;
     text-align: center;
-
-
+    background-color: #5d94d0;
   }
 
   /* Main Content */
