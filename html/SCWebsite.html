@@ -22,22 +22,26 @@
   <link rel="stylesheet" href="../styles/SCWebsite.css" />
 </head>
 <body>
-  <!-- 🔷 Title Section -->
-  <div class="titleSection">
-    <h2>Sky Consultancy Management & Services</h2>
-  </div>
 
-  <!-- 🔷 ToolBar with Language + Menu Toggle -->
-  <div class="toolBar">
-    <button id="language-toggle" class="language-btn">
-      <i class="fas fa-globe"></i> EN
-    </button>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <!-- 🔷 Header Section -->
+  <div class="sticky-header">
+    <div class="left">
+      <img src="../img/TransLogo.png" alt="Sky Logo">
+      <h2>Sky Consultancy Management & Services</h2>
+    </div>
+    <!-- 🔷 ToolBar with Language + Menu Toggle -->
+    <div class="toolBar">
+      <button id="language-toggle" class="language-btn">
+        <i class="fas fa-globe"></i> EN
+      </button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
   </div>
 
   <!-- 🔷 Hidden Navigation Bar -->
   <div class="nav-bar" id="navBar">
     <ul>
+      <div class="menu-toggle" onclick="closeMenu()">✖</div>
       <li><a href="#services">Services</a></li>
       <li><a href="#services">Why Us</a></li>
       <li><a href="#services">Contact Us</a></li>
@@ -57,20 +61,20 @@
     <h2 data-lang-key="ourServices">Our Services</h2>
     <div class="service-grid">
       <div class="service-item">
-        <h3 data-lang-key="service1Title">CIDB Company Registration (G1-G7)</h3>
-        <p data-lang-key="service1Desc">Efficient licensing solutions for contractors of all scales.</p>
+        <h3 data-lang-key="service1Title">Service / Product 1</h3>
+        <p data-lang-key="service1Desc">Description 1</p>
       </div>
       <div class="service-item">
-        <h3 data-lang-key="service2Title">Green Card Registration</h3>
-        <p data-lang-key="service2Desc">Secure your workers’ credentials with ease.</p>
+        <h3 data-lang-key="service2Title">Service / Product 2</h3>
+        <p data-lang-key="service2Desc">Description 2</p>
       </div>
       <div class="service-item">
-        <h3 data-lang-key="service3Title">Blacklist Resolution</h3>
-        <p data-lang-key="service3Desc">Get back on track with our expert assistance.</p>
+        <h3 data-lang-key="service3Title">Service / Product 3</h3>
+        <p data-lang-key="service3Desc">Description 3</p>
       </div>
       <div class="service-item">
-        <h3 data-lang-key="service4Title">Project Declaration</h3>
-        <p data-lang-key="service4Desc">Stay compliant and avoid unnecessary penalties.</p>
+        <h3 data-lang-key="service4Title">Service / Product 4</h3>
+        <p data-lang-key="service4Desc">Description 4</p>
       </div>
     </div>
   </section>

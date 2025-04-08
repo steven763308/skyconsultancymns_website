@@ -10,6 +10,7 @@ html, body {
 
 body {
   background-color: #f2f2f2;
+  padding-top: 70px; /* Push content down to prevent sticky header overlap */
 }
 
 .wrapper {
@@ -19,58 +20,53 @@ body {
 }
 
 /* =================================== */
-/* ✅ Hero Section (Landing Banner)    */
+/* ✅ Sticky Header (Logo + Title + Toolbar) */
 /* =================================== */
-header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.logo {
-  min-width: 300px;
-  max-width: 100%;
-  margin-bottom: none; /* NOTE: consider removing or replacing with margin value */
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: white;
-}
-
-.hero-subtitle {
-  margin: 15px 0;
-  color: white;
-}
-
-.cta-btn {
-  padding: 10px 25px;
-  background: #FFD700;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.cta-btn:hover {
-  background: #cba946;
-}
-
-/* =================================== */
-/* ✅ Toolbar (Language + Menu Button) */
-/* =================================== */
-.toolBar {
+.sticky-header {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.sticky-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1; /* ✅ 自动分配空间 */
+}
+
+.sticky-header .left img {
+  height: 60px;
+  width: auto;
+}
+
+.sticky-header .left h2 {
+  font-size: clamp(0.9rem, 2.4vw, 1.3rem);
+  color: #214c6b;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-header .toolBar {
   display: flex;
   align-items: center;
   gap: 15px;
-  z-index: 1001;
+  flex-shrink: 0; /* ✅ 不收缩工具按钮 */
+  z-index: 1010;
+  position: relative; /* 确保 z-index 有效 */
 }
 
 .language-btn {
@@ -92,7 +88,7 @@ header {
 .menu-toggle {
   font-size: 2em;
   cursor: pointer;
-  color: #214c6b;
+  color: black;
 }
 
 /* =================================== */
@@ -108,7 +104,7 @@ header {
   color: white;
   padding: 20px;
   transition: right 0.3s ease;
-  z-index: 1000;
+  z-index: 1020;
 }
 
 .nav-bar.active {
@@ -136,6 +132,44 @@ header {
   min-width: 80px;
   min-height: 30px;
   border-radius: 8px;
+}
+
+/* =================================== */
+/* ✅ Hero Section (Landing Banner)    */
+/* =================================== */
+header {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 80px; /* top padding increased to avoid overlap */
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.hero-subtitle {
+  margin: 15px 0;
+  color: white;
+}
+
+.cta-btn {
+  padding: 10px 25px;
+  background: #FFD700;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #cba946;
 }
 
 /* =================================== */
@@ -185,9 +219,9 @@ section {
 }
 
 .logo {
-  max-width: 120px;
+  max-width: 300px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: none;
 }
 
 h1 {
@@ -291,5 +325,19 @@ footer {
 
   .container {
     padding: 0 10px;
+  }
+
+  .sticky-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sticky-header .toolBar {
+    align-self: flex-end;
+  }
+
+  header {
+    padding-top: 120px; /* more space for top bar */
   }
 }
