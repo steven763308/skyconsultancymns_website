@@ -3,83 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--Google Information-->
+
+  <!-- ✅ SEO Meta -->
   <meta name="description" content="Sky Consultancy specializes in CIDB and construction related applications in Malaysia. Contact us for fast, professional government compliance services." />
   <link rel="icon" href="../img/TransLogo.png" type="image/png" />
   <title>Sky Consultancy Management & Services</title>
 
-  <!-- ✅ Font Awesome Icons -->
+  <!-- ✅ External Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
-  <!-- ✅ AOS Animation Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-  <!-- ✅ Google Fonts -->
+  <!-- ✅ Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Your custom CSS -->
+  <!-- ✅ Custom Styles -->
   <link rel="stylesheet" href="../styles/SCWebsite.css" />
-
 </head>
 <body>
+  <!-- 🔷 Title Section -->
+  <div class="titleSection">
+    <h2>Sky Consultancy Management & Services</h2>
+  </div>
 
-    <div class="titleSection">
-        <h2>Sky Consultancy Management & Services</h1>
-    </div>
+  <!-- 🔷 ToolBar with Language + Menu Toggle -->
+  <div class="toolBar">
+    <button id="language-toggle" class="language-btn">
+      <i class="fas fa-globe"></i> EN
+    </button>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
 
-    <!-- Menu Button + Language -->
-    <div class="toolBar">
-      <button id="language-toggle" class="language-btn">
-        <i class="fas fa-globe"></i> EN
-      </button>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </div>
+  <!-- 🔷 Hidden Navigation Bar -->
+  <div class="nav-bar" id="navBar">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#services">Why Us</a></li>
+      <li><a href="#services">Contact Us</a></li>
+    </ul>
+  </div>
 
+  <!-- 🔷 Hero Section -->
+  <header>
+    <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo" />
+    <h1 class="hero-title" data-lang-key="heroTitle">Your Trusted Partner for CIDB Solutions</h1>
+    <p class="hero-subtitle" data-lang-key="heroSubtitle">Expertise and Experience You Can Rely On</p>
+    <a href="#contact" class="cta-btn" data-lang-key="contactUs">Contact Us</a>
+  </header>
 
-    
-    <!-- Hidden Nav Bar -->
-    <div class="nav-bar" id="navBar">
-        <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#services">Why Us</a></li>
-            <li><a href="#services">Contact Us</a></li>
-        </ul>
-    </div>
-
-    <header>
-      <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo">
-      <h1 class="hero-title" data-lang-key="heroTitle">Your Trusted Partner for CIDB Solutions</h1>
-      <p class="hero-subtitle" data-lang-key="heroSubtitle">Expertise and Experience You Can Rely On</p>
-      <a href="#contact" class="cta-btn" data-lang-key="contactUs">Contact Us</a>
-    </header>
-
-    <!--Service Section-->
-    <section id="services" data-aos="fade-up">
-      <h2 data-lang-key="ourServices">Our Services</h2>
-      <div class="service-grid">
-        <div class="service-item">
-          <h3 data-lang-key="service1Title">CIDB Company Registration (G1-G7)</h3>
-          <p data-lang-key="service1Desc">Efficient licensing solutions for contractors of all scales.</p>
-        </div>
-        <div class="service-item">
-          <h3 data-lang-key="service2Title">Green Card Registration</h3>
-          <p data-lang-key="service2Desc">Secure your workers’ credentials with ease.</p>
-        </div>
-        <div class="service-item">
-          <h3 data-lang-key="service3Title">Blacklist Resolution</h3>
-          <p data-lang-key="service3Desc">Get back on track with our expert assistance.</p>
-        </div>
-        <div class="service-item">
-          <h3 data-lang-key="service4Title">Project Declaration</h3>
-          <p data-lang-key="service4Desc">Stay compliant and avoid unnecessary penalties.</p>
-        </div>
+  <!-- 🔷 Services Section -->
+  <section id="services" data-aos="fade-up">
+    <h2 data-lang-key="ourServices">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <h3 data-lang-key="service1Title">CIDB Company Registration (G1-G7)</h3>
+        <p data-lang-key="service1Desc">Efficient licensing solutions for contractors of all scales.</p>
       </div>
-    </section>
+      <div class="service-item">
+        <h3 data-lang-key="service2Title">Green Card Registration</h3>
+        <p data-lang-key="service2Desc">Secure your workers’ credentials with ease.</p>
+      </div>
+      <div class="service-item">
+        <h3 data-lang-key="service3Title">Blacklist Resolution</h3>
+        <p data-lang-key="service3Desc">Get back on track with our expert assistance.</p>
+      </div>
+      <div class="service-item">
+        <h3 data-lang-key="service4Title">Project Declaration</h3>
+        <p data-lang-key="service4Desc">Stay compliant and avoid unnecessary penalties.</p>
+      </div>
+    </div>
+  </section>
 
-    <hr>
+  <hr />
 
+  <!-- 🔷 Coming Soon + Contact Section -->
   <div class="wrapper">
     <div class="main-content">
       <div class="container">
@@ -102,21 +100,19 @@
       </div>
     </div>
 
+    <!-- 🔷 Footer Section -->
     <footer>
       <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved.</p>
     </footer>
   </div>
 
+  <!-- ✅ Custom JS Script -->
   <script src="../javascript/SCWebsite.js"></script>
 
-</body>
-
-  <!-- AOS JavaScript 引入 -->
+  <!-- ✅ AOS Animation Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-  <!-- 初始化 AOS -->
   <script>
     AOS.init();
   </script>
-
+</body>
 </html>

@@ -1,294 +1,295 @@
-/* Base Reset */
+/* =================================== */
+/* ✅ Base Reset & Body Layout         */
+/* =================================== */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  /* Wrapper to manage layout */
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  body {
-    background-color: #f2f2f2;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .titleSection h2{
-    margin-right: 20px;
-  }
+body {
+  background-color: #f2f2f2;
+}
 
-  header {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-  }
-  .logo {
-    min-width: 300px;
-    max-width: 100%;
-    margin-bottom: none;
-  }
-  .hero-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: white;
-  }
-  .hero-subtitle {
-    margin: 15px 0;
-    color: white;
-  }
-  .cta-btn {
-    padding: 10px 25px;
-    background: #FFD700;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  .cta-btn:hover {
-    background: #cba946;
-  }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  /* ToolBar 统一固定在右上角，水平排列 */
-  .toolBar {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px; /* 两个按钮间距 */
-    z-index: 1001;
-  }
+/* =================================== */
+/* ✅ Hero Section (Landing Banner)    */
+/* =================================== */
+header {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-  /* Language Button 样式 */
-  .language-btn {
-    min-width: 70px;
-    max-width: 100%;
-    min-height: 40px;
-    max-height: 100%;
-    background: white;
-    color: #007BFF;
-    border: 1px solid #007BFF;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+.logo {
+  min-width: 300px;
+  max-width: 100%;
+  margin-bottom: none; /* NOTE: consider removing or replacing with margin value */
+}
 
-  .language-btn:hover {
-    background: #007BFF;
-    color: white;
-  }
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+}
 
-  /* Menu Icon */
-  .menu-toggle {
-    font-size: 2em;
-    cursor: pointer;
-    color: #214c6b;
-  }
+.hero-subtitle {
+  margin: 15px 0;
+  color: white;
+}
 
-  /* Hidden nav-bar */
-  .nav-bar{
-    position: fixed;
-    top: 0;
-    right: -300px; /* hide to right */
-    width: 250px;
-    height: 100vh;
-    background-color: grey;
-    color: white;
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-  }
+.cta-btn {
+  padding: 10px 25px;
+  background: #FFD700;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-  .nav-bar ul{
-    list-style: none;
-    padding: 0;
-    margin-top: 60px;
-  }
-  
-  .nav-bar li{
-    margin: 20px 0;
-  }
+.cta-btn:hover {
+  background: #cba946;
+}
 
-  .nav-bar a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  
-  .nav-bar button{
-    background-color: #63a0cf;
-    min-width: 80px;
-    max-width: 100%;
-    min-height: 30px;
-    border-radius: 8px;
-  }
+/* =================================== */
+/* ✅ Toolbar (Language + Menu Button) */
+/* =================================== */
+.toolBar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1001;
+}
 
-  .nav-bar.active{
-    right: 0;
-  }
+.language-btn {
+  min-width: 70px;
+  padding: 8px 15px;
+  background: white;
+  color: #007BFF;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  .main-head{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    background-color: #5d94d0;
-  }
+.language-btn:hover {
+  background: #007BFF;
+  color: white;
+}
 
-  /*Services Grid*/
-  section {
-    padding: 50px 20px;
-  }
+.menu-toggle {
+  font-size: 2em;
+  cursor: pointer;
+  color: #214c6b;
+}
 
-  .service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .service-item {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
+/* =================================== */
+/* ✅ Slide-In Nav Bar                 */
+/* =================================== */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100vh;
+  background-color: grey;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
 
-  /* Main Content */
-  .main-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .logo {
-    max-width: 120px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
+.nav-bar.active {
+  right: 0;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.nav-bar li {
+  margin: 20px 0;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-bar button {
+  background-color: #63a0cf;
+  min-width: 80px;
+  min-height: 30px;
+  border-radius: 8px;
+}
+
+/* =================================== */
+/* ✅ Service Section                  */
+/* =================================== */
+section {
+  padding: 50px 20px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================== */
+/* ✅ Main Content & Info Section      */
+/* =================================== */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #555;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+/* =================================== */
+/* ✅ Button Group (WhatsApp / FB...)  */
+/* =================================== */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  min-width: 140px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.btn i {
+  font-size: 1.2em;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebd5b;
+}
+
+.btn-facebook {
+  background-color: #1877F2;
+}
+.btn-facebook:hover {
+  background-color: #145ecf;
+}
+
+.btn-email {
+  background-color: #214c6b;
+}
+.btn-email:hover {
+  background-color: #005a9e;
+}
+
+/* =================================== */
+/* ✅ Footer Section                   */
+/* =================================== */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 0.85em;
+  color: #777;
+}
+
+/* =================================== */
+/* ✅ Responsive Design                */
+/* =================================== */
+@media (max-width: 600px) {
   h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    color: #333;
+    font-size: 1.8em;
   }
-  
+
   p {
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
-    color: #555;
-  }
-  
-  h3 {
-    margin-bottom: 10px;
-  }
-  
-  /* Button Group */
-  .btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .btn {
-    padding: 12px 20px;
-    min-width: 140px;
-    max-width: 100%;
-    border: none;
-    border-radius: 8px;
     font-size: 1em;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    line-height: 1.2;
-    white-space: nowrap;
   }
-  
-  .btn i {
-    font-size: 1.2em;
+
+  .btn {
+    width: 100%;
+    font-size: 0.95em;
+    padding: 10px 18px;
   }
-  
-  /* Button Colors */
-  .btn-whatsapp {
-    background-color: #25D366;
+
+  .container {
+    padding: 0 10px;
   }
-  .btn-whatsapp:hover {
-    background-color: #1ebd5b;
-  }
-  
-  .btn-facebook {
-    background-color: #1877F2;
-  }
-  .btn-facebook:hover {
-    background-color: #145ecf;
-  }
-  
-  .btn-email {
-    background-color: #214c6b;
-  }
-  .btn-email:hover {
-    background-color: #005a9e;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    font-size: 0.85em;
-    color: #777;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 1.8em;
-    }
-  
-    p {
-      font-size: 1em;
-    }
-  
-    .btn {
-      width: 100%;
-      font-size: 0.95em;
-      padding: 10px 18px;
-    }
-  
-    .container {
-      padding: 0 10px;
-    }
-  }
+}
