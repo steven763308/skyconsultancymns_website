@@ -141,7 +141,7 @@ body {
 /* ✅ Hero Section (Landing Banner)    */
 /* =================================== */
 header {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/TransLogo.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
   color: white;
   text-align: center;
   padding: 120px 20px 100px;
