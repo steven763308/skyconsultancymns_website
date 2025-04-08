@@ -16,14 +16,81 @@ html, body {
   body {
     background-color: #f2f2f2;
   }
-  
-  .menu-toggle{
+
+  .titleSection h2{
+    margin-right: 20px;
+  }
+
+  header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .logo {
+    min-width: 300px;
+    max-width: 100%;
+    margin-bottom: none;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+  }
+  .hero-subtitle {
+    margin: 15px 0;
+    color: white;
+  }
+  .cta-btn {
+    padding: 10px 25px;
+    background: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .cta-btn:hover {
+    background: #cba946;
+  }
+
+  /* ToolBar 统一固定在右上角，水平排列 */
+  .toolBar {
     position: fixed;
     top: 20px;
     right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 两个按钮间距 */
+    z-index: 1001;
+  }
+
+  /* Language Button 样式 */
+  .language-btn {
+    min-width: 70px;
+    max-width: 100%;
+    min-height: 40px;
+    max-height: 100%;
+    background: white;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .language-btn:hover {
+    background: #007BFF;
+    color: white;
+  }
+
+  /* Menu Icon */
+  .menu-toggle {
     font-size: 2em;
     cursor: pointer;
-    z-index: 1001;
+    color: #214c6b;
   }
 
   /* Hidden nav-bar */
@@ -33,7 +100,7 @@ html, body {
     right: -300px; /* hide to right */
     width: 250px;
     height: 100vh;
-    background-color: #214c6b;
+    background-color: grey;
     color: white;
     padding: 20px;
     transition: right 0.3s ease;
@@ -76,6 +143,31 @@ html, body {
     padding: 20px;
     text-align: center;
     background-color: #5d94d0;
+  }
+
+  /*Services Grid*/
+  section {
+    padding: 50px 20px;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
 
   /* Main Content */

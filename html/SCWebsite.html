@@ -5,45 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--Google Information-->
   <meta name="description" content="Sky Consultancy specializes in CIDB and construction related applications in Malaysia. Contact us for fast, professional government compliance services." />
-  <link rel="icon" href="../img/FullLogo.png" type="image/png" />
+  <link rel="icon" href="../img/TransLogo.png" type="image/png" />
   <title>Sky Consultancy Management & Services</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- ✅ Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  
-  <!-- Link to external CSS -->
+
+  <!-- ✅ AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- ✅ Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Your custom CSS -->
   <link rel="stylesheet" href="../styles/SCWebsite.css" />
+
 </head>
 <body>
 
-    <div class="title">
+    <div class="titleSection">
         <h2>Sky Consultancy Management & Services</h1>
     </div>
 
-    <!-- Menu Button -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
+    <!-- Menu Button + Language -->
+    <div class="toolBar">
+      <button id="language-toggle" class="language-btn">
+        <i class="fas fa-globe"></i> EN
+      </button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
+
+
+    
     <!-- Hidden Nav Bar -->
     <div class="nav-bar" id="navBar">
         <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#services">Why Us</a></li>
             <li><a href="#services">Contact Us</a></li>
-            <button id="language-toggle" class="language-btn">EN</button>
         </ul>
     </div>
 
-    <!--Website Main Header-->
-    <div class="main-head">
-        <header>
-          <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo">
-          <h1 class="hero-title" data-lang-key="heroTitle">Your Trusted Partner for CIDB Solutions</h1>
-          <p class="hero-subtitle" data-lang-key="heroSubtitle">Expertise and Experience You Can Rely On</p>
-        </header>
-    </div>
+    <header>
+      <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo">
+      <h1 class="hero-title" data-lang-key="heroTitle">Your Trusted Partner for CIDB Solutions</h1>
+      <p class="hero-subtitle" data-lang-key="heroSubtitle">Expertise and Experience You Can Rely On</p>
+      <a href="#contact" class="cta-btn" data-lang-key="contactUs">Contact Us</a>
+    </header>
 
+    <!--Service Section-->
+    <section id="services" data-aos="fade-up">
+      <h2 data-lang-key="ourServices">Our Services</h2>
+      <div class="service-grid">
+        <div class="service-item">
+          <h3 data-lang-key="service1Title">CIDB Company Registration (G1-G7)</h3>
+          <p data-lang-key="service1Desc">Efficient licensing solutions for contractors of all scales.</p>
+        </div>
+        <div class="service-item">
+          <h3 data-lang-key="service2Title">Green Card Registration</h3>
+          <p data-lang-key="service2Desc">Secure your workers’ credentials with ease.</p>
+        </div>
+        <div class="service-item">
+          <h3 data-lang-key="service3Title">Blacklist Resolution</h3>
+          <p data-lang-key="service3Desc">Get back on track with our expert assistance.</p>
+        </div>
+        <div class="service-item">
+          <h3 data-lang-key="service4Title">Project Declaration</h3>
+          <p data-lang-key="service4Desc">Stay compliant and avoid unnecessary penalties.</p>
+        </div>
+      </div>
+    </section>
 
+    <hr>
 
   <div class="wrapper">
     <div class="main-content">
@@ -75,4 +110,13 @@
   <script src="../javascript/SCWebsite.js"></script>
 
 </body>
+
+  <!-- AOS JavaScript 引入 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- 初始化 AOS -->
+  <script>
+    AOS.init();
+  </script>
+
 </html>
