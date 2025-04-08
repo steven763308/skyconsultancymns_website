@@ -350,8 +350,7 @@ footer {
 /* =================================== */
 @media (max-width: 600px) {
   .head-companyname{
-    border: 10px solid red !important;
-
+    display: none !important;
   }
   
   h1 {
