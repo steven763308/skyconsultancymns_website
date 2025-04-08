@@ -6,11 +6,12 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #f2f2f2;
-  padding-top: 70px; /* Push content down to prevent sticky header overlap */
+  padding-top: 70px;
 }
 
 .wrapper {
@@ -43,7 +44,7 @@ body {
   align-items: center;
   gap: 10px;
   min-width: 0;
-  flex: 1; /* ✅ 自动分配空间 */
+  flex: 1;
 }
 
 .sticky-header .left img {
@@ -64,9 +65,9 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-shrink: 0; /* ✅ 不收缩工具按钮 */
+  flex-shrink: 0;
   z-index: 1010;
-  position: relative; /* 确保 z-index 有效 */
+  position: relative;
 }
 
 .language-btn {
@@ -88,7 +89,7 @@ body {
 .menu-toggle {
   font-size: 2em;
   cursor: pointer;
-  color: black;
+  color: #214c6b;
 }
 
 /* =================================== */
@@ -100,10 +101,11 @@ body {
   right: -300px;
   width: 250px;
   height: 100vh;
-  background-color: grey;
+  background-color: rgba(30, 30, 30, 0.95);
   color: white;
   padding: 20px;
-  transition: right 0.3s ease;
+  transition: right 0.4s ease-in-out;
+  backdrop-filter: blur(6px);
   z-index: 1020;
 }
 
@@ -138,38 +140,46 @@ body {
 /* ✅ Hero Section (Landing Banner)    */
 /* =================================== */
 header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/Logo.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/hero-bg.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
-  padding: 100px 20px 80px; /* top padding increased to avoid overlap */
+  padding: 120px 20px 100px;
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: white;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
 .hero-subtitle {
-  margin: 15px 0;
-  color: white;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #ddd;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .cta-btn {
-  padding: 10px 25px;
+  padding: 12px 30px;
   background: #FFD700;
   color: #333;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .cta-btn:hover {
-  background: #cba946;
+  background: #f7c600;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 /* =================================== */
@@ -219,9 +229,9 @@ section {
 }
 
 .logo {
-  max-width: 300px;
+  max-width: 120px;
   height: auto;
-  margin-bottom: none;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -338,6 +348,6 @@ footer {
   }
 
   header {
-    padding-top: 120px; /* more space for top bar */
+    padding-top: 140px;
   }
 }
