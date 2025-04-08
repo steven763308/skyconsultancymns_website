@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sky Consultancy specializes in CIDB and construction related applications in Malaysia. Contact us for fast, professional government compliance services." />
+  <title>Sky Consultancy Management & Services</title>
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="../img/TransLogo.png" type="image/png" />
+
+  <!-- ✅ Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- ✅ AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- ✅ Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Custom CSS -->
+  <link rel="stylesheet" href="ChatGPT.css" />
+</head>
+<body>
+
+  <!-- ✅ Sticky Header Section (Logo + Company Name + Toolbar) -->
+  <div class="sticky-header">
+    <div class="left">
+      <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" />
+      <h2>Sky Consultancy Management & Services</h2>
+    </div>
+    <div class="toolBar">
+      <button class="language-btn"><i class="fas fa-globe"></i> EN</button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </div>
+
+  <!-- ✅ Slide-in Menu Navigation -->
+  <div class="nav-bar" id="navBar">
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ✅ Hero Banner Section -->
+  <header data-aos="fade-down">
+    <h1 class="hero-title">Your Trusted Partner for CIDB Solutions</h1>
+    <p class="hero-subtitle">Expertise and Experience You Can Rely On</p>
+    <a href="#contact" class="cta-btn">Get in Touch</a>
+  </header>
+
+  <!-- ✅ About Us Section -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>
+      Sky Consultancy Management & Services is a professional consulting firm dedicated to helping contractors and businesses navigate CIDB registration, Green Card applications, and government compliance. 
+      <br><br>
+      We pride ourselves on fast, transparent, and reliable services that simplify the complex processes of construction-related certifications in Malaysia.
+    </p>
+  </section>
+
+  <!-- ✅ Services Section -->
+  <section id="services" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <h3>CIDB Company Registration (G1-G7)</h3>
+        <p>Efficient licensing solutions for contractors of all scales.</p>
+      </div>
+      <div class="service-item">
+        <h3>Green Card Registration</h3>
+        <p>Secure your workers’ credentials with ease.</p>
+      </div>
+      <div class="service-item">
+        <h3>Blacklist Resolution</h3>
+        <p>Get back on track with our expert assistance.</p>
+      </div>
+      <div class="service-item">
+        <h3>Project Declaration</h3>
+        <p>Stay compliant and avoid unnecessary penalties.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Testimonials Section -->
+  <section id="testimonials" data-aos="fade-up">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>“Fast and reliable service. Got our CIDB registration approved within a week!”</p>
+      <strong>- Mr. Lim, Project Manager</strong>
+    </div>
+    <div class="testimonial">
+      <p>“The team explained everything clearly and handled our Green Card process smoothly.”</p>
+      <strong>- Puan Noraini, HR Director</strong>
+    </div>
+  </section>
+
+  <!-- ✅ Partners / Logo Section -->
+  <section id="partners" data-aos="fade-up">
+    <h2>Our Partners</h2>
+    <div class="partner-logos">
+      <img src="../img/cidb.png" alt="CIDB Logo">
+      <img src="../img/mof.png" alt="MOF Logo">
+      <img src="../img/partner3.png" alt="Other Partner">
+    </div>
+  </section>
+
+  <!-- ✅ Contact Section (Under Construction) -->
+  <section id="contact" class="main-content">
+    <div class="container">
+      <img class="logo" src="../img/TransLogo.png" alt="Sky Consultancy Logo" />
+      <h1>Sky Consultancy<br />Management & Services</h1>
+      <p>Our website is under development.<br />Coming Soon!</p>
+
+      <h3>Find Us From</h3>
+      <div class="btn-group">
+        <a href="https://wa.me/60125583398" class="btn btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/SKY.CIDB" class="btn btn-facebook" target="_blank">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="mailto:steven@skyconsultancymns.com" class="btn btn-email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ JavaScript: Nav Toggle + AOS -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navBar');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>

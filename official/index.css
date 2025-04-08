@@ -59,6 +59,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
 }
 
 .sticky-header .toolBar {
@@ -187,7 +188,6 @@ header {
 /* =================================== */
 #about {
   padding: 60px 20px;
-  background-color: #ffffff;
   text-align: center;
 }
 
@@ -349,6 +349,10 @@ footer {
 /* ✅ Responsive Design                */
 /* =================================== */
 @media (max-width: 600px) {
+  .head-companyname{
+    display: none !important;
+  }
+  
   h1 {
     font-size: 1.8em;
   }
@@ -368,13 +372,13 @@ footer {
   }
 
   .sticky-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .sticky-header .toolBar {
-    align-self: flex-end;
+    margin-left: auto;
   }
 
   header {
