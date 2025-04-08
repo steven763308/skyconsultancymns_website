@@ -183,10 +183,40 @@ header {
 }
 
 /* =================================== */
+/* ✅ About Us Section                 */
+/* =================================== */
+#about {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #214c6b;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =================================== */
 /* ✅ Service Section                  */
 /* =================================== */
 section {
   padding: 50px 20px;
+}
+
+#services h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #214c6b;
 }
 
 .service-grid {
@@ -229,9 +259,9 @@ section {
 }
 
 .logo {
-  max-width: 120px;
+  max-width: 250px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: none;
 }
 
 h1 {
