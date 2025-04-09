@@ -77,19 +77,19 @@
   <section id="services" data-aos="fade-up">
     <h2 data-lang-key="ourServices">Our Services</h2>
     <div class="service-grid">
-      <div class="service-item">
+      <div class="service-item" onclick="openModal(1)">
         <h3 data-lang-key="service1Title">Service / Product 1</h3>
         <p data-lang-key="service1Desc">Description 1</p>
       </div>
-      <div class="service-item">
+      <div class="service-item" onclick="openModal(2)">
         <h3 data-lang-key="service2Title">Service / Product 2</h3>
         <p data-lang-key="service2Desc">Description 2</p>
       </div>
-      <div class="service-item">
+      <div class="service-item" onclick="openModal(3)">
         <h3 data-lang-key="service3Title">Service / Product 3</h3>
         <p data-lang-key="service3Desc">Description 3</p>
       </div>
-      <div class="service-item">
+      <div class="service-item" onclick="openModal(4)">
         <h3 data-lang-key="service4Title">Service / Product 4</h3>
         <p data-lang-key="service4Desc">Description 4</p>
       </div>
@@ -125,6 +125,15 @@
     <footer>
       <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved.</p>
     </footer>
+  </div>
+
+  <!-- 🔷 Modal for Service Details -->
+  <div id="serviceModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle">Service Title</h3>
+      <p id="modalDescription">Service full description...</p>
+    </div>
   </div>
 
   <!-- ✅ Custom JS Script -->
