@@ -49,3 +49,18 @@ const serviceData = [
     document.getElementById("serviceModal").style.display = "none";
   }
   
+  // Show or hide back-to-top button on scroll [back to top button]
+  window.addEventListener('scroll', function () {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      btn.style.display = 'flex';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+
+  // Smooth scroll to top
+  document.getElementById('backToTop').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+

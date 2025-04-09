@@ -1,4 +1,26 @@
 /* =================================== */
+/* ✅ Theme Variables                 */
+/* =================================== */
+:root {
+  --primary-color: #214c6b;
+  --secondary-color: #007BFF;
+  --accent-color: #FFD700;
+  --accent-hover: #f7c600;
+  --dark-bg: rgba(30, 30, 30, 0.95);
+  --modal-overlay: rgba(0, 0, 0, 0.65);
+  --footer-bg: rgba(0, 0, 0, 0.05);
+  --white: white;
+  --light-grey: #f9f9f9;
+  --mid-grey: #555;
+  --light-text: #ddd;
+  --black: #333;
+  --facebook: #1877F2;
+  --facebook-hover: #145ecf;
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1ebd5b;
+}
+
+/* =================================== */
 /* ✅ Base Reset & Body Layout         */
 /* =================================== */
 html, body {
@@ -432,6 +454,40 @@ footer {
   }
 }
 
+/* =============================== */
+/* 🔝 Back To Top Button Style     */
+/* =============================== */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color); /* 🔵 默认蓝色 */
+  color: white; /* ⚪ 箭头颜色 */
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: background 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: var(--primary-color); /* 🟦 Hover 主色 */
+}
+
+#backToTop i {
+  transition: transform 0.6s ease;
+}
+
+#backToTop:hover i {
+  transform: rotate(360deg); /* ↻ 箭头旋转 */
+}
 
 /* =================================== */
 /* ✅ Responsive Design                */
