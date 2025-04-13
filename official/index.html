@@ -96,6 +96,79 @@
     </div>
   </section>
 
+  <!-- Why Us Section -->
+  <section id="why-us" data-aos="fade-up">
+    <h2>Why Choose Us</h2>
+    <div class="why-us-grid">
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
+        <i class="fas fa-bolt"></i>
+        <h4>专业高效</h4>
+        <p>我们熟悉政府流程，快速帮您完成 CIDB、MOF、劳工相关申请。</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-user-check"></i>
+        <h4>专人服务</h4>
+        <p>一对一专属顾问，全程跟进，服务透明，响应快速。</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-briefcase"></i>
+        <h4>实战经验</h4>
+        <p>丰富的 G1–G7 客户处理经验，懂合规也懂现场。</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-shield-alt"></i>
+        <h4>信任保障</h4>
+        <p>我们承诺无隐藏费用、不成功不收费，为您权益保驾护航。</p>
+      </div>
+    </div>    
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-container">
+      <!-- 📞 联系方式 -->
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> +60 12-558 3398</p>
+        <p><i class="fas fa-envelope"></i> steven@skyconsultancymns.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
+      </div>
+
+      <!-- 📝 表单提交到 Formspree -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+      
+        <input type="email" name="email" placeholder="Your Email" required />
+      
+        <!-- ✅ 电话号码带 +60 验证 -->
+        <input
+        type="tel"
+        name="phone"
+        value="+60 "
+        placeholder="+60 12-345 6789"
+        pattern="\\+60\\s?1[0-9]{1}-?[0-9]{3,4}-?[0-9]{4}"
+        required
+        title="Phone number must start with +60 and follow Malaysian format." />      
+      
+        <select name="service" required>
+          <option value="" disabled selected>Select a Service</option>
+          <option value="CIDB Registration">CIDB Registration (G1–G7)</option>
+          <option value="Green Card">Green Card Application</option>
+          <option value="MOF Certification">MOF Certification</option>
+          <option value="Visa">Foreign Worker Visa</option>
+          <option value="Other">Other / General Inquiry</option>
+        </select>
+      
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      
+        <input type="hidden" name="_gotcha" style="display:none">
+        <input type="hidden" name="_next" value="https://skyconsultancymns.com/thank-you.html">
+      
+        <button type="submit">Send Message</button>
+      </form>      
+    </div>
+  </section>
+
   <hr />
 
   <!-- 🔷 Coming Soon + Contact Section -->

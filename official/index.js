@@ -64,3 +64,33 @@ const serviceData = [
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // ContactUs Phone Prefix
+  document.addEventListener("DOMContentLoaded", function () {
+    const phoneInput = document.getElementById("phone");
+    const prefix = "+60 ";
+  
+    // 初始状态强制带前缀
+    if (!phoneInput.value.startsWith(prefix)) {
+      phoneInput.value = prefix;
+    }
+  
+    // 防止删除前缀
+    phoneInput.addEventListener("input", function () {
+      if (!phoneInput.value.startsWith(prefix)) {
+        const cursorPos = phoneInput.selectionStart;
+        phoneInput.value = prefix + phoneInput.value.replace(/^(\+)?60\s?/i, "");
+        phoneInput.setSelectionRange(cursorPos < prefix.length ? prefix.length : cursorPos, cursorPos < prefix.length ? prefix.length : cursorPos);
+      }
+    });
+  
+    // 防止全选后删除
+    phoneInput.addEventListener("keydown", function (e) {
+      if (
+        (e.key === "Backspace" || e.key === "Delete") &&
+        phoneInput.selectionStart <= prefix.length
+      ) {
+        e.preventDefault();
+      }
+    });
+  });
+  
