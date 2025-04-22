@@ -354,7 +354,12 @@ section {
 }
 
 .contact-form {
-  flex: 1 1 300px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -363,11 +368,12 @@ section {
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
+  width: 100%;
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  width: 100%;
+  box-sizing: border-box;
   background-color: white;
   color: #333;
 }
@@ -379,17 +385,22 @@ section {
 }
 
 /* ✅ 验证失败样式 */
-.contact-form input:invalid {
+.contact-form input:invalid,
+.contact-form textarea:invalid,
+.contact-form select:invalid {
   border-color: #ff4d4f;
 }
 
-.contact-form input:focus:invalid {
+.contact-form input:focus:invalid,
+.contact-form textarea:focus:invalid,
+.contact-form select:focus:invalid {
   outline: none;
   box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
 }
 
+/* ✅ 提交按钮 */
 .contact-form button {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color, #003f6e);
   color: white;
   border: none;
   padding: 12px;
@@ -400,8 +411,9 @@ section {
 }
 
 .contact-form button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color, #00509e);
 }
+
 
 /* =================================== */
 /* ✅ Main Content & Info Section      */

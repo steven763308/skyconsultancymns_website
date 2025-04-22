@@ -134,38 +134,40 @@
         <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
       </div>
 
-      <!-- 📝 表单提交到 Formspree -->
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-      
-        <input type="email" name="email" placeholder="Your Email" required />
-      
-        <!-- ✅ 电话号码带 +60 验证 -->
-        <input
+    <!-- 📝 表单提交到 Formspree -->
+    <form class="contact-form" action="https://formspree.io/f/mblojgjv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+
+      <input type="email" name="email" placeholder="Your Email" required />
+
+      <!-- ✅ 电话号码带 +60 验证 -->
+      <input
+        id="phone"
         type="tel"
         name="phone"
-        value="+60 "
         placeholder="+60 12-345 6789"
-        pattern="\\+60\\s?1[0-9]{1}-?[0-9]{3,4}-?[0-9]{4}"
+        pattern="\+60 ?1[0-9]?( |-)?[0-9]{3,4}( |-)?[0-9]{4}"
         required
-        title="Phone number must start with +60 and follow Malaysian format." />      
-      
-        <select name="service" required>
-          <option value="" disabled selected>Select a Service</option>
-          <option value="CIDB Registration">CIDB Registration (G1–G7)</option>
-          <option value="Green Card">Green Card Application</option>
-          <option value="MOF Certification">MOF Certification</option>
-          <option value="Visa">Foreign Worker Visa</option>
-          <option value="Other">Other / General Inquiry</option>
-        </select>
-      
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      
-        <input type="hidden" name="_gotcha" style="display:none">
-        <input type="hidden" name="_next" value="https://skyconsultancymns.com/thank-you.html">
-      
-        <button type="submit">Send Message</button>
-      </form>      
+        title="Phone number must start with +60 and follow Malaysian format."
+      />
+
+      <select name="service" required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="CIDB Registration">CIDB Registration (G1–G7)</option>
+        <option value="Green Card">Green Card Application</option>
+        <option value="MOF Certification">MOF Certification</option>
+        <option value="Visa">Foreign Worker Visa</option>
+        <option value="Other">Other / General Inquiry</option>
+      </select>
+
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <!-- 防 spam -->
+      <input type="hidden" name="_gotcha" style="display:none">
+      <input type="hidden" name="_next" value="https://skyconsultancymns.com/thank-you.html">
+
+      <button type="submit">Send Message</button>
+    </form>    
     </div>
   </section>
 

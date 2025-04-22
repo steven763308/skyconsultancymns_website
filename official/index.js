@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       const preloader = document.getElementById("preloader");
       preloader.classList.add("hidden");
-    }, 2500); // 2.5秒后隐藏
+    }, 2000); // 2.5秒后隐藏
 });
 
 //open menu sidebar
