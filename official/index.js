@@ -21,12 +21,12 @@ function closeMenu(){
 // Service Data (Modal)
 const serviceData = [
     {
-      logo: "img/servicesLogo/cidbLogo.png", //path to relevant logo
+      logo: "../img/servicesLogo/cidbLogo.png", //path to relevant logo
       title: "Service / Product 1",
       description: "This is a detailed description for Service / Product 1. You can provide more context, pricing, usage instructions, or images here."
     },
     {
-      logo: "", //path to relevant logo
+      logo: "../img/servicesLogo/jimLogo.png", //path to relevant logo
       title: "Service / Product 2",
       description: "Full information about Service / Product 2 goes here. Tailor the details for your client's needs."
     },
@@ -102,4 +102,28 @@ const serviceData = [
       }
     });
   });
+
+//Language Switching
+const langToggle = document.getElementById("language-toggle");
+const elements = document.querySelectorAll("[data-lang-key]");
+let isEnglish = true;
+const translations ={
+  zh: {
+    heroTitle: "您值得信赖的CIDB合作伙伴",
+    //etc *need add data-lang-key
+  }
+};
+langToggle.addEventListener("click", () =>{
+  isEnglish = !isEnglish;
+  langToggle.textContent = isEnglish ? "中文" : "EN";
+  elements.forEach(el =>{
+    const key = el.getAttribute("data-lang-key");
+    if(!isEnglish && translations.zh[key]) el.textContent = translations.zh[key];
+    else if (isEnglish) el.textContent = el.getAttribute("data-default") || el.textContent;
+  });
+});
+//save default content
+elements.forEach(el =>{
+  el.setAttribute("data-default", el.textContent);
+});
   
