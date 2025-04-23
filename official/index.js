@@ -21,18 +21,22 @@ function closeMenu(){
 // Service Data (Modal)
 const serviceData = [
     {
+      logo: "img/servicesLogo/cidbLogo.png", //path to relevant logo
       title: "Service / Product 1",
       description: "This is a detailed description for Service / Product 1. You can provide more context, pricing, usage instructions, or images here."
     },
     {
+      logo: "", //path to relevant logo
       title: "Service / Product 2",
       description: "Full information about Service / Product 2 goes here. Tailor the details for your client's needs."
     },
     {
+      logo: "", //path to relevant logo
       title: "Service / Product 3",
       description: "Explain why Service / Product 3 is beneficial. You can add certification info or workflow."
     },
     {
+      logo: "", //path to relevant logo
       title: "Service / Product 4",
       description: "Detailed overview of Service / Product 4 with solutions and contact methods if needed."
     }
@@ -40,8 +44,13 @@ const serviceData = [
   
   //onclick function
   function openModal(index) {
-    document.getElementById("modalTitle").innerText = serviceData[index].title;
-    document.getElementById("modalDescription").innerText = serviceData[index].description;
+    const data = serviceData[index];
+
+    const logoElement = document.getElementById("serviceLogo");
+    logoElement.src = data.logo;
+    logoElement.alt = data.title + " Logo";
+    document.getElementById("modalTitle").innerText = data.title;
+    document.getElementById("modalDescription").innerText = data.description;
     document.getElementById("serviceModal").style.display = "flex";
   }
   

@@ -47,9 +47,10 @@
   <div class="nav-bar" id="navBar">
     <ul>
       <div class="menu-toggle" onclick="closeMenu()">✖</div>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#services">Why Us</a></li>
-      <li><a href="#services">Contact Us</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
   </div>
 
@@ -132,6 +133,10 @@
         <p><i class="fas fa-phone-alt"></i> +60 12-558 3398</p>
         <p><i class="fas fa-envelope"></i> steven@skyconsultancymns.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
+        <div>
+          <!--Add Contact Shortcut-->
+
+        </div>
       </div>
 
     <!-- 📝 表单提交到 Formspree -->
@@ -206,6 +211,7 @@
   <div id="serviceModal" class="modal-overlay">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal()">&times;</span>
+      <img id="serviceLogo" alt="serviceLogo">
       <h3 id="modalTitle">Service Title</h3>
       <p id="modalDescription">Service full description...</p>
     </div>
