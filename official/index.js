@@ -106,24 +106,51 @@ const serviceData = [
 //Language Switching
 const langToggle = document.getElementById("language-toggle");
 const elements = document.querySelectorAll("[data-lang-key]");
-let isEnglish = true;
-const translations ={
-  zh: {
-    heroTitle: "您值得信赖的CIDB合作伙伴",
-    //etc *need add data-lang-key
+let translations = {};
+let currentLang = "en";
+
+//load language pack from json
+async function loadTranslations(){
+  try{
+    const res = await fetch ("../official/lang.json"); //lang.json actual path
+    translations = await res.json();
+    const savedLang = localStorage.getItem("lang");
+
+    //if guest previously choosen, otherwise: use default browser
+    if(savedLang){
+      currentLang = savedLang;
+    }else{
+      const browserLang = navigator.language || navigator.userLanguage;
+      currentLang = browserLang.startsWith("zh") ? "zh" : "en";
+    }
+
+    applyTranslations(currentLang);
+    updateToggleButton(); //set default text
+  }catch(err){
+    console.error("Error Loading Translation: ", err);
   }
-};
-langToggle.addEventListener("click", () =>{
-  isEnglish = !isEnglish;
-  langToggle.textContent = isEnglish ? "中文" : "EN";
-  elements.forEach(el =>{
+}
+
+function applyTranslations(lang){
+  elements.forEach(el => {
     const key = el.getAttribute("data-lang-key");
-    if(!isEnglish && translations.zh[key]) el.textContent = translations.zh[key];
-    else if (isEnglish) el.textContent = el.getAttribute("data-default") || el.textContent;
+    if(translations[lang] && translations[lang][key]){
+      el.textContent = translations[lang][key];
+    }
   });
+}
+
+//set button displayed language 
+function updateToggleButton(){
+  langToggle.textContent = currentLang === "en" ? "中文" : "EN";
+}
+
+langToggle.addEventListener("click", () => {
+  currentLang = currentLang === "en" ? "zh" : "en";
+  localStorage.setItem("lang", currentLang);
+  applyTranslations(currentLang);
+  updateToggleButton();
 });
-//save default content
-elements.forEach(el =>{
-  el.setAttribute("data-default", el.textContent);
-});
+
+window.addEventListener("DOMContentLoaded", loadTranslations);
   
