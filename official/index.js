@@ -22,17 +22,17 @@ function closeMenu(){
 const serviceData = [
     {
       logo: "../img/servicesLogo/cidbLogo.png", //path to relevant logo
-      title: "Service / Product 1",
+      title: "CIDB",
       description: "This is a detailed description for Service / Product 1. You can provide more context, pricing, usage instructions, or images here."
     },
     {
       logo: "../img/servicesLogo/jimLogo.png", //path to relevant logo
-      title: "Service / Product 2",
+      title: "Imigresen Malaysia",
       description: "Full information about Service / Product 2 goes here. Tailor the details for your client's needs."
     },
     {
-      logo: "", //path to relevant logo
-      title: "Service / Product 3",
+      logo: "../img/servicesLogo/expatriateLogo.png", //path to relevant logo
+      title: "Expatriate (ESD)",
       description: "Explain why Service / Product 3 is beneficial. You can add certification info or workflow."
     },
     {

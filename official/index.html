@@ -47,10 +47,10 @@
   <div class="nav-bar" id="navBar">
     <ul>
       <div class="menu-toggle" onclick="closeMenu()">✖</div>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#why-us">Why Us</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#about" data-lang-key="navAbout">About Us</a></li>
+      <li><a href="#services" data-lang-key="navServices">Services</a></li>
+      <li><a href="#why-us" data-lang-key="navWhyus">Why Us</a></li>
+      <li><a href="#contact" data-lang-key="navContact">Contact Us</a></li>
     </ul>
   </div>
 
@@ -64,9 +64,9 @@
 
   <!-- About Us Section -->
   <section id="about" data-aos="fade-up">
-    <h2>About Us</h2>
+    <h2 data-lang-key="navAbout"></h2>
     <p>
-      <h4>这个公司最帅Steven是最帅的老板</h4>
+      <h4 data-lang-key="abHeader"></h4>
       <br><br>
       首先我要感谢很多人，有我的爸爸妈妈，和小熊宝，除了hoziqi因为他对我没有爱和宽容。
       <br><br>
@@ -76,21 +76,25 @@
 
   <!-- 🔷 Services Section -->
   <section id="services" data-aos="fade-up">
-    <h2 data-lang-key="ourServices">Our Services</h2>
+    <h2 data-lang-key="navServices"></h2>
     <div class="service-grid">
       <div class="service-item" onclick="openModal(0)">
+        <!--Img-->
         <h3 data-lang-key="service1Title">Service / Product 1</h3>
         <p data-lang-key="service1Desc">Description 1</p>
       </div>
       <div class="service-item" onclick="openModal(1)">
+        <!--Img-->
         <h3 data-lang-key="service2Title">Service / Product 2</h3>
         <p data-lang-key="service2Desc">Description 2</p>
       </div>
       <div class="service-item" onclick="openModal(2)">
+        <!--Img-->
         <h3 data-lang-key="service3Title">Service / Product 3</h3>
         <p data-lang-key="service3Desc">Description 3</p>
       </div>
       <div class="service-item" onclick="openModal(3)">
+        <!--Img-->
         <h3 data-lang-key="service4Title">Service / Product 4</h3>
         <p data-lang-key="service4Desc">Description 4</p>
       </div>
@@ -99,7 +103,7 @@
 
   <!-- Why Us Section -->
   <section id="why-us" data-aos="fade-up">
-    <h2>Why Choose Us</h2>
+    <h2 data-lang-key="navWhyus"></h2>
     <div class="why-us-grid">
       <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
         <i class="fas fa-bolt"></i>
@@ -126,7 +130,7 @@
 
   <!-- Contact Us Section -->
   <section id="contact" data-aos="fade-up">
-    <h2 class="section-title">Contact Us</h2>
+    <h2 class="section-title" data-lang-key="navContact"></h2>
     <div class="contact-container">
       <!-- 📞 联系方式 -->
       <div class="contact-info">
@@ -176,36 +180,10 @@
     </div>
   </section>
 
-  <hr />
-
-  <!-- 🔷 Coming Soon + Contact Section -->
-  <div class="wrapper">
-    <div class="main-content">
-      <div class="container">
-        <img class="logo" src="../img/TransLogo.png" alt="Sky Consultancy Logo" />
-        <h1>Sky Consultancy <br />Management & Services</h1>
-        <p>Our website is under development.<br />Coming Soon!</p>
-
-        <h3>Find Us From</h3>
-        <div class="btn-group">
-          <a href="https://wa.me/60125583398" class="btn btn-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-          <a href="https://www.facebook.com/SKY.CIDB" class="btn btn-facebook" target="_blank">
-            <i class="fab fa-facebook-f"></i> Facebook
-          </a>
-          <a href="mailto:steven@skyconsultancymns.com" class="btn btn-email">
-            <i class="fas fa-envelope"></i> Email
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 🔷 Footer Section -->
-    <footer>
-      <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved.</p>
-    </footer>
-  </div>
+  <!-- 🔷 Footer Section -->
+  <footer>
+    <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved.</p>
+  </footer>
 
   <!-- 🔷 Modal for Service Details -->
   <div id="serviceModal" class="modal-overlay">

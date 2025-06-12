@@ -94,14 +94,23 @@ body {
 }
 
 .language-btn {
-  min-width: 70px;
-  padding: 8px 15px;
+  width: 80px;       /* ✅ 固定宽度 */
+  height: 40px;       /* ✅ 固定高度 */
   background: white;
   color: #007BFF;
   border: 1px solid #007BFF;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
 }
 
 .language-btn:hover {
@@ -263,6 +272,16 @@ section {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.service-item img {
+  width: 120px;              /* or 100%, depending on container */
+  height: 120px;
+  border-radius: 50%;        /* makes it a perfect circle */
+  object-fit: cover;         /* ensures the image fills the circle properly */
+  display: block;
+  margin: 0 auto 20px;       /* centers the logo inside modal and adds spacing */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional soft shadow */
+}
+
 /* =============================== */
 /* 🧲 Why Us Section Style         */
 /* =============================== */
@@ -390,11 +409,13 @@ section {
   letter-spacing: 0.5px;
 }
 
-/* ✅ 验证失败样式 */
-.contact-form input:invalid,
-.contact-form textarea:invalid,
-.contact-form select:invalid {
+/* ✅ 仅在验证失败 + 聚焦时才红框 */
+.contact-form input:invalid:focus,
+.contact-form textarea:invalid:focus,
+.contact-form select:invalid:focus {
   border-color: #ff4d4f;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
 }
 
 .contact-form input:focus:invalid,

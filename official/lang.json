@@ -1,12 +1,31 @@
 {
     "en": {
-      "heroTitle": "Your Trusted Partner for Construction Compliance",
-      "heroSubtitle": "Expertise and Experience You Can Rely On",
-      "contactUs": "Contact Us"
+
+      "navAbout": "About Us",
+      "navServices": "Services",
+      "navWhyus": "Why Us",
+      "navContact": "Contact Us",
+
+      "heroTitle": "Your Best Partner in Construction Compliance",
+      "heroSubtitle": "We’re not just runners of paperwork — we’re compliance partners who help builders start faster and safer.",
+      "contactUs": "Contact Us",
+
+
+      "abHeader": "Sky Consultancy Management & Services is a consultancy firm specializing in government licensing and compliance for the construction industry. We assist contractors, construction firms, and employers with all regulatory matters related to CIDB, foreign labor, and construction site approval."
+    
+
     },
     "zh": {
-      "heroTitle": "您值得信赖的CIDB合作伙伴",
-      "heroSubtitle": "值得您信赖的专业与经验",
-      "contactUs": "联系我们"
+      "navAbout": "关于企业",
+      "navServices": "提供服务",
+      "navWhyus": "企业优势",
+      "navContact": "联系我们",
+
+      "heroTitle": "您建筑合规的最佳伙伴",
+      "heroSubtitle": "我们不只是代办流程，而是让建筑业更安心、合法、高效开工的合规顾问团队",
+      "contactUs": "联系我们",
+
+      "abAboutus": "关于企业",
+      "abHeader": "Sky Consultancy Management & Services 是一家专注于建筑行业的政府执照与合规服务顾问公司，致力于协助承包商、建筑企业及雇主完成所有与 CIDB、外籍劳工与工程开工相关的法定手续。"
     }
 }
