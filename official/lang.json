@@ -18,16 +18,39 @@
       "serviceIntro": "We specialize in providing comprehensive government compliance services for construction-related businesses, covering the following areas:",
       "service1Title": "CIDB",
       "service1Desc": "Company registration, Green Card, and grade upgrading for contractors.",
-      "service1Details": "",
+      "service1Details": [
+        "Apply for CIDB company registration (PPK & SPKK)",
+        "Green Card application for construction workers",
+        "Grade upgrading services from G1 to G7",
+        "Blacklist removal and system dispute handling"
+      ],
       "service2Title": "Imigresen",
       "service2Desc": "Apply and renew foreign worker permits including SPIKPA and FOMEMA arrangements.",
-      "service2Details": "",
+      "service2Details": [
+        "Application and renewal of foreign worker work permits (PLKS)",
+        "Assistance with SPIKPA medical insurance registration",
+        "Arrangement and follow-up of FOMEMA medical checkups",
+        "Coordination of immigration entry procedures and document preparation",
+        "Matching with licensed quota factories or contractor partners"
+      ],
       "service3Title": "Expatriate (ESD)",
       "service3Desc": "Employment Pass (EP) application and quota setup for skilled expatriates.",
-      "service3Details": "",
+      "service3Details": [
+        "Guidance and process explanation for Employment Pass (EP) application",
+        "Company registration in the ESD system with expatriate job setup",
+        "Evaluation and submission of expatriate quota applications",
+        "Document preparation, online submission, and coordination with immigration authorities",
+        "Support for legally onboarding skilled expatriates to work in Malaysia"
+      ],
       "service4Title": "Others",
       "service4Desc": "Includes MyKKP (PEMTK) site notification and MOF vendor registration.",
-      "service4Details": ""
+      "service4Details": [
+        "Assist in submitting MyKKP (PEMTK) site commencement notifications to JKKP",
+        "Prepare required documents and complete the online declaration process",
+        "Support clients in obtaining official PEMTK certificates for legal project commencement",
+        "Guide companies to register as MOF-certified government vendors",
+        "Provide support for meeting requirements to participate in government projects and tenders"
+      ]
     },
     "zh": {
       "navAbout": "关于企业",
