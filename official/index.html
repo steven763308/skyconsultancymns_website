@@ -58,10 +58,10 @@
 
   <!-- 🔷 Hero Section -->
   <header>
-    <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo" />
-    <h1 class="hero-title" data-lang-key="heroTitle"></h1>
-    <p class="hero-subtitle" data-lang-key="heroSubtitle"></p>
-    <a href="#contact" class="cta-btn" data-lang-key="contactUs"></a>
+      <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo" />
+      <h1 class="hero-title" data-lang-key="heroTitle"></h1>
+      <p class="hero-subtitle" data-lang-key="heroSubtitle"></p>
+      <a href="#contact" class="cta-btn" data-lang-key="contactUs"></a>
   </header>  
 
   <!-- About Us Section -->
@@ -69,13 +69,11 @@
     <h2 data-lang-key="navAbout"></h2>
     <p>
       <p data-lang-key="abHeader"></p>
-      <br><br>
       <p data-lang-key="abInfo"></p>
       
       <!--About Info Bullet-->
       <ul id="abInfoBullet"></ul>
       
-      <br><br>
       <h4 data-lang-key="abFooter"></h4>
     </p>
   </section>
@@ -148,7 +146,18 @@
   <section id="faq" data-aos="fade-up">
     <h2 data-lang-key="navFaq"></h2>
     <p data-lang-key="faqDesc"></p>
-
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggelFaq(this)" data-lang-key="faqQ1"></button>
+      <div class="faq-answer" data-lang-key="faqA1"></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggelFaq(this)" data-lang-key="faqQ2"></button>
+      <div class="faq-answer" data-lang-key="faqA2"></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggelFaq(this)" data-lang-key="faqQ3"></button>
+      <div class="faq-answer" data-lang-key="faqA3"></div>
+    </div>
   </section>
 
   <!-- Contact Us Section -->

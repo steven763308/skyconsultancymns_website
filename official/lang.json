@@ -11,14 +11,13 @@
       "heroSubtitle": "We’re not just runners of paperwork — we’re compliance partners who help builders start faster and safer.",
       "contactUs": "Contact Us",
 
-
       "abHeader": "Sky Consultancy Management & Services is a consultancy firm specializing in government licensing and compliance for the construction industry. We assist contractors, construction firms, and employers with all regulatory matters related to CIDB, foreign labor, and construction site approval.",
       "abInfo": "Our core team has strong practical experience:",
       "abInfoBullet": [
         "Founder Steven has over 5 years of experience in CIDB compliance and registration, having assisted more than 80 contractors with registration, upgrades, blacklist removals, and renewals.",
         "Co-founder Mr. Sky has more than 15 years of experience in foreign labor and immigration matters, specializing in work permits, entry processing, and compliance with Imigresen Malaysia."
       ],
-      "abFooter": "",
+      "abFooter": "We understand the complexity and challenges faced by construction professionals when dealing with government procedures. That’s why we are committed to providing professional, time-saving, and fully compliant one-stop solutions — so you can focus on your projects with complete peace of mind.",
 
       "whyusTitle1": "Mastery of Process & Internal Insight",
       "whyusDesc1": "With extensive hands-on experience across various case types, we maintain close connections with internal officers from relevant departments to help you complete applications efficiently.",
@@ -69,8 +68,9 @@
         "Provide support for meeting requirements to participate in government projects and tenders"
       ],
 
-      "faqDesc": "Frequent Ask Question 1"
-
+      "faqDesc": "Frequent Ask Question 1",
+      "faqQ1": "FAQ Question 1",
+      "faqA1": "FAQ Answer 1"
     },
     "zh": {
       "navAbout": "关于企业",

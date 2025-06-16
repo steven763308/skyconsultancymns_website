@@ -318,6 +318,7 @@ section {
 .service-item {
   background: #f9f9f9;
   min-height: 200px;
+  height: 300px;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -369,7 +370,6 @@ section {
   margin-bottom: 20px;
   color: #214c6b;
 }
-
 
 /* =============================== */
 /* ✉️ Contact Us Section Style     */
