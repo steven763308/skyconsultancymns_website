@@ -2,8 +2,9 @@
     "en": {
 
       "navAbout": "About Us",
-      "navServices": "Services",
       "navWhyus": "Why Us",
+      "navServices": "Services",
+      "navFaq": "FAQ",
       "navContact": "Contact Us",
 
       "heroTitle": "Your Best Partner in Construction Compliance",
@@ -12,8 +13,15 @@
 
 
       "abHeader": "Sky Consultancy Management & Services is a consultancy firm specializing in government licensing and compliance for the construction industry. We assist contractors, construction firms, and employers with all regulatory matters related to CIDB, foreign labor, and construction site approval.",
+      "abInfo": "Our core team has strong practical experience:",
+      "abInfoBullet": [
+        "Founder Steven has over 5 years of experience in CIDB compliance and registration, having assisted more than 80 contractors with registration, upgrades, blacklist removals, and renewals.",
+        "Co-founder Mr. Sky has more than 15 years of experience in foreign labor and immigration matters, specializing in work permits, entry processing, and compliance with Imigresen Malaysia."
+      ],
       "abFooter": "",
 
+      "whyusTitle1": "流程我们熟，内部节奏我们更懂。",
+      "whyusDesc1": "我们熟悉政府流程，快速帮您完成 CIDB、MOF、劳工相关申请。",
 
       "serviceIntro": "We specialize in providing comprehensive government compliance services for construction-related businesses, covering the following areas:",
       "service1Title": "CIDB",
@@ -50,12 +58,16 @@
         "Support clients in obtaining official PEMTK certificates for legal project commencement",
         "Guide companies to register as MOF-certified government vendors",
         "Provide support for meeting requirements to participate in government projects and tenders"
-      ]
+      ],
+
+      "faqDesc": "Frequent Ask Question 1"
+
     },
     "zh": {
       "navAbout": "关于企业",
-      "navServices": "提供服务",
       "navWhyus": "企业优势",
+      "navServices": "提供服务",
+      "navFaq": "常见问题",
       "navContact": "联系我们",
 
       "heroTitle": "您建筑合规的最佳伙伴",
@@ -64,9 +76,16 @@
       
       "abAboutus": "关于企业",
       "abHeader": "Sky Consultancy Management & Services 是一家专注于建筑行业的政府执照与合规服务顾问公司，致力于协助承包商、建筑企业及雇主完成所有与 CIDB、外籍劳工与工程开工相关的法定手续。",
-      "abInfo": "我们的核心团队拥有丰富的实战经验：创办人 Steven 在 CIDB 合规与注册服务领域拥有超过 5 年经验，已协助超过 80 家承包商与建筑公司完成 CIDB 注册、更新、黑名单解除与等级升级等服务，深受客户信任。联合创办人 Mr. Sky 在外籍劳工管理与移民事务方面拥有超过 15 年经验，熟悉移民局（Imigresen Malaysia）的各种程序，擅长协助企业处理外籍准证、劳工入境与合规审查。",
+      "abInfo": "我们的核心团队拥有丰富的实战经验：",
+      "abInfoBullet": [
+        "创办人 Steven 在 CIDB 合规与注册服务领域拥有超过 5 年经验，已协助超过 80 家承包商与建筑公司完成 CIDB 注册、更新、黑名单解除与等级升级等服务，深受客户信任。",
+        "联合创办人 Mr. Sky 在外籍劳工管理与移民事务方面拥有超过 15 年经验，熟悉移民局（Imigresen Malaysia）的各种程序，擅长协助企业处理外籍准证、劳工入境与合规审查。"
+      ],
       "abFooter": "我们理解建筑业者在面对政府程序时的复杂与挑战，因此以「专业、省时、合法」为核心宗旨，提供一站式合规解决方案，让客户能专注工程、无后顾之忧。",
     
+      "whyusTitle1": "流程我们熟，内部节奏我们更懂。",
+      "whyusDesc1": "我们熟悉政府流程，快速帮您完成 CIDB、MOF、劳工相关申请。",
+
       "serviceIntro": "我们专注于为建筑相关企业提供全方位的政府合规服务，涵盖以下领域：",
       "service1Title": "CIDB",
       "service1Desc": "承包商公司CIDB注册、Green Card 劳工卡申请与等级升级服务。",
@@ -102,6 +121,8 @@
         "协助客户获取正式 PEMTK 证书，合法开工",
         "指导公司注册成为财政部（MOF）政府供应商",
         "提供政府工程与投标资格的注册支持"
-      ]
+      ],
+
+      "faqDesc": "常见问题详情"
     }
 }

@@ -49,8 +49,9 @@
     <ul>
       <div class="menu-toggle" onclick="closeMenu()">✖</div>
       <li><a href="#about" data-lang-key="navAbout">About Us</a></li>
-      <li><a href="#services" data-lang-key="navServices">Services</a></li>
       <li><a href="#why-us" data-lang-key="navWhyus">Why Us</a></li>
+      <li><a href="#services" data-lang-key="navServices">Services</a></li>
+      <li><a href="#faq" data-lang-key="navFaq">FAQ</a></li>
       <li><a href="#contact" data-lang-key="navContact">Contact Us</a></li>
     </ul>
   </div>
@@ -67,12 +68,43 @@
   <section id="about" data-aos="fade-up">
     <h2 data-lang-key="navAbout"></h2>
     <p>
-      <h4 data-lang-key="abHeader"></h4>
+      <p data-lang-key="abHeader"></p>
       <br><br>
       <p data-lang-key="abInfo"></p>
+      
+      <!--About Info Bullet-->
+      <ul id="abInfoBullet"></ul>
+      
       <br><br>
       <h4 data-lang-key="abFooter"></h4>
     </p>
+  </section>
+
+    <!-- Why Us Section -->
+  <section id="why-us" data-aos="fade-up">
+    <h2 data-lang-key="navWhyus"></h2>
+    <div class="why-us-grid">
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
+        <i class="fas fa-bolt"></i>
+        <h4 data-lang-key="whyusTitle1"></h4>
+        <p data-lang-key="whyusDesc1"></p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-user-check"></i>
+        <h4>专人服务</h4>
+        <p>一对一专属顾问，全程跟进，服务透明，响应快速。</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-briefcase"></i>
+        <h4>实战经验</h4>
+        <p>丰富的 G1–G7 客户处理经验，懂合规也懂现场。</p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-shield-alt"></i>
+        <h4>信任保障</h4>
+        <p>我们承诺无隐藏费用、不成功不收费，为您权益保驾护航。</p>
+      </div>
+    </div>    
   </section>
 
   <!-- 🔷 Services Section -->
@@ -103,31 +135,11 @@
     </div>
   </section>
 
-  <!-- Why Us Section -->
-  <section id="why-us" data-aos="fade-up">
-    <h2 data-lang-key="navWhyus"></h2>
-    <div class="why-us-grid">
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
-        <i class="fas fa-bolt"></i>
-        <h4>专业高效</h4>
-        <p>我们熟悉政府流程，快速帮您完成 CIDB、MOF、劳工相关申请。</p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-user-check"></i>
-        <h4>专人服务</h4>
-        <p>一对一专属顾问，全程跟进，服务透明，响应快速。</p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-briefcase"></i>
-        <h4>实战经验</h4>
-        <p>丰富的 G1–G7 客户处理经验，懂合规也懂现场。</p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="600">
-        <i class="fas fa-shield-alt"></i>
-        <h4>信任保障</h4>
-        <p>我们承诺无隐藏费用、不成功不收费，为您权益保驾护航。</p>
-      </div>
-    </div>    
+  <!-- 🔷 FAQ Section -->
+  <section id="faq" data-aos="fade-up">
+    <h2 data-lang-key="navFaq"></h2>
+    <p data-lang-key="faqDesc"></p>
+
   </section>
 
   <!-- Contact Us Section -->
@@ -140,8 +152,26 @@
         <p><i class="fas fa-envelope"></i> steven@skyconsultancymns.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
         <div>
-          <!--Add Contact Shortcut-->
-
+          <!-- WhatsApp Contact Shortcut -->
+          <a href="https://wa.link/zylnwa" target="_blank" class="icon-button whatsapp-btn" title="WhatsApp">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp Icon" />
+          </a>
+          <!-- Facebook Page Shortcut -->
+          <a href="https://www.facebook.com/SKY.CIDB" target="_blank" class="icon-button facebook-btn" title="Facebook">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook Icon" />
+          </a>
+          <!-- Instagram Button -->
+          <a href="https://www.instagram.com/yourusername" target="_blank" style="text-decoration: none;">
+            <button class="icon-button instagram-btn">
+              <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram Icon" />
+            </button>
+          </a>
+          <!-- Xiaohongshu (小红书) Button -->
+          <a href="https://www.xiaohongshu.com/user/profile/yourid" target="_blank" style="text-decoration: none;">
+            <button class="icon-button xhs-btn">
+              <img src="../img/xhsLogo.png" alt="Xiaohongshu Icon" />
+            </button>
+          </a>
         </div>
       </div>
 

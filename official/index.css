@@ -179,7 +179,7 @@ header {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
   color: white;
   text-align: center;
-  padding: 80px 20px 100px;
+  padding: 100px 20px 100px;
   position: relative;
   z-index: 1;
   backdrop-filter: blur(2px);
@@ -241,52 +241,6 @@ header {
   margin: 0 auto;
 }
 
-/* =================================== */
-/* ✅ Service Section                  */
-/* =================================== */
-section {
-  padding: 50px 20px;
-  background-color: var(--white);
-}
-
-#services h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #214c6b;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.service-item {
-  background: #f9f9f9;
-  min-height: 200px;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.service-item img {
-  width: 120px;              /* or 100%, depending on container */
-  height: 120px;
-  border-radius: 50%;        /* makes it a perfect circle */
-  object-fit: cover;         /* ensures the image fills the circle properly */
-  display: block;
-  margin: 0 auto 20px;       /* centers the logo inside modal and adds spacing */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional soft shadow */
-}
-
 /* =============================== */
 /* 🧲 Why Us Section Style         */
 /* =============================== */
@@ -339,6 +293,68 @@ section {
   line-height: 1.6;
 }
 
+/* =================================== */
+/* ✅ Service Section                  */
+/* =================================== */
+section {
+  padding: 50px 20px;
+  background-color: var(--white);
+}
+
+#services h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #214c6b;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background: #f9f9f9;
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+  width: 120px;              /* or 100%, depending on container */
+  height: 120px;
+  border-radius: 50%;        /* makes it a perfect circle */
+  object-fit: cover;         /* ensures the image fills the circle properly */
+  display: block;
+  margin: 0 auto 20px;       /* centers the logo inside modal and adds spacing */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional soft shadow */
+}
+
+/* =================================== */
+/* ✅ FAQ Section                      */
+/* =================================== */
+#faq {
+  padding: 50px 20px;
+  background-color: var(--white);
+}
+
+#faq h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #214c6b;
+}
+
+
 /* =============================== */
 /* ✉️ Contact Us Section Style     */
 /* =============================== */
@@ -352,7 +368,7 @@ section {
   margin-bottom: 40px;
 }
 
-#contact h2{
+#contact h2 {
   font-size: 2rem;
   margin-bottom: 40px;
   color: var(--primary-color);
@@ -446,6 +462,54 @@ section {
   background-color: var(--secondary-color, #00509e);
 }
 
+/* =============================== */
+/* 🔗 Social Icon Buttons (Circle) */
+/* =============================== */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ✅ WhatsApp 按钮样式 */
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+/* ✅ Facebook 按钮样式 */
+.facebook-btn {
+  background-color: #1877f2;
+}
+
+/* Platform-specific Colors */
+.instagram-btn {
+  background-color: #C13584;
+}
+
+.instagram-btn:hover {
+  background-color: #e959a3;
+}
+
+.xhs-btn {
+  background-color: #ef2d36; /* 小红书代表色 */
+}
+
+.xhs-btn:hover {
+  background-color: #ff4b57;
+}
 
 /* =================================== */
 /* ✅ Main Content & Info Section      */
@@ -688,10 +752,10 @@ footer {
 /* ✅ Responsive Design                */
 /* =================================== */
 @media (max-width: 600px) {
-  .head-companyname{
+  .head-companyname {
     display: none !important;
   }
-  
+
   h1 {
     font-size: 1.8em;
   }
@@ -722,5 +786,38 @@ footer {
 
   header {
     padding-top: 140px;
+  }
+
+  /* ✅ 表单元素统一样式 */
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  /* ✅ select 元素针对手机优化 */
+  select {
+    appearance: none;
+    background-color: #fff;
+  }
+
+  /* ✅ 对齐 label 和 input */
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-size: 0.95em;
+    margin-bottom: 6px;
   }
 }
