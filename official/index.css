@@ -784,8 +784,26 @@ footer {
     margin-left: auto;
   }
 
+  /* ✅ Hero Section Optimized */
   header {
-    padding-top: 140px;
+    padding: 80px 20px 100px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    white-space: nowrap;
   }
 
   /* ✅ 表单元素统一样式 */
