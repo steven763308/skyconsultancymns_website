@@ -26,6 +26,7 @@
       "serviceIntro": "We specialize in providing comprehensive government compliance services for construction-related businesses, covering the following areas:",
       "service1Title": "CIDB",
       "service1Desc": "Company registration, Green Card, and grade upgrading for contractors.",
+      "clickToView": "Click To View",
       "service1Details": [
         "Apply for CIDB company registration (PPK & SPKK)",
         "Green Card application for construction workers",
@@ -89,6 +90,7 @@
       "serviceIntro": "我们专注于为建筑相关企业提供全方位的政府合规服务，涵盖以下领域：",
       "service1Title": "CIDB",
       "service1Desc": "承包商公司CIDB注册、Green Card 劳工卡申请与等级升级服务。",
+      "clickToView": "点击查看详情",
       "service1Details": [
         "申请 CIDB 公司注册（PPK & SPKK）",
         "员工 Green Card 工人证申请",

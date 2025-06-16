@@ -322,6 +322,8 @@ section {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .service-item:hover {
@@ -329,8 +331,15 @@ section {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.click-note{
+  display: block;
+  font-size: 0.75em;
+  color: #888;
+  margin-top: 4px;
+}
+
 .service-item img {
-  width: 120px;              /* or 100%, depending on container */
+  width: 120px;             /* or 100%, depending on container */
   height: 120px;
   border-radius: 50%;        /* makes it a perfect circle */
   object-fit: cover;         /* ensures the image fills the circle properly */
