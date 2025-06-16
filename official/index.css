@@ -258,7 +258,7 @@ header {
 .why-us-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 50px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -267,12 +267,13 @@ header {
   background: var(--light-grey);
   border-radius: 12px;
   padding: 30px 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-us-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .why-us-item i {
@@ -324,6 +325,7 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
+  padding-bottom: 10px;
 }
 
 .service-item:hover {
@@ -336,6 +338,11 @@ section {
   font-size: 0.75em;
   color: #888;
   margin-top: 4px;
+  position: absolute;
+  align-items: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .service-item img {
