@@ -18,45 +18,65 @@ function closeMenu(){
     nav.classList.toggle('active');
 }
 
-// Service Data (Modal)
-const serviceData = [
-    {
-      logo: "../img/servicesLogo/cidbLogo.png", //path to relevant logo
-      title: "CIDB",
-      description: "This is a detailed description for Service / Product 1. You can provide more context, pricing, usage instructions, or images here."
-    },
-    {
-      logo: "../img/servicesLogo/jimLogo.png", //path to relevant logo
-      title: "Imigresen Malaysia",
-      description: "Full information about Service / Product 2 goes here. Tailor the details for your client's needs."
-    },
-    {
-      logo: "../img/servicesLogo/expatriateLogo.png", //path to relevant logo
-      title: "Expatriate (ESD)",
-      description: "Explain why Service / Product 3 is beneficial. You can add certification info or workflow."
-    },
-    {
-      logo: "", //path to relevant logo
-      title: "Service / Product 4",
-      description: "Detailed overview of Service / Product 4 with solutions and contact methods if needed."
-    }
-  ];
-  
-  //onclick function
-  function openModal(index) {
-    const data = serviceData[index];
+// Static logo paths
+const logoPaths = [
+  "../img/servicesLogo/cidbLogo.png",
+  "../img/servicesLogo/jimLogo.png",
+  "../img/servicesLogo/expatriateLogo.png",
+  "../img/servicesLogo/othersLogo.png"
+];
 
-    const logoElement = document.getElementById("serviceLogo");
-    logoElement.src = data.logo;
-    logoElement.alt = data.title + " Logo";
-    document.getElementById("modalTitle").innerText = data.title;
-    document.getElementById("modalDescription").innerText = data.description;
-    document.getElementById("serviceModal").style.display = "flex";
-  }
+//service logo path
+document.querySelectorAll('.serviceLogo').forEach((img, index) => {
+  img.src = logoPaths[index];
+});
+
+// Modal function with language-loaded data
+function openModal(index) {
+  fetch("lang.json")
+    .then(res => res.json())
+    .then(langData => {
+      const lang = langData[currentLang]; // 选择当前语言
+      const titleKey = `service${index + 1}Title`;
+      const descKey = `service${index + 1}Desc`;
+      const detailsKey = `service${index + 1}Details`;
+
+      const logo = logoPaths[index];
+      const title = lang[titleKey] || "Service";
+      const description = lang[descKey] || "Description not available.";
+      const details = lang[detailsKey] || [];
+
+      // 插入内容到 Modal
+      const logoElement = document.getElementById("serviceLogo");
+      logoElement.src = logo;
+      logoElement.alt = title + " Logo";
+      document.getElementById("modalTitle").innerText = title;
+      document.getElementById("modalDescription").innerText = description;
+
+      const detailsList = document.getElementById("modalDetails");
+      detailsList.innerHTML = ""; // 清空旧内容
+      details.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        detailsList.appendChild(li);
+      });
+
+      document.getElementById("serviceModal").style.display = "flex";
+    })
+    .catch(err => {
+      console.error("Language file loading failed:", err);
+    });
+}
   
   function closeModal() {
     document.getElementById("serviceModal").style.display = "none";
   }
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+      closeModal();
+    }
+  });
   
   // Show or hide back-to-top button on scroll [back to top button]
   window.addEventListener('scroll', function () {
@@ -141,8 +161,10 @@ function applyTranslations(lang){
 }
 
 //set button displayed language 
-function updateToggleButton(){
-  langToggle.textContent = currentLang === "en" ? "中文" : "EN";
+function updateToggleButton() {
+  langToggle.innerHTML = currentLang === "en"
+    ? '<i class="fas fa-globe"></i> 中文'
+    : '<i class="fas fa-globe"></i> EN';
 }
 
 langToggle.addEventListener("click", () => {

@@ -11,9 +11,23 @@
       "contactUs": "Contact Us",
 
 
-      "abHeader": "Sky Consultancy Management & Services is a consultancy firm specializing in government licensing and compliance for the construction industry. We assist contractors, construction firms, and employers with all regulatory matters related to CIDB, foreign labor, and construction site approval."
-    
+      "abHeader": "Sky Consultancy Management & Services is a consultancy firm specializing in government licensing and compliance for the construction industry. We assist contractors, construction firms, and employers with all regulatory matters related to CIDB, foreign labor, and construction site approval.",
+      "abFooter": "",
 
+
+      "serviceIntro": "We specialize in providing comprehensive government compliance services for construction-related businesses, covering the following areas:",
+      "service1Title": "CIDB",
+      "service1Desc": "Company registration, Green Card, and grade upgrading for contractors.",
+      "service1Details": "",
+      "service2Title": "Imigresen",
+      "service2Desc": "Apply and renew foreign worker permits including SPIKPA and FOMEMA arrangements.",
+      "service2Details": "",
+      "service3Title": "Expatriate (ESD)",
+      "service3Desc": "Employment Pass (EP) application and quota setup for skilled expatriates.",
+      "service3Details": "",
+      "service4Title": "Others",
+      "service4Desc": "Includes MyKKP (PEMTK) site notification and MOF vendor registration.",
+      "service4Details": ""
     },
     "zh": {
       "navAbout": "关于企业",
@@ -24,8 +38,47 @@
       "heroTitle": "您建筑合规的最佳伙伴",
       "heroSubtitle": "我们不只是代办流程，而是让建筑业更安心、合法、高效开工的合规顾问团队",
       "contactUs": "联系我们",
-
+      
       "abAboutus": "关于企业",
-      "abHeader": "Sky Consultancy Management & Services 是一家专注于建筑行业的政府执照与合规服务顾问公司，致力于协助承包商、建筑企业及雇主完成所有与 CIDB、外籍劳工与工程开工相关的法定手续。"
+      "abHeader": "Sky Consultancy Management & Services 是一家专注于建筑行业的政府执照与合规服务顾问公司，致力于协助承包商、建筑企业及雇主完成所有与 CIDB、外籍劳工与工程开工相关的法定手续。",
+      "abInfo": "我们的核心团队拥有丰富的实战经验：创办人 Steven 在 CIDB 合规与注册服务领域拥有超过 5 年经验，已协助超过 80 家承包商与建筑公司完成 CIDB 注册、更新、黑名单解除与等级升级等服务，深受客户信任。联合创办人 Mr. Sky 在外籍劳工管理与移民事务方面拥有超过 15 年经验，熟悉移民局（Imigresen Malaysia）的各种程序，擅长协助企业处理外籍准证、劳工入境与合规审查。",
+      "abFooter": "我们理解建筑业者在面对政府程序时的复杂与挑战，因此以「专业、省时、合法」为核心宗旨，提供一站式合规解决方案，让客户能专注工程、无后顾之忧。",
+    
+      "serviceIntro": "我们专注于为建筑相关企业提供全方位的政府合规服务，涵盖以下领域：",
+      "service1Title": "CIDB",
+      "service1Desc": "承包商公司CIDB注册、Green Card 劳工卡申请与等级升级服务。",
+      "service1Details": [
+        "申请 CIDB 公司注册（PPK & SPKK）",
+        "员工 Green Card 工人证申请",
+        "G1 至 G7 等级升级服务",
+        "黑名单解除与系统处理"
+      ],
+      "service2Title": "Imigresen",
+      "service2Desc": "申请与续签外籍劳工准证，包含 SPIKPA 保险与 FOMEMA 健康检查安排。",
+      "service2Details": [
+        "外籍劳工工作准证（PLKS）申请与续签",
+        "协助 SPIKPA 医疗保险购买流程",
+        "FOMEMA 健康检查安排与跟进",
+        "安排入境流程与文件准备",
+        "对接配额工厂或承包商资源"
+      ],
+      "service3Title": "Expatriate (ESD)",
+      "service3Desc": "协助办理外籍技术人员 Employment Pass（EP）与配额设定。",
+      "service3Details": [
+        "Employment Pass（EP）申请指导与流程讲解",
+        "注册公司于 ESD 系统，设定外籍职位与公司资料",
+        "评估与提交外籍职位配额申请",
+        "文件准备、线上提交与移民局互动协助",
+        "协助高技能外籍人员合法引进至马来西亚就业"
+      ],
+      "service4Title": "Others",
+      "service4Desc": "涵盖 MyKKP（PEMTK）工地开工报备与 MOF 财政部供应商注册。",
+      "service4Details": [
+        "协助向 JKKP 提交 MyKKP（PEMTK）工地开工报备",
+        "准备所需文件并完成线上申报流程",
+        "协助客户获取正式 PEMTK 证书，合法开工",
+        "指导公司注册成为财政部（MOF）政府供应商",
+        "提供政府工程与投标资格的注册支持"
+      ]
     }
 }

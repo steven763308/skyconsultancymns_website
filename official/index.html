@@ -12,6 +12,7 @@
   <!-- ✅ External Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- ✅ Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -68,34 +69,35 @@
     <p>
       <h4 data-lang-key="abHeader"></h4>
       <br><br>
-      首先我要感谢很多人，有我的爸爸妈妈，和小熊宝，除了hoziqi因为他对我没有爱和宽容。
+      <p data-lang-key="abInfo"></p>
       <br><br>
-      <h4>我的梦想是财富自由，帮我的小熊宝找新的妈妈！</h4>
+      <h4 data-lang-key="abFooter"></h4>
     </p>
   </section>
 
   <!-- 🔷 Services Section -->
   <section id="services" data-aos="fade-up">
     <h2 data-lang-key="navServices"></h2>
+    <p data-lang-key="serviceIntro"></p>
     <div class="service-grid">
       <div class="service-item" onclick="openModal(0)">
-        <!--Img-->
-        <h3 data-lang-key="service1Title">Service / Product 1</h3>
+        <img class="serviceLogo" data-index="0" alt="CIDB Logo">
+        <h3 data-lang-key="service1Title">CIDB</h3>
         <p data-lang-key="service1Desc">Description 1</p>
       </div>
       <div class="service-item" onclick="openModal(1)">
-        <!--Img-->
-        <h3 data-lang-key="service2Title">Service / Product 2</h3>
+        <img class="serviceLogo" data-index="1" alt="Imigresen Logo">
+        <h3 data-lang-key="service2Title">Imigresen</h3>
         <p data-lang-key="service2Desc">Description 2</p>
       </div>
       <div class="service-item" onclick="openModal(2)">
-        <!--Img-->
-        <h3 data-lang-key="service3Title">Service / Product 3</h3>
+        <img class="serviceLogo" data-index="2" alt="ESD Logo">
+        <h3 data-lang-key="service3Title">Expatriate</h3>
         <p data-lang-key="service3Desc">Description 3</p>
       </div>
       <div class="service-item" onclick="openModal(3)">
-        <!--Img-->
-        <h3 data-lang-key="service4Title">Service / Product 4</h3>
+        <img class="serviceLogo" data-index="3" alt="Others Logo">
+        <h3 data-lang-key="service4Title">Others</h3>
         <p data-lang-key="service4Desc">Description 4</p>
       </div>
     </div>
@@ -192,6 +194,8 @@
       <img id="serviceLogo" alt="serviceLogo">
       <h3 id="modalTitle">Service Title</h3>
       <p id="modalDescription">Service full description...</p>
+      <hr>
+        <ul id="modalDetails"></ul> <!-- ✅ 改为 ul 列表 -->
     </div>
   </div>
 
