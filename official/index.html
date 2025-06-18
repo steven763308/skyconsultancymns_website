@@ -64,19 +64,18 @@
       <a href="#contact" class="cta-btn" data-lang-key="contactUs"></a>
   </header>  
 
-  <!-- About Us Section -->
-  <section id="about" data-aos="fade-up">
-    <h2 data-lang-key="navAbout"></h2>
-    <p>
-      <p data-lang-key="abHeader"></p>
-      <p data-lang-key="abInfo"></p>
-      
-      <!--About Info Bullet-->
-      <ul id="abInfoBullet"></ul>
-      
-      <h4 data-lang-key="abFooter"></h4>
-    </p>
-  </section>
+<!-- About Us Section -->
+<section id="about" data-aos="fade-up">
+  <div class="about-container">
+    <h2 data-lang-key="navAbout" data-aos="zoom-in"></h2>
+    <p data-lang-key="abHeader" data-aos="fade-up" data-aos-delay="100"></p>
+    <p data-lang-key="abInfo" data-aos="fade-up" data-aos-delay="200"></p>
+    <!-- About Info Bullet -->
+    <div class="about-bullet" data-lang-key="abInfoBullet" data-aos="fade-up" data-aos-delay="300"></div>
+    <h4 data-lang-key="abFooter" data-aos="fade-up" data-aos-delay="400"></h4>
+  </div>
+</section>
+
 
     <!-- Why Us Section -->
   <section id="why-us" data-aos="fade-up">
@@ -143,22 +142,54 @@
   </section>
 
   <!-- 🔷 FAQ Section -->
-  <section id="faq" data-aos="fade-up">
-    <h2 data-lang-key="navFaq"></h2>
-    <p data-lang-key="faqDesc"></p>
+<section id="faq" data-aos="fade-up">
+  <h2 class="faq-title" data-lang-key="navFaq"></h2>
+  <p class="faq-desc" data-lang-key="faqDesc"></p>
+  <div class="faq-container">
     <div class="faq-item">
-      <button class="faq-question" onclick="toggelFaq(this)" data-lang-key="faqQ1"></button>
-      <div class="faq-answer" data-lang-key="faqA1"></div>
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ1"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA1List"></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggelFaq(this)" data-lang-key="faqQ2"></button>
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ2"></span>
+      </button>
       <div class="faq-answer" data-lang-key="faqA2"></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" onclick="toggelFaq(this)" data-lang-key="faqQ3"></button>
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ3"></span>
+      </button>
       <div class="faq-answer" data-lang-key="faqA3"></div>
     </div>
-  </section>
+        <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ4"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA4"></div>
+    </div>
+        <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ5"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA5"></div>
+    </div>
+        <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ6"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA6"></div>
+    </div>
+  </div>
+</section>
 
   <!-- Contact Us Section -->
   <section id="contact" data-aos="fade-up">

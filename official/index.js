@@ -151,14 +151,34 @@ async function loadTranslations(){
   }
 }
 
-function applyTranslations(lang){
+function applyTranslations(lang) {
   elements.forEach(el => {
+    const listKey = el.getAttribute("data-lang-list");
     const key = el.getAttribute("data-lang-key");
-    if(translations[lang] && translations[lang][key]){
-      el.textContent = translations[lang][key];
+
+    // ✅ 优先处理 data-lang-list（你偏好的 list 格式）
+    if (listKey && translations[lang] && Array.isArray(translations[lang][listKey])) {
+      const listItems = translations[lang][listKey]
+        .map(item => `<li>${item}</li>`)
+        .join("");
+      el.innerHTML = `<ul>${listItems}</ul>`;
+      return; // 避免继续执行 data-lang-key
+    }
+
+    // ✅ 普通翻译 或 自动识别数组为 bullet list
+    if (key && translations[lang] && translations[lang][key]) {
+      const value = translations[lang][key];
+
+      if (Array.isArray(value)) {
+        const listItems = value.map(item => `<li>${item}</li>`).join("");
+        el.innerHTML = `<ul>${listItems}</ul>`;
+      } else {
+        el.textContent = value;
+      }
     }
   });
 }
+
 
 //set button displayed language 
 function updateToggleButton() {
@@ -173,5 +193,28 @@ langToggle.addEventListener("click", () => {
   applyTranslations(currentLang);
   updateToggleButton();
 });
+
+//FAQ toggle
+function toggleFaq(button) {
+  const answer = button.nextElementSibling;
+  const icon = button.querySelector(".faq-icon");
+
+  const isOpen = answer.classList.contains("open");
+
+  // 可选：是否互斥关闭其他
+  document.querySelectorAll(".faq-answer").forEach(a => {
+    a.classList.remove("open");
+  });
+  document.querySelectorAll(".faq-icon").forEach(i => {
+    i.textContent = "+";
+  });
+
+  // 打开当前项
+  if (!isOpen) {
+    answer.classList.add("open");
+    icon.textContent = "–";
+  }
+}
+
 
 window.addEventListener("DOMContentLoaded", loadTranslations);
