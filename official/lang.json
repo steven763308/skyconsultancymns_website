@@ -106,6 +106,7 @@
       "serviceIntro": "我们专注于为建筑相关企业提供全方位的政府合规服务，涵盖以下领域：",
       "service1Title": "CIDB",
       "service1Desc": "承包商公司CIDB注册、Green Card 劳工卡申请与等级升级服务。",
+      "service1DescDetails": "CIDB（Construction Industry Development Board Malaysia）是马来西亚建筑工业发展局，负责监管全国建筑业发展、承包商注册与等级认证制度。若您是承包商或工程公司，必须先在 CIDB 注册，并取得相应等级（G1 至 G7），才能合法参与政府或私人建筑项目。",
       "clickToView": "点击查看详情",
       "service1Details": [
         "申请 CIDB 公司注册（PPK & SPKK）",
@@ -113,8 +114,9 @@
         "G1 至 G7 等级升级服务",
         "黑名单解除与系统处理"
       ],
-      "service2Title": "Imigresen",
+      "service2Title": "Imigresen Malaysia",
       "service2Desc": "申请与续签外籍劳工准证，包含 SPIKPA 保险与 FOMEMA 健康检查安排。",
+      "service2DescDetails": "Imigresen Malaysia（马来西亚移民局）负责外籍劳工入境、合法工作准证（PLKS）以及劳工配额的核准与监督。凡是雇用外籍员工（例如尼泊尔、孟加拉、印尼等）的公司，都需通过移民局、JTKSM（人力资源部）和 KDN（内政部）等多方配合办理准证与入境手续。",
       "service2Details": [
         "外籍劳工工作准证（PLKS）申请与续签",
         "协助 SPIKPA 医疗保险购买流程",
@@ -124,6 +126,7 @@
       ],
       "service3Title": "Expatriate (ESD)",
       "service3Desc": "协助办理外籍技术人员 Employment Pass（EP）与配额设定。",
+      "service3DescDetails": "ESD（Expatriate Services Division）为马来西亚移民局（Imigresen Malaysia）旗下专门处理外籍专业人士工作准证（Employment Pass）的线上系统。它适用于聘请高级技术人员、经理层、外籍合伙人或专业顾问等合法在大马工作的企业与机构。若您是技术型公司、外国控股企业或需要引进特定专业人才的本地公司，必须先透过 ESD 系统注册为认可公司并申请配额（quota）后，才能为外籍员工申请 Employment Pass（EP）。",
       "service3Details": [
         "Employment Pass（EP）申请指导与流程讲解",
         "注册公司于 ESD 系统，设定外籍职位与公司资料",
@@ -133,6 +136,7 @@
       ],
       "service4Title": "Others",
       "service4Desc": "涵盖 MyKKP（PEMTK）工地开工报备与 MOF 财政部供应商注册。",
+      "service4DescDetails": "除了常见的 CIDB 和外劳准证，我们也协助客户处理其他政府部门要求的特定执照与报备，确保项目在正式开工或投标前合法合规，不遗漏关键细节。",
       "service4Details": [
         "协助向 JKKP 提交 MyKKP（PEMTK）工地开工报备",
         "准备所需文件并完成线上申报流程",

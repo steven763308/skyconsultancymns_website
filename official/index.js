@@ -38,7 +38,7 @@ function openModal(index) {
     .then(langData => {
       const lang = langData[currentLang]; // 选择当前语言
       const titleKey = `service${index + 1}Title`;
-      const descKey = `service${index + 1}Desc`;
+      const descKey = `service${index + 1}DescDetails`;
       const detailsKey = `service${index + 1}Details`;
 
       const logo = logoPaths[index];

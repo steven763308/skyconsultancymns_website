@@ -366,10 +366,6 @@ section {
   color: #214c6b;
 }
 
-#services p {
-  margin-left: 50px;
-}
-
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
