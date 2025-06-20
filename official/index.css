@@ -244,7 +244,7 @@ header {
 /* ✅ Container 包裹器 */
 .about-container {
   padding: 0 50px;
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -813,11 +813,24 @@ footer {
   padding: 30px 25px;
   border-radius: 12px;
   max-width: 800px;
+  height: 600px;
   width: 100%;
   text-align: left;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   animation: popUp 0.4s ease-out;
+  overflow-y: auto; /*allow for scroll*/
+}
+
+@keyframes slideIn{
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-content img {
@@ -830,15 +843,31 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional soft shadow */
 }
 
-/* Close Button */
 .close-modal {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 15px;         /* 浮出 modal 上方 */
+  right: 15px;       /* 浮出 modal 右侧 */
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  color: #333;
   font-size: 1.5rem;
-  color: #555;
-  cursor: pointer;
   font-weight: bold;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-modal:hover {
+  background-color: #f44336; /* 红色警示调 */
+  color: white;
+  transform: scale(1.1) rotate(90deg); /* 可选动画 */
 }
 
 /* Animation */

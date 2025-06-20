@@ -68,9 +68,40 @@
         "Provide support for meeting requirements to participate in government projects and tenders"
       ],
 
-      "faqDesc": "我们整理了客户最常问的几个问题，点击展开了解详情:",
-      "faqQ1": "FAQ Question 1",
-      "faqA1": "FAQ Answer 1"
+      "faqDesc": "We've compiled some of the most frequently asked questions from our clients. Click to expand and learn more:",
+      "faqQ1": "Are you scammers? Can I pay only after the job is done?",
+      "faqA1List": [
+        "We understand your concerns about trust in the digital age.",
+        "Sky Consultancy follows a milestone-based payment system: we charge a reasonable deposit depending on the service type, and the remaining balance is only collected after the service is completed.",
+        "We have numerous successful cases and positive feedback. We would never compromise our brand over a small deposit. Our goal is to build trust, foster long-term partnerships, and gain referrals—not just a one-off deal.",
+        "If you're still unsure, we’re happy to provide company registration documents, actual case studies, or proof of collaboration to give you peace of mind before working with us."
+      ],
+      "faqQ2": "Where is your company located? Can I visit your office?",
+      "faqA2": [
+        "We do have a physical office, but thanks to technological advancements, we aim to provide efficient online services to clients nationwide in Malaysia.",
+        "No matter which state you're in, we can assist you through phone, WhatsApp, or email—ensuring you don’t have to travel just to get things done.",
+        "If there's a need for a face-to-face discussion, we're more than happy to arrange an appointment to ensure every detail is clearly communicated."
+      ],
+      "faqQ3": "My company hasn’t been registered yet. Can I still apply for a license?",
+      "faqA3": [
+        "Most business-related applications require a registered company. If you haven’t set one up yet, we can assist you with the SSM company registration process.",
+        "If needed, we’re also glad to help you build the entire company structure and compliance process from scratch to ensure everything goes smoothly later on."
+      ],
+      "faqQ4": "What happens if the application fails?",
+      "faqA4": [
+        "If the application fails due to document issues, we’ll help you make corrections and resubmit. Some services also come with a 'no success, no charge' guarantee.",
+        "For services that require upfront fees even if they might not succeed, we will clearly explain the risks and charges before proceeding—rest assured there will be no hidden or surprise fees midway."
+      ],
+      "faqQ5": "How long does the process take?",
+      "faqA5": [
+        "It depends on the type of service you're applying for. Each government department and application type has a different processing timeline.",
+        "You can let us know what you need assistance with, and we’ll provide a rough timeline based on past experience. We’ll also keep you updated throughout the process for full transparency and peace of mind."
+      ],
+      "faqQ6": "My project is quite complex. Do you have experience handling such cases?",
+      "faqA6": [
+        "We’ve handled various complex cases including foreign worker penalty points, project suspensions, and fast-track G upgrades. We have solid hands-on experience and welcome further consultation.",
+        "Additionally, we have strong partnerships with professionals and institutions across the industry, enabling us to integrate resources based on your specific situation and deliver the most effective and high-quality solutions."
+      ]
     },
     "zh": {
       "navAbout": "关于企业",
