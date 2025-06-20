@@ -114,6 +114,10 @@
         "G1 至 G7 等级升级服务",
         "黑名单解除与系统处理"
       ],
+      "service1Option": "",
+      "service1OptionDesc": "",
+      "serviceHintTitle": "专业建议：",
+      "service1HintDesc": "无论您是首次注册 CIDB，还是想升级到更高等级，我们都能根据您的公司状况、财务资料、人力配额，提供最适合的注册/升级路径，并协助您避开常见错误与系统封锁。",
       "service2Title": "Imigresen Malaysia",
       "service2Desc": "申请与续签外籍劳工准证，包含 SPIKPA 保险与 FOMEMA 健康检查。",
       "service2DescDetails": "Imigresen Malaysia（马来西亚移民局）负责外籍劳工入境、合法工作准证（PLKS）以及劳工配额的核准与监督。凡是雇用外籍员工（例如尼泊尔、孟加拉、印尼等）的公司，都需通过移民局、JTKSM（人力资源部）和 KDN（内政部）等多方配合办理准证与入境手续。",
@@ -124,6 +128,7 @@
         "安排入境流程与文件准备",
         "对接配额工厂或承包商资源"
       ],
+      "service2HintDesc": "我们熟悉劳工入境从“申请配额”到“领取准证”的每个步骤，并与中介及 Manpower Agency 保持联系。配合厂房、建筑项目的实际需求，提供最顺畅的申请流程规划。",
       "service3Title": "Expatriate (ESD)",
       "service3Desc": "协助办理外籍技术人员 Employment Pass（EP）与配额设定。",
       "service3DescDetails": "ESD（Expatriate Services Division）为马来西亚移民局（Imigresen Malaysia）旗下专门处理外籍专业人士工作准证（Employment Pass）的线上系统。它适用于聘请高级技术人员、经理层、外籍合伙人或专业顾问等合法在大马工作的企业与机构。若您是技术型公司、外国控股企业或需要引进特定专业人才的本地公司，必须先透过 ESD 系统注册为认可公司并申请配额（quota）后，才能为外籍员工申请 Employment Pass（EP）。",
@@ -134,6 +139,7 @@
         "文件准备、线上提交与移民局互动协助",
         "协助高技能外籍人员合法引进至马来西亚就业"
       ],
+      "service3HintDesc": "我们了解外籍准证流程复杂、耗时且极度讲究文件正确性。Sky Consultancy 提供一站式规划、申报与跟进服务，确保您的企业合法引进高素质人才，顺利开展业务。",
       "service4Title": "Others",
       "service4Desc": "涵盖 MyKKP（PEMTK）工地开工报备与 MOF 财政部供应商注册。",
       "service4DescDetails": "除了常见的 CIDB 和外劳准证，我们也协助客户处理其他政府部门要求的特定执照与报备，确保项目在正式开工或投标前合法合规，不遗漏关键细节。",
@@ -144,6 +150,7 @@
         "指导公司注册成为财政部（MOF）政府供应商",
         "提供政府工程与投标资格的注册支持"
       ],
+      "service4HintDesc": "工程即将开工但未完成 JKKP 报备的项目公司, 想参与政府招标但尚未注册财政部代码的小型承包商, 项目涉及外劳宿舍、设备租赁、土木改建等特定用途的承包单位",
 
       "faqDesc": "我们整理了客户最常问的几个问题，点击展开了解详情:",
       "faqQ1": "你们是骗子吗，不可以完成后才付款吗",

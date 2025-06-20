@@ -40,11 +40,13 @@ function openModal(index) {
       const titleKey = `service${index + 1}Title`;
       const descKey = `service${index + 1}DescDetails`;
       const detailsKey = `service${index + 1}Details`;
+      const serHintDesc = `service${index + 1}HintDesc`;
 
       const logo = logoPaths[index];
       const title = lang[titleKey] || "Service";
       const description = lang[descKey] || "Description not available.";
       const details = lang[detailsKey] || [];
+      const hintDesc = lang[serHintDesc] || [];
 
       // 插入内容到 Modal
       const logoElement = document.getElementById("serviceLogo");
@@ -52,6 +54,7 @@ function openModal(index) {
       logoElement.alt = title + " Logo";
       document.getElementById("modalTitle").innerText = title;
       document.getElementById("modalDescription").innerText = description;
+      document.getElementById("serviceModalHintDesc").innerText = hintDesc;
 
       const detailsList = document.getElementById("modalDetails");
       detailsList.innerHTML = ""; // 清空旧内容
