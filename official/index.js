@@ -36,33 +36,62 @@ function openModal(index) {
   fetch("lang.json")
     .then(res => res.json())
     .then(langData => {
-      const lang = langData[currentLang]; // 选择当前语言
+      const lang = langData[currentLang];
       const titleKey = `service${index + 1}Title`;
+      const descHintTitle = `serviceHintTitle`;
       const descKey = `service${index + 1}DescDetails`;
       const detailsKey = `service${index + 1}Details`;
+      const detailsObjectKey = `service${index + 1}DetailsObject`; // ✅ 新增字段
       const serHintDesc = `service${index + 1}HintDesc`;
 
       const logo = logoPaths[index];
       const title = lang[titleKey] || "Service";
+      const hintTitle = lang[descHintTitle] || [];
       const description = lang[descKey] || "Description not available.";
       const details = lang[detailsKey] || [];
+      const detailsObject = lang[detailsObjectKey] || [];
       const hintDesc = lang[serHintDesc] || [];
 
-      // 插入内容到 Modal
-      const logoElement = document.getElementById("serviceLogo");
-      logoElement.src = logo;
-      logoElement.alt = title + " Logo";
+      // 插入基本内容
+      document.getElementById("serviceLogo").src = logo;
+      document.getElementById("serviceLogo").alt = title + " Logo";
       document.getElementById("modalTitle").innerText = title;
+      document.getElementById("serviceModalHint").innerHTML = `<i class="fas fa-lightbulb" style="margin-right: 8px; color: #ffc107;"></i>${hintTitle}`;
       document.getElementById("modalDescription").innerText = description;
       document.getElementById("serviceModalHintDesc").innerText = hintDesc;
 
-      const detailsList = document.getElementById("modalDetails");
-      detailsList.innerHTML = ""; // 清空旧内容
-      details.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        detailsList.appendChild(li);
-      });
+      // ✅ 渲染复杂内容（CIDB / Imigresen）
+      const detailsContainer = document.querySelector(".modal-content-details");
+      detailsContainer.innerHTML = "";
+
+      if (detailsObject.length > 0) {
+        const h3 = document.createElement("h3");
+        h3.innerHTML = `<i class="fas fa-file-alt" style="margin-right: 8px;"></i>我们提供的 ${title} 服务包括:`;
+        detailsContainer.appendChild(h3);
+
+        detailsObject.forEach(block => {
+          const h4 = document.createElement("h4");
+          h4.textContent = block.title;
+          detailsContainer.appendChild(h4);
+
+          const ul = document.createElement("ul");
+          block.items.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+          });
+          detailsContainer.appendChild(ul);
+        });
+      } else {
+        // 否则使用原来的简单 bullet list 渲染
+        const simpleList = document.getElementById("modalDetails");
+        simpleList.innerHTML = "";
+        details.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          simpleList.appendChild(li);
+        });
+      }
 
       document.getElementById("serviceModal").style.display = "flex";
     })

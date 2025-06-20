@@ -31,42 +31,104 @@
       "whyusDesc5": "From the first step to the last, we explain each stage in plain, simple language — so you know exactly what’s happening, and can confidently leave the process to us.",
 
       "serviceIntro": "We specialize in providing comprehensive government compliance services for construction-related businesses, covering the following areas:",
+
       "service1Title": "CIDB",
-      "service1Desc": "Company registration, Green Card, and grade upgrading for contractors.",
-      "clickToView": "Click To View",
-      "service1Details": [
-        "Apply for CIDB company registration (PPK & SPKK)",
-        "Green Card application for construction workers",
-        "Grade upgrading services from G1 to G7",
-        "Blacklist removal and system dispute handling"
+      "service1Desc": "CIDB registration for contractor companies, Green Card application for workers, and grade upgrading services.",
+      "service1DescDetails": "CIDB (Construction Industry Development Board Malaysia) is the authority responsible for regulating Malaysia’s construction industry, contractor registration, and grade certification. If you are a contractor or engineering company, you must register with CIDB and obtain the appropriate grade (G1 to G7) before participating legally in government or private construction projects.",
+      "clickToView": "Click to view details",
+      "service1DetailsObject": [
+        {
+          "title": "1. CIDB Company Registration (PPK & SPKK focused)",
+          "items": ["New license registration", "License renewal", "License grade upgrading", "Company profile updates (address, directors, technical staff, SSM documents, etc.)"]
+        },
+        {
+          "title": "2. CIDB Green Card (Personnel)",
+          "items": ["Registration", "Renewal", "Replacement for lost card"]
+        },
+        {
+          "title": "3. Blacklist Removal & System Assistance",
+          "items": ["Assistance with incomplete projects, past records, rejected or blocked registrations", "Appeal guidance and CIDB system submission support"]
+        },
+        {
+          "title": "4. Project Declaration",
+          "items": ["Assist contractors in submitting construction projects (Projek) to the CIDB system", "Coordinate project start dates and manage data completeness", "Undeclared projects risk penalties during surprise inspections"]
+        },
+        {
+          "title": "5. Other Related Services",
+          "items": ["ABM (Construction Academy) course arrangements and registration", "Support for partnership project registration, documentation, and compliance"]
+        }
       ],
-      "service2Title": "Imigresen",
-      "service2Desc": "Apply and renew foreign worker permits including SPIKPA and FOMEMA arrangements.",
-      "service2Details": [
-        "Application and renewal of foreign worker work permits (PLKS)",
-        "Assistance with SPIKPA medical insurance registration",
-        "Arrangement and follow-up of FOMEMA medical checkups",
-        "Coordination of immigration entry procedures and document preparation",
-        "Matching with licensed quota factories or contractor partners"
+      "serviceHintTitle": "Pro Tip:",
+      "service1HintDesc": "Whether you're registering with CIDB for the first time or upgrading to a higher grade, we can assess your company profile, financial records, and manpower to recommend the best path forward—while helping you avoid common mistakes and system blocks.",
+      
+      "service2Title": "Imigresen Malaysia",
+      "service2Desc": "Application and renewal of foreign worker permits, including SPIKPA insurance and FOMEMA medical checks.",
+      "service2DescDetails": "Imigresen Malaysia (Immigration Department of Malaysia) oversees the entry, permit issuance (PLKS), and quota approval for foreign workers. Companies hiring foreign employees (e.g., from Nepal, Bangladesh, Indonesia, etc.) must process permits in collaboration with Imigresen, JTKSM (Labour Department), and KDN (Ministry of Home Affairs).",
+      "service2DetailsObject": [
+        {
+          "title": "1. Quota & Foreign Worker Approval",
+          "items": ["Assist companies in applying for JTKSM foreign worker quotas", "Prepare supporting documents for KDN approval letters", "Track application status to avoid delays"]
+        },
+        {
+          "title": "2. PLKS Permit Application & Renewal",
+          "items": ["Apply for work permits (Pas Lawatan Kerja Sementara) for new hires", "Annual PLKS renewal service (including passport data updates)", "Permit sticker processing and system integration"]
+        },
+        {
+          "title": "3. SPIKPA Medical Insurance Purchase Support",
+          "items": ["SPIKPA is mandatory for foreign workers before permit issuance", "We offer online/bulk purchase assistance and updates"]
+        },
+        {
+          "title": "4. FOMEMA Health Screening & Follow-up",
+          "items": ["Foreign workers must pass FOMEMA health checks for permit applications/renewals", "We assist with scheduling, tracking reports, and re-screening if needed"]
+        },
+        {
+          "title": "5. Document Preparation & Entry Process Coordination",
+          "items": ["Flight tickets, VDR visa, airport pickup, passport copies, worker photos, etc.", "Provide standard templates and document review service", "Coordinate with agents and manpower agencies for smooth entry"]
+        },
+        {
+          "title": "6. Quota Transfer / Contractor Matching / Special Approval Support",
+          "items": ["Support for companies lacking quotas to connect with approved quota holders", "Help resolve issues such as expired quotas or blocked permits", "Handle matters related to ePLKS system"]
+        }
       ],
+      "service2HintDesc": "We are familiar with every step from 'Quota Application' to 'Permit Issuance' and maintain close ties with agents and manpower agencies. We tailor the entire process to match your factory or construction project needs, ensuring a smooth and compliant workflow.",
+
       "service3Title": "Expatriate (ESD)",
-      "service3Desc": "Employment Pass (EP) application and quota setup for skilled expatriates.",
-      "service3Details": [
-        "Guidance and process explanation for Employment Pass (EP) application",
-        "Company registration in the ESD system with expatriate job setup",
-        "Evaluation and submission of expatriate quota applications",
-        "Document preparation, online submission, and coordination with immigration authorities",
-        "Support for legally onboarding skilled expatriates to work in Malaysia"
+      "service3Desc": "Support for Employment Pass (EP) applications and quota setup for foreign professionals.",
+      "service3DescDetails": "ESD (Expatriate Services Division) is an online system under Imigresen Malaysia that manages work permits (Employment Pass) for foreign professionals. It's required for hiring technical experts, managers, foreign partners, or consultants. Companies must first register under the ESD system as Recognized Companies and apply for quotas before submitting EP applications.",
+      "service3DetailsObject": [
+        {
+          "title": "1. Company Registration & Quota Setup",
+          "items": ["Guide company through ESD registration and certification", "Define job titles, functions, salary levels, and categories", "Submit quota requests and track status"]
+        },
+        {
+          "title": "2. EP Application & Renewal Services",
+          "items": ["Prepare documents (passport, photo, academic certs, offer letter, etc.)", "Submit e-EP application, manage VDR, endorsement, and related steps", "EP renewals (1/2/3 years)"]
+        },
+        {
+          "title": "3. Other Immigration & HR-Related Affairs",
+          "items": ["Job changes, salary adjustment applications", "Company data updates (address, director changes)", "Appeal support for rejected applications"]
+        }
       ],
+      "service3HintDesc": "We understand the complexity and strict documentation requirements of expatriate permit applications. Sky Consultancy offers end-to-end support from planning to submission and tracking to ensure you bring in top international talent legally and efficiently.",
+
       "service4Title": "Others",
-      "service4Desc": "Includes MyKKP (PEMTK) site notification and MOF vendor registration.",
-      "service4Details": [
-        "Assist in submitting MyKKP (PEMTK) site commencement notifications to JKKP",
-        "Prepare required documents and complete the online declaration process",
-        "Support clients in obtaining official PEMTK certificates for legal project commencement",
-        "Guide companies to register as MOF-certified government vendors",
-        "Provide support for meeting requirements to participate in government projects and tenders"
+      "service4Desc": "Covers MyKKP (PEMTK) site notification and MOF supplier registration.",
+      "service4DescDetails": "Beyond CIDB and foreign worker permits, we also help clients manage special licenses and reports required by other government departments to ensure legal compliance before project kick-off or tender submissions.",
+      "service4DetailsObject": [
+        {
+          "title": "1. MyKKP (PEMTK) Site Notification",
+          "items": ["Assist contractors/developers in submitting project data via JKKP system", "Determine correct submission type (contractor or developer)", "Prepare documents, submit online, and obtain official PEMTK certificate"]
+        },
+        {
+          "title": "2. MOF Supplier Registration",
+          "items": ["Assist companies in registering with MOF (new or renewal)", "Ensure the company qualifies to participate in government tenders"]
+        },
+        {
+          "title": "3. SPAN Contractor / Piping Service Registration",
+          "items": ["Help register companies under SPAN for water-related construction", "Register categories like Plumbing Contractor, Piping Installer, SPK", "Prepare documents, guide submission, and follow up certification"]
+        }
       ],
+      "service4HintDesc": "Ideal for project companies about to start construction but haven’t filed PEMTK reports, small contractors planning to bid on government projects without MOF codes, or firms involved in foreign worker dormitories, equipment rental, and civil modifications.",
 
       "faqDesc": "We've compiled some of the most frequently asked questions from our clients. Click to expand and learn more:",
       "faqQ1": "Are you scammers? Can I pay only after the job is done?",
@@ -139,47 +201,94 @@
       "service1Desc": "承包商公司CIDB注册、Green Card 劳工卡申请与等级升级服务。",
       "service1DescDetails": "CIDB（Construction Industry Development Board Malaysia）是马来西亚建筑工业发展局，负责监管全国建筑业发展、承包商注册与等级认证制度。若您是承包商或工程公司，必须先在 CIDB 注册，并取得相应等级（G1 至 G7），才能合法参与政府或私人建筑项目。",
       "clickToView": "点击查看详情",
-      "service1Details": [
-        "申请 CIDB 公司注册（PPK & SPKK）",
-        "员工 Green Card 工人证申请",
-        "G1 至 G7 等级升级服务",
-        "黑名单解除与系统处理"
+      "service1DetailsObject": [
+        {
+          "title": "1. 公司 CIDB（主要专注PPK & SPKK）",
+          "items": ["新注册执照", "执照更新", "执照等级升级", "公司资料更新（地址、董事、技术人员、SSM 文件等）"]
+        },
+        {
+          "title": "2. CIDB 建筑卡（个人）",
+          "items": ["注册", "延期", "遗失重办"]
+        },
+        {
+          "title": "3. 黑名单解除与系统处理",
+          "items": ["协助承包商处理未完项目、旧案、拒绝注册或等级封锁", "提供申诉建议与系统申报辅助"]
+        },
+        {
+          "title": "4. 项目上报",
+          "items": ["协助承包商提交施工项目（Projek）至 CIDB 系统备案", "配合开工日期、项目资料完整性管理", "如果项目没有申报突击检查将面临处罚"]
+        },
+        {
+          "title": "5. 其他相关事务",
+          "items": ["ABM（建筑学院）课程安排与报名", "合作项目注册、文书准备与备案支持"]
+        }
       ],
-      "service1Option": "",
-      "service1OptionDesc": "",
       "serviceHintTitle": "专业建议：",
       "service1HintDesc": "无论您是首次注册 CIDB，还是想升级到更高等级，我们都能根据您的公司状况、财务资料、人力配额，提供最适合的注册/升级路径，并协助您避开常见错误与系统封锁。",
       "service2Title": "Imigresen Malaysia",
       "service2Desc": "申请与续签外籍劳工准证，包含 SPIKPA 保险与 FOMEMA 健康检查。",
       "service2DescDetails": "Imigresen Malaysia（马来西亚移民局）负责外籍劳工入境、合法工作准证（PLKS）以及劳工配额的核准与监督。凡是雇用外籍员工（例如尼泊尔、孟加拉、印尼等）的公司，都需通过移民局、JTKSM（人力资源部）和 KDN（内政部）等多方配合办理准证与入境手续。",
-      "service2Details": [
-        "外籍劳工工作准证（PLKS）申请与续签",
-        "协助 SPIKPA 医疗保险购买流程",
-        "FOMEMA 健康检查安排与跟进",
-        "安排入境流程与文件准备",
-        "对接配额工厂或承包商资源"
+      "service2DetailsObject": [
+        {
+          "title": "1. 配额与劳工核准申请",
+          "items": ["协助公司申请 JTKSM 外劳配额", "准备 KDN（内政部）批准信资料", "追踪批准状态，避免耽误工期"]
+        },
+        {
+          "title": "2. PLKS 准证申请与续签服务",
+          "items": ["新聘外劳的工作准证（Pas Lawatan Kerja Sementara）申请", "每年 PLKS 准证续签服务（包括护照资料更新）", "准证贴纸处理与系统对接"]
+        },
+        {
+          "title": "3. SPIKPA 医疗保险协助购买",
+          "items": ["SPIKPA 为外劳强制医疗保险，必须于准证前购买", "我们提供线上/批量代购协助与更新"]
+        },
+        {
+          "title": "4. FOMEMA 健康检查安排与跟进",
+          "items": ["外劳须通过 FOMEMA 检查才可申请/续签准证", "协助安排检查、查询报告状态、处理复检"]
+        },
+        {
+          "title": "5. 文件准备与入境流程协助",
+          "items": ["飞机票、VDR签证、接机、护照副本、劳工照片等", "提供标准表格填写、资料审核服务", "与代理及 Manpower Agency 协调快速入境"]
+        },
+        {
+          "title": "6. 配额转移 / 承包商对接 / 批文追踪等特殊事务",
+          "items": ["支援资源不足企业找到合格配额企业合作", "协助解决配额失效、签证受限等问题", "处理与 ePLKS 系统相关事宜"]
+        }
       ],
       "service2HintDesc": "我们熟悉劳工入境从“申请配额”到“领取准证”的每个步骤，并与中介及 Manpower Agency 保持联系。配合厂房、建筑项目的实际需求，提供最顺畅的申请流程规划。",
       "service3Title": "Expatriate (ESD)",
       "service3Desc": "协助办理外籍技术人员 Employment Pass（EP）与配额设定。",
       "service3DescDetails": "ESD（Expatriate Services Division）为马来西亚移民局（Imigresen Malaysia）旗下专门处理外籍专业人士工作准证（Employment Pass）的线上系统。它适用于聘请高级技术人员、经理层、外籍合伙人或专业顾问等合法在大马工作的企业与机构。若您是技术型公司、外国控股企业或需要引进特定专业人才的本地公司，必须先透过 ESD 系统注册为认可公司并申请配额（quota）后，才能为外籍员工申请 Employment Pass（EP）。",
-      "service3Details": [
-        "Employment Pass（EP）申请指导与流程讲解",
-        "注册公司于 ESD 系统，设定外籍职位与公司资料",
-        "评估与提交外籍职位配额申请",
-        "文件准备、线上提交与移民局互动协助",
-        "协助高技能外籍人员合法引进至马来西亚就业"
+      "service3DetailsObject": [
+        {
+          "title": "1. 公司注册与职位配额申请",
+          "items": ["协助公司完成 ESD 线上注册与认证", "协助设定职位名称、岗位性质、薪资等级与所属类别", "提交 Employment Pass 配额申请并追踪状态"]
+        },
+        {
+          "title": "2. Employment Pass（EP）首次申请与续签服务",
+          "items": ["准备外籍员工资料（护照、照片、学历证明、聘用信等）", "协助提交电子申请（e-EP）、处理 VDR、贴签等流程", "Employment Pass 续签（1年 / 2年 / 3年）"]
+        },
+        {
+          "title": "3. 其他相关移民局与高层人力资源事务",
+          "items": ["职位转换、薪资调整申请", "公司资料更新（换地址、董事变更）", "被拒申请的上诉支持（appeal）"]
+        }
       ],
       "service3HintDesc": "我们了解外籍准证流程复杂、耗时且极度讲究文件正确性。Sky Consultancy 提供一站式规划、申报与跟进服务，确保您的企业合法引进高素质人才，顺利开展业务。",
       "service4Title": "Others",
       "service4Desc": "涵盖 MyKKP（PEMTK）工地开工报备与 MOF 财政部供应商注册。",
       "service4DescDetails": "除了常见的 CIDB 和外劳准证，我们也协助客户处理其他政府部门要求的特定执照与报备，确保项目在正式开工或投标前合法合规，不遗漏关键细节。",
-      "service4Details": [
-        "协助向 JKKP 提交 MyKKP（PEMTK）工地开工报备",
-        "准备所需文件并完成线上申报流程",
-        "协助客户获取正式 PEMTK 证书，合法开工",
-        "指导公司注册成为财政部（MOF）政府供应商",
-        "提供政府工程与投标资格的注册支持"
+      "service4DetailsObject": [
+        {
+          "title": "1. MyKKP（PEMTK）工地开工报备",
+          "items": ["协助承包商/发展商向 JKKP 系统报备项目资料", "判断是否以 kontraktor 或 project developer 身份呈报", "准备文件、完成线上提交并获取正式 PEMTK 证书"]
+        },
+        {
+          "title": "2. 财政部供应商注册（MOF）",
+          "items": ["协助公司完成 MOF 注册（新公司或更新）", "保障企业拥有合法政府工程投标资格"]
+        },
+        {
+          "title": "3. SPAN 承包商/管道服务注册",
+          "items": ["协助公司在 SPAN 系统注册成为水务领域合法承包商", "注册类别如：Plumbing Contractor、Piping Installer、SPK申请等", "准备文件、指导提交、跟进认证进度"]
+        }
       ],
       "service4HintDesc": "工程即将开工但未完成 JKKP 报备的项目公司, 想参与政府招标但尚未注册财政部代码的小型承包商, 项目涉及外劳宿舍、设备租赁、土木改建等特定用途的承包单位",
 
