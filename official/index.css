@@ -889,6 +889,46 @@ footer {
   overflow-y: auto;
 }
 
+.btnInterest-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#btnInterest {
+  display: inline-flex; /* 用 flex 对齐图标和文字 */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: linear-gradient(to right, #28a745, #218838);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+#btnInterest i {
+  font-size: 1.2em;
+}
+
+#btnInterest:hover {
+  background: linear-gradient(to right, #218838, #1e7e34);
+  transform: translateY(-2px);
+}
+
+#btnInterest:active {
+  transform: scale(0.97);
+}
+
 /* 主标题（通常是 CIDB / Imigresen 服务） */
 .modal-content-details h3 {
   font-size: 1.3rem;
@@ -916,7 +956,7 @@ footer {
 }
 
 .modal-content-details li {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #444;
   margin-bottom: 5px;

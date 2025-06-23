@@ -31,6 +31,14 @@ document.querySelectorAll('.serviceLogo').forEach((img, index) => {
   img.src = logoPaths[index];
 });
 
+//whatsapp link array
+const whatsappLink = [
+  "https://api.whatsapp.com/send?phone=60125583398&text=CIDB%20Enquiry", //service CIDB
+  "https://api.whatsapp.com/send?phone=60125583398&text=Imigresen%20Enquiry", //service Imigresen
+  "https://api.whatsapp.com/send?phone=60125583398&text=Expatriate%20(ESD)%20Enquiry", //service ESD
+  "https://api.whatsapp.com/send?phone=60125583398&text=Others%20Service%20Enquiry%20(MyKKP%2C%20MOF%2C%20etc...)", //service Others (MyKKP, MOF)
+]
+
 // Modal function with language-loaded data
 function openModal(index) {
   fetch("lang.json")
@@ -92,6 +100,12 @@ function openModal(index) {
           simpleList.appendChild(li);
         });
       }
+
+      //update WhatsApp Button Link
+      const btn = document.getElementById("btnInterest");
+      btn.onclick = () => {
+        window.open(whatsappLink[index], "_blank");
+      };
 
       document.getElementById("serviceModal").style.display = "flex";
     })
@@ -211,7 +225,6 @@ function applyTranslations(lang) {
   });
 }
 
-
 //set button displayed language 
 function updateToggleButton() {
   langToggle.innerHTML = currentLang === "en"
@@ -247,6 +260,5 @@ function toggleFaq(button) {
     icon.textContent = "–";
   }
 }
-
 
 window.addEventListener("DOMContentLoaded", loadTranslations);
