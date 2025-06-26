@@ -1,9 +1,16 @@
 //preload animation
 window.addEventListener("load", () => {
-    setTimeout(() => {
-      const preloader = document.getElementById("preloader");
-      preloader.classList.add("hidden");
-    }, 2000); // 2.5秒后隐藏
+  const pre = document.getElementById("preloader");
+
+  // ✅ 延迟 2.5 秒再开始移除动画
+  setTimeout(() => {
+    pre.classList.add("hide");
+  }, 2500); // 可改为 3000 即 3 秒
+
+  // ✅ 动画滑出后彻底移除元素
+  setTimeout(() => {
+    pre.remove();
+  }, 4000); // 此值 = 上面 2500 + 动画滑出时间 1500
 });
 
 //open menu sidebar
