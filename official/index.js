@@ -74,7 +74,7 @@ function openModal(index) {
 
       if (detailsObject.length > 0) {
         const h3 = document.createElement("h3");
-        h3.innerHTML = `<i class="fas fa-file-alt" style="margin-right: 8px;"></i>我们提供的 ${title} 服务包括:`;
+        h3.innerHTML = `<i class="fas fa-file-alt" style="margin-right: 8px;"></i><span data-lang-key="serviceIncludeTitle"></span>`;
         detailsContainer.appendChild(h3);
 
         detailsObject.forEach(block => {
