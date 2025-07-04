@@ -56,7 +56,7 @@ function openModal(index) {
       const descHintTitle = `serviceHintTitle`;
       const descKey = `service${index + 1}DescDetails`;
       const detailsKey = `service${index + 1}Details`;
-      const detailsObjectKey = `service${index + 1}DetailsObject`; // ✅ 新增字段
+      const detailsObjectKey = `service${index + 1}DetailsObject`;
       const serHintDesc = `service${index + 1}HintDesc`;
 
       const logo = logoPaths[index];
@@ -75,15 +75,24 @@ function openModal(index) {
       document.getElementById("modalDescription").innerText = description;
       document.getElementById("serviceModalHintDesc").innerText = hintDesc;
 
-      // ✅ 渲染复杂内容（CIDB / Imigresen）
+      // 清空内容区块
       const detailsContainer = document.querySelector(".modal-content-details");
       detailsContainer.innerHTML = "";
 
+      // ✅ 动态获取包含服务名的标题句
+      function getTranslatedText(key, replacements = {}) {
+        const template = lang[key] || "";
+        return template.replace(/{(\w+)}/g, (_, k) => replacements[k] || "");
+      }
+
       if (detailsObject.length > 0) {
+        // ✅ 插入包含服务名称的标题
         const h3 = document.createElement("h3");
-        h3.innerHTML = `<i class="fas fa-file-alt" style="margin-right: 8px;"></i><span data-lang-key="serviceIncludeTitle"></span>`;
+        const includeTitle = getTranslatedText("serviceIncludeTitle", { service: title }); // title 为当前服务名，如 CIDB
+        h3.innerHTML = `<i class="fas fa-file-alt" style="margin-right: 8px;"></i><span>${includeTitle}</span>`;
         detailsContainer.appendChild(h3);
 
+        // 插入每个模块区块
         detailsObject.forEach(block => {
           const h4 = document.createElement("h4");
           h4.textContent = block.title;
@@ -98,7 +107,7 @@ function openModal(index) {
           detailsContainer.appendChild(ul);
         });
       } else {
-        // 否则使用原来的简单 bullet list 渲染
+        // 简单 bullet list 渲染
         const simpleList = document.getElementById("modalDetails");
         simpleList.innerHTML = "";
         details.forEach(item => {
@@ -108,12 +117,13 @@ function openModal(index) {
         });
       }
 
-      //update WhatsApp Button Link
+      // 更新 WhatsApp 按钮链接
       const btn = document.getElementById("btnInterest");
       btn.onclick = () => {
         window.open(whatsappLink[index], "_blank");
       };
 
+      // 显示 modal
       document.getElementById("serviceModal").style.display = "flex";
     })
     .catch(err => {

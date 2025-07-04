@@ -14,8 +14,8 @@
       "abHeader": "Sky Consultancy Management & Services is a consultancy firm specializing in government licensing and compliance for the construction industry. We assist contractors, construction firms, and employers with all regulatory matters related to CIDB, foreign labor, and construction site approval.",
       "abInfo": "Our core team has strong practical experience:",
       "abInfoBullet": [
-        "Founder Steven has over 5 years of experience in CIDB compliance and registration, having assisted more than 80 contractors with registration, upgrades, blacklist removals, and renewals.",
-        "Co-founder Mr. Sky has more than 15 years of experience in foreign labor and immigration matters, specializing in work permits, entry processing, and compliance with Imigresen Malaysia."
+        "Mr. Sky has more than 15 years of experience in foreign labor and immigration matters, specializing in work permits, entry processing, and compliance with Imigresen Malaysia.",
+        "Mr. Steven has over 5 years of experience in CIDB compliance and registration, having assisted more than 80 contractors with registration, upgrades, blacklist removals, and renewals."
       ],
       "abFooter": "We understand the complexity and challenges faced by construction professionals when dealing with government procedures. That’s why we are committed to providing professional, time-saving, and fully compliant one-stop solutions — so you can focus on your projects with complete peace of mind.",
 
@@ -31,7 +31,7 @@
       "whyusDesc5": "From the first step to the last, we explain each stage in plain, simple language — so you know exactly what’s happening, and can confidently leave the process to us.",
 
       "serviceIntro": "We specialize in providing comprehensive government compliance services for construction-related businesses, covering the following areas:",
-      "serviceIncludeTitle": "Our services for {title} include:",
+      "serviceIncludeTitle": "Our services for {service} include:",
       "service1Title": "CIDB",
       "service1Desc": "CIDB registration for contractor companies, Green Card application for workers, and grade upgrading services.",
       "service1DescDetails": "CIDB (Construction Industry Development Board Malaysia) is the authority responsible for regulating Malaysia’s construction industry, contractor registration, and grade certification. If you are a contractor or engineering company, you must register with CIDB and obtain the appropriate grade (G1 to G7) before participating legally in government or private construction projects.",
@@ -181,8 +181,8 @@
       "abHeader": "Sky Consultancy Management & Services 是一家专注于建筑行业的政府执照与合规服务顾问公司，致力于协助承包商、建筑企业及雇主完成所有与 CIDB、外籍劳工与工程开工相关的法定手续。",
       "abInfo": "我们的核心团队拥有丰富的实战经验：",
       "abInfoBullet": [
-        "创办人 Steven 在 CIDB 合规与注册服务领域拥有超过 5 年经验，已协助超过 80 家承包商与建筑公司完成 CIDB 注册、更新、黑名单解除与等级升级等服务，深受客户信任。",
-        "联合创办人 Mr. Sky 在外籍劳工管理与移民事务方面拥有超过 15 年经验，熟悉移民局（Imigresen Malaysia）的各种程序，擅长协助企业处理外籍准证、劳工入境与合规审查。"
+        "Mr. Sky 在外籍劳工管理与移民事务方面拥有超过 15 年经验，熟悉移民局（Imigresen Malaysia）的各种程序，擅长协助企业处理外籍准证、劳工入境与合规审查。",
+        "Steven 在 CIDB 合规与注册服务领域拥有超过 5 年经验，已协助超过 80 家承包商与建筑公司完成 CIDB 注册、更新、黑名单解除与等级升级等服务，深受客户信任。"
       ],
       "abFooter": "我们理解建筑业者在面对政府程序时的复杂与挑战，因此以「专业、省时、合法」为核心宗旨，提供一站式合规解决方案，让客户能专注工程、无后顾之忧。",
     
@@ -198,7 +198,7 @@
       "whyusDesc5": "从第一步到最后一步，我们会用通俗易懂的方式说明每个阶段要做什么，让你明明白白放心交给我们处理。",
 
       "serviceIntro": "我们专注于为建筑相关企业提供全方位的政府合规服务，涵盖以下领域：",
-      "serviceIncludeTitle": "我们提供的 {title} 服务包括:",
+      "serviceIncludeTitle": "我们提供的 {service} 服务包括:",
       "service1Title": "CIDB",
       "service1Desc": "承包商公司CIDB注册、Green Card 劳工卡申请与等级升级服务。",
       "service1DescDetails": "CIDB（Construction Industry Development Board Malaysia）是马来西亚建筑工业发展局，负责监管全国建筑业发展、承包商注册与等级认证制度。若您是承包商或工程公司，必须先在 CIDB 注册，并取得相应等级（G1 至 G7），才能合法参与政府或私人建筑项目。",
