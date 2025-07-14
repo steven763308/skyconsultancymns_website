@@ -67,28 +67,16 @@
       "service2DescDetails": "Imigresen Malaysia (Immigration Department of Malaysia) oversees the entry, permit issuance (PLKS), and quota approval for foreign workers. Companies hiring foreign employees (e.g., from Nepal, Bangladesh, Indonesia, etc.) must process permits in collaboration with Imigresen, JTKSM (Labour Department), and KDN (Ministry of Home Affairs).",
       "service2DetailsObject": [
         {
-          "title": "1. Quota & Foreign Worker Approval",
-          "items": ["Assist companies in applying for JTKSM foreign worker quotas", "Prepare supporting documents for KDN approval letters", "Track application status to avoid delays"]
-        },
-        {
-          "title": "2. PLKS Permit Application & Renewal",
+          "title": "1. PLKS Permit Application & Renewal",
           "items": ["Apply for work permits (Pas Lawatan Kerja Sementara) for new hires", "Annual PLKS renewal service (including passport data updates)", "Permit sticker processing and system integration"]
         },
         {
-          "title": "3. SPIKPA Medical Insurance Purchase Support",
+          "title": "2. SPIKPA Medical Insurance Purchase Support",
           "items": ["SPIKPA is mandatory for foreign workers before permit issuance", "We offer online/bulk purchase assistance and updates"]
         },
         {
-          "title": "4. FOMEMA Health Screening & Follow-up",
+          "title": "3. FOMEMA Health Screening & Follow-up",
           "items": ["Foreign workers must pass FOMEMA health checks for permit applications/renewals", "We assist with scheduling, tracking reports, and re-screening if needed"]
-        },
-        {
-          "title": "5. Document Preparation & Entry Process Coordination",
-          "items": ["Flight tickets, VDR visa, airport pickup, passport copies, worker photos, etc.", "Provide standard templates and document review service", "Coordinate with agents and manpower agencies for smooth entry"]
-        },
-        {
-          "title": "6. Quota Transfer / Contractor Matching / Special Approval Support",
-          "items": ["Support for companies lacking quotas to connect with approved quota holders", "Help resolve issues such as expired quotas or blocked permits", "Handle matters related to ePLKS system"]
         }
       ],
       "service2HintDesc": "We are familiar with every step from 'Quota Application' to 'Permit Issuance' and maintain close ties with agents and manpower agencies. We tailor the entire process to match your factory or construction project needs, ensuring a smooth and compliant workflow.",
@@ -233,28 +221,16 @@
       "service2DescDetails": "Imigresen Malaysia（马来西亚移民局）负责外籍劳工入境、合法工作准证（PLKS）以及劳工配额的核准与监督。凡是雇用外籍员工（例如尼泊尔、孟加拉、印尼等）的公司，都需通过移民局、JTKSM（人力资源部）和 KDN（内政部）等多方配合办理准证与入境手续。",
       "service2DetailsObject": [
         {
-          "title": "1. 配额与劳工核准申请",
-          "items": ["协助公司申请 JTKSM 外劳配额", "准备 KDN（内政部）批准信资料", "追踪批准状态，避免耽误工期"]
-        },
-        {
-          "title": "2. PLKS 准证申请与续签服务",
+          "title": "1. PLKS 准证申请与续签服务",
           "items": ["新聘外劳的工作准证（Pas Lawatan Kerja Sementara）申请", "每年 PLKS 准证续签服务（包括护照资料更新）", "准证贴纸处理与系统对接"]
         },
         {
-          "title": "3. SPIKPA 医疗保险协助购买",
+          "title": "2. SPIKPA 医疗保险协助购买",
           "items": ["SPIKPA 为外劳强制医疗保险，必须于准证前购买", "我们提供线上/批量代购协助与更新"]
         },
         {
-          "title": "4. FOMEMA 健康检查安排与跟进",
+          "title": "3. FOMEMA 健康检查安排与跟进",
           "items": ["外劳须通过 FOMEMA 检查才可申请/续签准证", "协助安排检查、查询报告状态、处理复检"]
-        },
-        {
-          "title": "5. 文件准备与入境流程协助",
-          "items": ["飞机票、VDR签证、接机、护照副本、劳工照片等", "提供标准表格填写、资料审核服务", "与代理及 Manpower Agency 协调快速入境"]
-        },
-        {
-          "title": "6. 配额转移 / 承包商对接 / 批文追踪等特殊事务",
-          "items": ["支援资源不足企业找到合格配额企业合作", "协助解决配额失效、签证受限等问题", "处理与 ePLKS 系统相关事宜"]
         }
       ],
       "service2HintDesc": "我们熟悉劳工入境从“申请配额”到“领取准证”的每个步骤，并与中介及 Manpower Agency 保持联系。配合厂房、建筑项目的实际需求，提供最顺畅的申请流程规划。",
