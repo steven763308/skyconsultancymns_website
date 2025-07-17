@@ -3,44 +3,313 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sky Consultancy specializes in CIDB and construction related applications in Malaysia. Contact us for fast, professional government compliance services." />
-  <link rel="icon" href="../img/FullLogo.png" type="image/png" />
-  <title>Coming Soon - Sky Consultancy</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- ✅ SEO Meta -->
+  <meta name="description" content="Sky Consultancy specializes in CIDB and construction related applications in Malaysia. Contact us for fast, professional government compliance services." />
+  <link rel="icon" href="../img/TransLogo.png" type="image/png" />
+  <title>Sky Consultancy Management & Services</title>
+
+  <!-- ✅ External Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ✅ Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Custom Styles -->
+  <link rel="stylesheet" href="../src/index.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <div class="main-content">
-      <div class="container">
-        <img class="logo" src="../img/TransLogo.png" alt="Sky Consultancy Logo" />
-        <h1>Sky Consultancy <br />Management & Services</h1>
-        <p>Our website is under development.</p>
-        <br />
-        <p>Coming Soon!</p>
 
-        <h3>Find Us From</h3>
-        <div class="btn-group">
-          <a href="https://wa.me/60125583398" class="btn btn-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-          <a href="https://www.facebook.com/SKY.CIDB" class="btn btn-facebook" target="_blank">
-            <i class="fab fa-facebook-f"></i> Facebook
-          </a>
-          <a href="mailto:steven@skyconsultancymns.com" class="btn btn-email">
-            <i class="fas fa-envelope"></i> Email
-          </a>
-        </div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-wrapper">
+      <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="preloader-logo" />
+      <div class="loader-track">
+        <div class="loader-bar"></div>
       </div>
     </div>
-
-    <footer>
-      <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved.</p>
-    </footer>
   </div>
+
+  <!-- 🔷 Header Section -->
+  <div class="sticky-header">
+    <div class="left">
+      <img src="../img/TransLogo.png" alt="Sky Logo">
+      <h2 class="head-companyname">Sky Consultancy Management & Services</h2>
+    </div>
+    <!-- 🔷 ToolBar with Language + Menu Toggle -->
+    <div class="toolBar">
+      <button id="language-toggle" class="language-btn">
+        <i class="fas fa-globe"></i> EN
+      </button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </div>
+
+  <!-- 🔷 Hidden Navigation Bar -->
+  <div class="nav-bar" id="navBar">
+    <ul>
+      <div class="menu-toggle" onclick="closeMenu()">✖</div>
+      <li><a href="#about" data-lang-key="navAbout">About Us</a></li>
+      <li><a href="#why-us" data-lang-key="navWhyus">Why Us</a></li>
+      <li><a href="#services" data-lang-key="navServices">Services</a></li>
+      <li><a href="#faq" data-lang-key="navFaq">FAQ</a></li>
+      <li><a href="#contact" data-lang-key="navContact">Contact Us</a></li>
+    </ul>
+  </div>
+
+<!-- 🔷 Hero Section -->
+<header>
+  <!-- 🟡 圆形 Logo 包裹层 -->
+  <div class="logo-wrapper">
+    <img src="../img/TransLogo.png" alt="Sky Consultancy Logo" class="logo" />
+  </div>
+
+  <h1 class="hero-title" data-lang-key="heroTitle">Sky Consultancy</h1>
+  <p class="hero-subtitle" data-lang-key="heroSubtitle">我们为建筑行业提供一站式合规服务</p>
+  <a href="#contact" class="cta-btn" data-lang-key="contactUs">联系我们</a>
+</header>
+
+<!-- About Us Section -->
+<section id="about" data-aos="fade-up">
+  <div class="about-container">
+    <h2 data-lang-key="navAbout" data-aos="zoom-in"></h2>
+    <p data-lang-key="abHeader" data-aos="fade-up" data-aos-delay="100"></p>
+    <p data-lang-key="abInfo" data-aos="fade-up" data-aos-delay="200"></p>
+    <!-- About Info Bullet -->
+    <div class="about-bullet" data-lang-key="abInfoBullet" data-aos="fade-up" data-aos-delay="300"></div>
+    <h4 data-lang-key="abFooter" data-aos="fade-up" data-aos-delay="400"></h4>
+  </div>
+</section>
+
+    <!-- Why Us Section -->
+  <section id="why-us" data-aos="fade-up">
+    <h2 data-lang-key="navWhyus"></h2>
+    <div class="why-us-grid">
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
+        <i class="fas fa-bolt"></i>
+        <h4 data-lang-key="whyusTitle1"></h4>
+        <p data-lang-key="whyusDesc1"></p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-user-check"></i>
+        <h4 data-lang-key="whyusTitle2"></h4>
+        <p data-lang-key="whyusDesc2"></p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-briefcase"></i>
+        <h4 data-lang-key="whyusTitle3"></h4>
+        <p data-lang-key="whyusDesc3"></p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-shield-alt"></i>
+        <h4 data-lang-key="whyusTitle4"></h4>
+        <p data-lang-key="whyusDesc4"></p>
+      </div>
+      <div class="why-us-item" data-aos="fade-up" data-aos-delay="800">
+        <i class="fas fa-compass"></i>
+        <h4 data-lang-key="whyusTitle5"></h4>
+        <p data-lang-key="whyusDesc5"></p>
+      </div>
+    </div>    
+  </section>
+
+  <!-- 🔷 Services Section -->
+  <section id="services" data-aos="fade-up">
+    <h2 data-lang-key="navServices"></h2>
+    <p id="serviceIntro" data-lang-key="serviceIntro"></p>
+    <div class="service-grid">
+      <div class="service-item" onclick="openModal(0)" data-aos="fade-up" data-aos-delay="0">
+        <img class="serviceLogo" data-index="0" alt="CIDB Logo">
+        <h3 data-lang-key="service1Title">CIDB</h3>
+        <p data-lang-key="service1Desc">Description 1</p>
+        <small class="click-note" data-lang-key="clickToView">Click to View</small>
+      </div>
+      <div class="service-item" onclick="openModal(1)" data-aos="fade-up" data-aos-delay="200">
+        <img class="serviceLogo" data-index="1" alt="Imigresen Logo">
+        <h3 data-lang-key="service2Title">Imigresen</h3>
+        <p data-lang-key="service2Desc">Description 2</p>
+        <small class="click-note" data-lang-key="clickToView">Click to View</small>
+      </div>
+      <div class="service-item" onclick="openModal(2)" data-aos="fade-up" data-aos-delay="400">
+        <img class="serviceLogo" data-index="2" alt="ESD Logo">
+        <h3 data-lang-key="service3Title">Expatriate</h3>
+        <p data-lang-key="service3Desc">Description 3</p>
+        <small class="click-note" data-lang-key="clickToView">Click to View</small>
+      </div>
+      <div class="service-item" onclick="openModal(3)" data-aos="fade-up" data-aos-delay="600">
+        <img class="serviceLogo" data-index="3" alt="Others Logo">
+        <h3 data-lang-key="service4Title">Others</h3>
+        <p data-lang-key="service4Desc">Description 4</p>
+        <small class="click-note" data-lang-key="clickToView">Click to View</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔷 FAQ Section -->
+<section id="faq" data-aos="fade-up">
+  <h2 class="faq-title" data-lang-key="navFaq"></h2>
+  <p class="faq-desc" data-lang-key="faqDesc"></p>
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ1"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA1List"></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ2"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA2"></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ3"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA3"></div>
+    </div>
+        <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ4"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA4"></div>
+    </div>
+        <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ5"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA5"></div>
+    </div>
+        <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span class="faq-icon">+</span>
+        <span data-lang-key="faqQ6"></span>
+      </button>
+      <div class="faq-answer" data-lang-key="faqA6"></div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title" data-lang-key="navContact"></h2>
+    <div class="contact-container">
+      <!-- 📞 联系方式 -->
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> +60 12-558 3398</p>
+        <p><i class="fas fa-envelope"></i> steven@skyconsultancymns.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
+        <div>
+          <!-- WhatsApp Contact Shortcut -->
+          <a href="https://wa.link/zylnwa" target="_blank" class="icon-button whatsapp-btn" title="WhatsApp">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp Icon" />
+          </a>
+          <!-- Facebook Page Shortcut -->
+          <a href="https://www.facebook.com/SKY.CIDB" target="_blank" class="icon-button facebook-btn" title="Facebook">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook Icon" />
+          </a>
+          <!-- Instagram Button -->
+          <a href="https://www.instagram.com/skyconsultancy_mns/" target="_blank" style="text-decoration: none;">
+            <button class="icon-button instagram-btn">
+              <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram Icon" />
+            </button>
+          </a>
+          <!-- Xiaohongshu (小红书) Button 
+          <a href="https://www.xiaohongshu.com/user/profile/yourid" target="_blank" style="text-decoration: none;">
+            <button class="icon-button xhs-btn">
+              <img src="../img/xhsLogo.png" alt="Xiaohongshu Icon" />
+            </button>
+          </a>-->
+        </div>
+      </div>
+
+    <!-- 📝 表单提交到 Formspree -->
+    <form class="contact-form" action="https://formspree.io/f/mblojgjv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+
+      <input type="email" name="email" placeholder="Your Email" required />
+
+      <!-- ✅ 电话号码带 +60 验证 -->
+      <input
+        id="phone"
+        type="tel"
+        name="phone"
+        placeholder="+60 12-345 6789"
+        pattern="\+60 ?1[0-9]?( |-)?[0-9]{3,4}( |-)?[0-9]{4}"
+        required
+        title="Phone number must start with +60 and follow Malaysian format."
+      />
+
+      <select name="service" required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="CIDB Registration">CIDB Registration (G1–G7)</option>
+        <option value="Green Card">Green Card Application</option>
+        <option value="MOF Certification">MOF Certification</option>
+        <option value="Visa">Foreign Worker Visa</option>
+        <option value="Other">Other / General Inquiry</option>
+      </select>
+
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <!-- 防 spam -->
+      <input type="hidden" name="_gotcha" style="display:none">
+      <input type="hidden" name="_next" value="https://skyconsultancymns.com/thank-you.html">
+
+      <button type="submit">Send Message</button>
+    </form>    
+    </div>
+  </section>
+
+  <!-- 🔷 Footer Section -->
+  <footer>
+    <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved. | Powered By ByteX Technology</p>
+  </footer>
+
+  <!-- 🔷 Modal for Service Details -->
+  <div id="serviceModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">✕</span>
+      <img id="serviceLogo" alt="serviceLogo">
+      <h3 id="modalTitle">Service Title</h3>
+      <p id="modalDescription">Service full description...</p>
+      <hr>
+      <!--services details line-->
+      <div class="modal-content-details"></div>
+
+        <ul id="modalDetails"></ul> <!-- ✅ 改为 ul 列表 -->
+      <hr>
+      <h4 id="serviceModalHint"></h4>
+      <p id="serviceModalHintDesc">tips here</p>
+
+      <div class="btnInterest-Wrapper">
+        <button id="btnInterest" data-lang-key="btnInterest">
+          <i class="fab fa-whatsapp"></i> <span class="btnInterest-text">WhatsApp 询问</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔝 Back to Top Button -->
+  <button id="backToTop" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ✅ Custom JS Script -->
+  <script src="../src/index.js"></script>
+
+  <!-- ✅ AOS Animation Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

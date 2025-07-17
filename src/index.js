@@ -195,7 +195,7 @@ let currentLang = "en";
 //load language pack from json
 async function loadTranslations(){
   try{
-    const res = await fetch ("../official/lang.json"); //lang.json actual path
+    const res = await fetch ("../src/lang.json"); //lang.json actual path
     translations = await res.json();
     const savedLang = localStorage.getItem("lang");
 
