@@ -48,7 +48,7 @@ const whatsappLink = [
 
 // Modal function with language-loaded data
 function openModal(index) {
-  fetch("lang.json")
+  fetch("../src/lang.json")
     .then(res => res.json())
     .then(langData => {
       const lang = langData[currentLang];
