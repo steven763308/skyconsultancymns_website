@@ -4,312 +4,611 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ SEO Meta -->
-  <meta name="description" content="AP Jobstar specializes in CIDB and construction related applications in Malaysia. Contact us for fast, professional government compliance services." />
-  <link rel="icon" href="../img/companyLogoAP.png" type="image/png" />
-  <title>Agensi Pekerjaan Jobstar Sdn. Bhd.</title>
+  <!-- SEO Meta -->
+  <title>CIDB Consultant Malaysia | Sky Consultancy</title>
+  <meta name="description" content="Professional CIDB contractor registration, renewal, grade upgrade, personnel registration and construction compliance advisory in Malaysia. Contact Sky Consultancy for professional guidance." />
+  <link rel="canonical" href="https://skyconsultancymns.com/" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- ✅ External Libraries -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sky Consultancy Management & Services" />
+  <meta property="og:title" content="CIDB Consultant Malaysia | Sky Consultancy" />
+  <meta property="og:description" content="Professional CIDB contractor registration, renewal, grade upgrade, personnel registration and construction compliance advisory in Malaysia." />
+  <meta property="og:url" content="https://skyconsultancymns.com/" />
+  <meta property="og:image" content="https://skyconsultancymns.com/img/FullLogo.png" />
+  <meta property="og:locale" content="en_MY" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="img/TransLogo.png" type="image/png" />
+
+  <!-- External Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- ✅ Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Custom Styles -->
-  <link rel="stylesheet" href="../src/index.css" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Sky Consultancy Management & Services",
+    "image": "https://skyconsultancymns.com/img/FullLogo.png",
+    "url": "https://skyconsultancymns.com/",
+    "telephone": "+60125583398",
+    "email": "steven@skyconsultancymns.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kuala Lumpur",
+      "addressCountry": "MY"
+    },
+    "areaServed": "Malaysia",
+    "description": "Professional CIDB contractor registration, renewal, grade upgrade, personnel registration and construction compliance advisory in Malaysia.",
+    "sameAs": [
+      "https://www.facebook.com/SKY.CIDB",
+      "https://www.instagram.com/skyconsultancy_mns/"
+    ]
+  }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="src/index.css" />
 </head>
 <body>
 
   <!-- Preloader -->
   <div id="preloader">
     <div class="loader-wrapper">
-      <img src="../img/APLogo.png" alt="AP Jobstar Logo" class="preloader-logo" />
+      <img src="img/TransLogo.png" alt="Sky Consultancy" class="preloader-logo" />
       <div class="loader-track">
         <div class="loader-bar"></div>
       </div>
     </div>
   </div>
 
-  <!-- 🔷 Header Section -->
-  <div class="sticky-header">
-    <div class="left">
-      <img src="../img/companyLogoAP.png" alt="AP Jobstar Logo">
-      <h2 class="head-companyname">Agensi Pekerjaan Jobstar Sdn. Bhd.</h2>
-    </div>
-    <!-- 🔷 ToolBar with Language + Menu Toggle -->
-    <div class="toolBar">
-      <button id="language-toggle" class="language-btn">
-        <i class="fas fa-globe"></i> EN
-      </button>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </div>
-  </div>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#top" class="navbar-brand">
+        <img src="img/TransLogo.png" alt="Sky Consultancy Management & Services" />
+      </a>
 
-  <!-- 🔷 Hidden Navigation Bar -->
+      <nav class="navbar-links" aria-label="Primary">
+        <a href="#about" data-lang-key="navAbout">About Us</a>
+        <a href="#why-us" data-lang-key="navWhyus">Why Us</a>
+        <a href="#services" data-lang-key="navServices">Services</a>
+        <a href="#faq" data-lang-key="navFaq">FAQ</a>
+        <a href="#contact" data-lang-key="navContact">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button id="language-toggle" class="language-btn" aria-label="Switch language">
+          <i class="fas fa-globe" aria-hidden="true"></i> <span id="langToggleLabel">EN</span>
+        </button>
+        <a class="navbar-cta whatsapp-link" href="#" data-lang-key="navCta" data-wa-base>WhatsApp Us</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navBar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
   <div class="nav-bar" id="navBar">
+    <button class="nav-bar-close" id="navBarClose" aria-label="Close menu">✕</button>
     <ul>
-      <div class="menu-toggle" onclick="closeMenu()">✖</div>
       <li><a href="#about" data-lang-key="navAbout">About Us</a></li>
       <li><a href="#why-us" data-lang-key="navWhyus">Why Us</a></li>
       <li><a href="#services" data-lang-key="navServices">Services</a></li>
       <li><a href="#faq" data-lang-key="navFaq">FAQ</a></li>
-      <li><a href="#contact" data-lang-key="navContact">Contact Us</a></li>
+      <li><a href="#contact" data-lang-key="navContact">Contact</a></li>
     </ul>
+    <a class="nav-bar-cta whatsapp-link" href="#" data-lang-key="navCta" data-wa-base>WhatsApp Us</a>
   </div>
+  <div class="nav-overlay" id="navOverlay"></div>
 
-<!-- 🔷 Hero Section -->
-<header>
-  <!-- 🟡 圆形 Logo 包裹层 -->
-  <div class="logo-wrapper">
-    <img src="../img/companyLogoAP.png" alt="AP Jobstar Logo" class="logo" />
-  </div>
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="heroEyebrow">CONSTRUCTION COMPLIANCE ADVISORY · MALAYSIA</p>
+          <h1 class="hero-title">
+            <span data-lang-key="heroTitlePrefix">Professional</span>
+            <span class="accent" data-lang-key="heroTitleAccent">CIDB &amp; Construction Compliance</span>
+            <span data-lang-key="heroTitleSuffix">Advisory</span>
+          </h1>
+          <p class="hero-subtitle" data-lang-key="heroSubtitle">Supporting contractors and businesses in navigating CIDB registration, regulatory requirements and construction compliance with practical, professional guidance.</p>
+          <div class="hero-cta-row">
+            <a href="#" class="btn btn-primary whatsapp-link" data-wa-base>
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              <span data-lang-key="heroCtaPrimary">WhatsApp Us</span>
+            </a>
+            <a href="#services" class="btn btn-secondary" data-lang-key="heroCtaSecondary">Explore Our Services</a>
+          </div>
+          <p class="hero-reassurance" data-lang-key="heroReassurance">Professional consultation for Malaysian contractors &amp; businesses.</p>
+        </div>
 
-  <h1 class="hero-title" data-lang-key="heroTitle">AP Jobstar Sdn. Bhd.</h1>
-  <p class="hero-subtitle" data-lang-key="heroSubtitle">我们为行业提供一站式合规服务</p>
-  <a href="#contact" class="cta-btn" data-lang-key="contactUs">联系我们</a>
-</header>
-
-<!-- About Us Section -->
-<section id="about" data-aos="fade-up">
-  <div class="about-container">
-    <h2 data-lang-key="navAbout" data-aos="zoom-in"></h2>
-    <p data-lang-key="abHeader" data-aos="fade-up" data-aos-delay="100"></p>
-    <p data-lang-key="abInfo" data-aos="fade-up" data-aos-delay="200"></p>
-    <!-- About Info Bullet -->
-    <div class="about-bullet" data-lang-key="abInfoBullet" data-aos="fade-up" data-aos-delay="300"></div>
-    <h4 data-lang-key="abFooter" data-aos="fade-up" data-aos-delay="400"></h4>
-  </div>
-</section>
-
-    <!-- Why Us Section -->
-  <section id="why-us" data-aos="fade-up">
-    <h2 data-lang-key="navWhyus"></h2>
-    <div class="why-us-grid">
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
-        <i class="fas fa-bolt"></i>
-        <h4 data-lang-key="whyusTitle1"></h4>
-        <p data-lang-key="whyusDesc1"></p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-user-check"></i>
-        <h4 data-lang-key="whyusTitle2"></h4>
-        <p data-lang-key="whyusDesc2"></p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-briefcase"></i>
-        <h4 data-lang-key="whyusTitle3"></h4>
-        <p data-lang-key="whyusDesc3"></p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="600">
-        <i class="fas fa-shield-alt"></i>
-        <h4 data-lang-key="whyusTitle4"></h4>
-        <p data-lang-key="whyusDesc4"></p>
-      </div>
-      <div class="why-us-item" data-aos="fade-up" data-aos-delay="800">
-        <i class="fas fa-compass"></i>
-        <h4 data-lang-key="whyusTitle5"></h4>
-        <p data-lang-key="whyusDesc5"></p>
-      </div>
-    </div>    
-  </section>
-
-  <!-- 🔷 Services Section -->
-  <section id="services" data-aos="fade-up">
-    <h2 data-lang-key="navServices"></h2>
-    <p id="serviceIntro" data-lang-key="serviceIntro"></p>
-    <div class="service-grid">
-      <div class="service-item" onclick="openModal(0)" data-aos="fade-up" data-aos-delay="0">
-        <img class="serviceLogo" data-index="0" alt="CIDB Logo">
-        <h3 data-lang-key="service1Title">CIDB</h3>
-        <p data-lang-key="service1Desc">Description 1</p>
-        <small class="click-note" data-lang-key="clickToView">Click to View</small>
-      </div>
-      <div class="service-item" onclick="openModal(1)" data-aos="fade-up" data-aos-delay="200">
-        <img class="serviceLogo" data-index="1" alt="Imigresen Logo">
-        <h3 data-lang-key="service2Title">Imigresen</h3>
-        <p data-lang-key="service2Desc">Description 2</p>
-        <small class="click-note" data-lang-key="clickToView">Click to View</small>
-      </div>
-      <div class="service-item" onclick="openModal(2)" data-aos="fade-up" data-aos-delay="400">
-        <img class="serviceLogo" data-index="2" alt="ESD Logo">
-        <h3 data-lang-key="service3Title">Expatriate</h3>
-        <p data-lang-key="service3Desc">Description 3</p>
-        <small class="click-note" data-lang-key="clickToView">Click to View</small>
-      </div>
-      <div class="service-item" onclick="openModal(3)" data-aos="fade-up" data-aos-delay="600">
-        <img class="serviceLogo" data-index="3" alt="Others Logo">
-        <h3 data-lang-key="service4Title">Others</h3>
-        <p data-lang-key="service4Desc">Description 4</p>
-        <small class="click-note" data-lang-key="clickToView">Click to View</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔷 FAQ Section -->
-<section id="faq" data-aos="fade-up">
-  <h2 class="faq-title" data-lang-key="navFaq"></h2>
-  <p class="faq-desc" data-lang-key="faqDesc"></p>
-  <div class="faq-container">
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-icon">+</span>
-        <span data-lang-key="faqQ1"></span>
-      </button>
-      <div class="faq-answer" data-lang-key="faqA1List"></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-icon">+</span>
-        <span data-lang-key="faqQ2"></span>
-      </button>
-      <div class="faq-answer" data-lang-key="faqA2"></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-icon">+</span>
-        <span data-lang-key="faqQ3"></span>
-      </button>
-      <div class="faq-answer" data-lang-key="faqA3"></div>
-    </div>
-        <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-icon">+</span>
-        <span data-lang-key="faqQ4"></span>
-      </button>
-      <div class="faq-answer" data-lang-key="faqA4"></div>
-    </div>
-        <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-icon">+</span>
-        <span data-lang-key="faqQ5"></span>
-      </button>
-      <div class="faq-answer" data-lang-key="faqA5"></div>
-    </div>
-        <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-icon">+</span>
-        <span data-lang-key="faqQ6"></span>
-      </button>
-      <div class="faq-answer" data-lang-key="faqA6"></div>
-    </div>
-  </div>
-</section>
-
-  <!-- Contact Us Section -->
-  <section id="contact" data-aos="fade-up">
-    <h2 class="section-title" data-lang-key="navContact"></h2>
-    <div class="contact-container">
-      <!-- 📞 联系方式 -->
-      <div class="contact-info">
-        <p><i class="fas fa-phone-alt"></i> +60 12-558 3398</p>
-        <p><i class="fas fa-envelope"></i> steven@skyconsultancymns.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> Kuala Lumpur, Malaysia</p>
-        <div>
-          <!-- WhatsApp Contact Shortcut -->
-          <a href="https://wa.link/zylnwa" target="_blank" class="icon-button whatsapp-btn" title="WhatsApp">
-            <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp Icon" />
-          </a>
-          <!-- Facebook Page Shortcut -->
-          <a href="https://www.facebook.com/SKY.CIDB" target="_blank" class="icon-button facebook-btn" title="Facebook">
-            <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook Icon" />
-          </a>
-          <!-- Instagram Button -->
-          <a href="https://www.instagram.com/skyconsultancy_mns/" target="_blank" style="text-decoration: none;">
-            <button class="icon-button instagram-btn">
-              <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram Icon" />
-            </button>
-          </a>
-          <!-- Xiaohongshu (小红书) Button 
-          <a href="https://www.xiaohongshu.com/user/profile/yourid" target="_blank" style="text-decoration: none;">
-            <button class="icon-button xhs-btn">
-              <img src="../img/xhsLogo.png" alt="Xiaohongshu Icon" />
-            </button>
-          </a>-->
+        <div class="hero-visual" data-aos="fade-up" data-aos-delay="150">
+          <div class="hero-visual-frame">
+            <img src="img/heroBackground.jpeg" alt="Construction site in Malaysia at dusk, representing the industry Sky Consultancy serves" />
+          </div>
+          <div class="hero-float-card card-1"><i class="fas fa-file-signature" aria-hidden="true"></i><span data-lang-key="heroCard1">CIDB Contractor Registration</span></div>
+          <div class="hero-float-card card-2"><i class="fas fa-shield-halved" aria-hidden="true"></i><span data-lang-key="heroCard2">Compliance Advisory</span></div>
+          <div class="hero-float-card card-3"><i class="fas fa-id-card" aria-hidden="true"></i><span data-lang-key="heroCard3">Personnel Registration</span></div>
         </div>
       </div>
+    </section>
 
-    <!-- 📝 表单提交到 Formspree -->
-    <form class="contact-form" action="https://formspree.io/f/mblojgjv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
+    <!-- Trust Bar -->
+    <section class="trust-bar" aria-label="Sky Consultancy at a glance">
+      <div class="trust-bar-inner" data-aos="fade-up">
+        <div class="trust-item">
+          <span class="trust-num" data-lang-key="trustStat1Num">Since 2023</span>
+          <span class="trust-label" data-lang-key="trustStat1Label">Industry Experience</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num" data-lang-key="trustStat2Num">300+</span>
+          <span class="trust-label" data-lang-key="trustStat2Label">Companies Supported</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num" data-lang-key="trustStat3Num">CIDB Focused</span>
+          <span class="trust-label" data-lang-key="trustStat3Label">Compliance Advisory</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num" data-lang-key="trustStat4Num">Malaysia</span>
+          <span class="trust-label" data-lang-key="trustStat4Label">Business Support</span>
+        </div>
+      </div>
+    </section>
 
-      <input type="email" name="email" placeholder="Your Email" required />
+    <!-- About -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="aboutEyebrow">ABOUT SKY CONSULTANCY</p>
+          <h2 data-lang-key="aboutTitle">Compliance is more than paperwork.</h2>
+        </div>
 
-      <!-- ✅ 电话号码带 +60 验证 -->
-      <input
-        id="phone"
-        type="tel"
-        name="phone"
-        placeholder="+60 12-345 6789"
-        pattern="\+60 ?1[0-9]?( |-)?[0-9]{3,4}( |-)?[0-9]{4}"
-        required
-        title="Phone number must start with +60 and follow Malaysian format."
-      />
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-up" data-aos-delay="100">
+            <p data-lang-key="aboutPara1">Sky Consultancy Management &amp; Services provides professional compliance and business advisory with a primary focus on Malaysia's construction industry.</p>
+            <p data-lang-key="aboutPara2">Since beginning operations in 2023, we have supported contractors and businesses in navigating CIDB requirements, regulatory procedures and operational compliance through practical, solution-oriented advisory.</p>
+          </div>
 
-      <select name="service" required>
-        <option value="" disabled selected>Select a Service</option>
-        <option value="CIDB Registration">CIDB Registration (G1–G7)</option>
-        <option value="Green Card">Green Card Application</option>
-        <option value="MOF Certification">MOF Certification</option>
-        <option value="Visa">Foreign Worker Visa</option>
-        <option value="Other">Other / General Inquiry</option>
-      </select>
+          <div class="about-approach" data-aos="fade-up" data-aos-delay="200">
+            <h3 data-lang-key="aboutApproachTitle">Our Approach</h3>
+            <ol class="approach-steps">
+              <li>
+                <span class="approach-index">01</span>
+                <div>
+                  <h4 data-lang-key="aboutStep1">Understand the Issue</h4>
+                  <p data-lang-key="aboutStep1Desc">We start by listening to your situation in detail.</p>
+                </div>
+              </li>
+              <li>
+                <span class="approach-index">02</span>
+                <div>
+                  <h4 data-lang-key="aboutStep2">Assess the Requirements</h4>
+                  <p data-lang-key="aboutStep2Desc">We review the applicable CIDB and regulatory requirements.</p>
+                </div>
+              </li>
+              <li>
+                <span class="approach-index">03</span>
+                <div>
+                  <h4 data-lang-key="aboutStep3">Recommend the Solution</h4>
+                  <p data-lang-key="aboutStep3Desc">We explain the appropriate course of action clearly.</p>
+                </div>
+              </li>
+              <li>
+                <span class="approach-index">04</span>
+                <div>
+                  <h4 data-lang-key="aboutStep4">Support the Process</h4>
+                  <p data-lang-key="aboutStep4Desc">We assist you through the agreed scope of work.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <!-- Problem Scenarios -->
+    <section id="problems" class="section-alt">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="problemEyebrow">COMMON SITUATIONS</p>
+          <h2 data-lang-key="problemTitle">Facing a CIDB or compliance issue?</h2>
+          <p class="section-sub" data-lang-key="problemSubtitle">Many of the companies we work with start with one of these situations.</p>
+        </div>
 
-      <!-- 防 spam -->
-      <input type="hidden" name="_gotcha" style="display:none">
-      <input type="hidden" name="_next" value="https://skyconsultancymns.com/thank-you.html">
+        <div class="problem-grid">
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="0">
+            <i class="fas fa-file-circle-plus" aria-hidden="true"></i>
+            <h3 data-lang-key="problem1Title">Starting a new contractor registration?</h3>
+            <p data-lang-key="problem1Desc">Get guidance on registration requirements and preparation.</p>
+          </div>
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="80">
+            <i class="fas fa-arrow-trend-up" aria-hidden="true"></i>
+            <h3 data-lang-key="problem2Title">Planning to upgrade your CIDB grade?</h3>
+            <p data-lang-key="problem2Desc">Understand technical personnel, financial and supporting requirements before applying.</p>
+          </div>
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="160">
+            <i class="fas fa-rotate" aria-hidden="true"></i>
+            <h3 data-lang-key="problem3Title">CIDB renewal facing issues?</h3>
+            <p data-lang-key="problem3Desc">Identify possible compliance gaps before proceeding.</p>
+          </div>
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="0">
+            <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+            <h3 data-lang-key="problem4Title">Company or personnel blacklisted?</h3>
+            <p data-lang-key="problem4Desc">Review the issue and understand the available compliance options.</p>
+          </div>
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="80">
+            <i class="fas fa-circle-question" aria-hidden="true"></i>
+            <h3 data-lang-key="problem5Title">Unsure about CIDB requirements?</h3>
+            <p data-lang-key="problem5Desc">Speak with our team before making unnecessary submissions or payments.</p>
+          </div>
+          <div class="problem-card" data-aos="fade-up" data-aos-delay="160">
+            <i class="fas fa-users-gear" aria-hidden="true"></i>
+            <h3 data-lang-key="problem6Title">Managing foreign workers or personnel compliance?</h3>
+            <p data-lang-key="problem6Desc">Get guidance on selected construction-related manpower compliance matters.</p>
+          </div>
+        </div>
 
-      <button type="submit">Send Message</button>
-    </form>    
-    </div>
-  </section>
+        <div class="section-cta" data-aos="fade-up">
+          <a href="#contact" class="btn btn-primary" data-lang-key="problemCta">Discuss Your Case With Us</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- 🔷 Footer Section -->
+    <!-- Services -->
+    <section id="services">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="servicesEyebrow">OUR EXPERTISE</p>
+          <h2 data-lang-key="servicesTitle">Our Advisory Services</h2>
+          <p class="section-sub" data-lang-key="servicesSubtitle">Focused compliance solutions for Malaysia's construction industry.</p>
+        </div>
+
+        <div class="service-grid" id="serviceGrid"></div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us" class="section-alt">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="whyEyebrow">WHY SKY CONSULTANCY</p>
+          <h2 data-lang-key="whyTitle">Professional guidance. Practical solutions.</h2>
+        </div>
+
+        <div class="why-us-grid">
+          <div class="why-us-item" data-aos="fade-up" data-aos-delay="0">
+            <i class="fas fa-hard-hat" aria-hidden="true"></i>
+            <h4 data-lang-key="why1Title">Construction-Focused Experience</h4>
+            <p data-lang-key="why1Desc">Practical exposure to contractor registration and construction compliance matters.</p>
+          </div>
+          <div class="why-us-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+            <h4 data-lang-key="why2Title">Compliance-First Approach</h4>
+            <p data-lang-key="why2Desc">We assess requirements before recommending the appropriate course of action.</p>
+          </div>
+          <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            <h4 data-lang-key="why3Title">Practical Advisory</h4>
+            <p data-lang-key="why3Desc">We explain requirements in a way businesses can understand and act on.</p>
+          </div>
+          <div class="why-us-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+            <h4 data-lang-key="why4Title">Long-Term Support</h4>
+            <p data-lang-key="why4Desc">Our objective is not simply completing paperwork but helping clients manage ongoing compliance requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work -->
+    <section id="process">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="processEyebrow">HOW WE WORK</p>
+          <h2 data-lang-key="processTitle">A clear path from enquiry to resolution.</h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-item" data-aos="fade-up" data-aos-delay="0">
+            <span class="process-num">01</span>
+            <h4 data-lang-key="process1Title">Tell Us Your Situation</h4>
+            <p data-lang-key="process1Desc">Contact us and explain your requirement or compliance issue.</p>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="process-num">02</span>
+            <h4 data-lang-key="process2Title">Initial Assessment</h4>
+            <p data-lang-key="process2Desc">Our team reviews the situation and applicable requirements.</p>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="process-num">03</span>
+            <h4 data-lang-key="process3Title">Recommended Solution</h4>
+            <p data-lang-key="process3Desc">We explain the available approach, requirements and next steps.</p>
+          </div>
+          <div class="process-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="process-num">04</span>
+            <h4 data-lang-key="process4Title">Application / Advisory Support</h4>
+            <p data-lang-key="process4Desc">Where applicable, we support the client throughout the agreed scope of service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Track Record -->
+    <section id="track-record" class="section-alt">
+      <div class="section-inner track-record">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="trackEyebrow">TRACK RECORD</p>
+          <h2 data-lang-key="trackTitle">Supporting Malaysian Contractors Since 2023</h2>
+          <p class="section-sub" data-lang-key="trackDesc">From contractor registration and renewals to complex compliance issues, Sky Consultancy has supported businesses across different stages of their construction journey.</p>
+        </div>
+        <div class="track-points" data-aos="fade-up" data-aos-delay="100">
+          <div class="track-point"><i class="fas fa-building" aria-hidden="true"></i><span data-lang-key="trackPoint1">300+ Companies Supported</span></div>
+          <div class="track-point"><i class="fas fa-layer-group" aria-hidden="true"></i><span data-lang-key="trackPoint2">Multiple CIDB Grades</span></div>
+          <div class="track-point"><i class="fas fa-hard-hat" aria-hidden="true"></i><span data-lang-key="trackPoint3">Construction-Focused Cases</span></div>
+          <div class="track-point"><i class="fas fa-arrows-rotate" aria-hidden="true"></i><span data-lang-key="trackPoint4">Ongoing Compliance Advisory</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="faqEyebrow">FREQUENTLY ASKED QUESTIONS</p>
+          <h2 class="faq-title" data-lang-key="faqTitle">FAQ</h2>
+          <p class="section-sub faq-desc" data-lang-key="faqDesc">Answers to some of the questions we're asked most often. Click a question to expand it.</p>
+        </div>
+        <div class="faq-container" id="faqContainer"></div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="section-inner final-cta-inner" data-aos="fade-up">
+        <p class="eyebrow" data-lang-key="finalCtaEyebrow">NEED PROFESSIONAL GUIDANCE?</p>
+        <h2 data-lang-key="finalCtaTitle">Let's understand your case before deciding the next step.</h2>
+        <p data-lang-key="finalCtaDesc">Speak with our team regarding your CIDB, construction compliance or selected business advisory requirements.</p>
+        <div class="hero-cta-row">
+          <a href="#" class="btn btn-primary whatsapp-link" data-wa-base>
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span data-lang-key="finalCtaPrimary">WhatsApp Us</span>
+          </a>
+          <a href="#contact" class="btn btn-outline-light" data-lang-key="finalCtaSecondary">Send an Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow" data-lang-key="contactEyebrow">GET IN TOUCH</p>
+          <h2 class="section-title" data-lang-key="contactTitle">Contact Sky Consultancy</h2>
+          <p class="section-sub" data-lang-key="contactDesc">Reach out with your CIDB or compliance requirement and our team will get back to you.</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info" data-aos="fade-up">
+            <div class="contact-info-item">
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
+              <div>
+                <span class="contact-label" data-lang-key="contactPhoneLabel">Phone</span>
+                <a href="tel:+60125583398">+60 12-558 3398</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <div>
+                <span class="contact-label" data-lang-key="contactEmailLabel">Email</span>
+                <a href="mailto:steven@skyconsultancymns.com">steven@skyconsultancymns.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <div>
+                <span class="contact-label" data-lang-key="contactLocationLabel">Location</span>
+                <span data-lang-key="contactLocationValue">Kuala Lumpur, Malaysia</span>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-whatsapp-solid whatsapp-link" data-wa-base>
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              <span data-lang-key="contactWhatsappCta">Chat on WhatsApp</span>
+            </a>
+
+            <div class="social-row">
+              <a href="https://www.facebook.com/SKY.CIDB" target="_blank" rel="noopener" class="icon-button facebook-btn" title="Facebook" aria-label="Sky Consultancy on Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/skyconsultancy_mns/" target="_blank" rel="noopener" class="icon-button instagram-btn" title="Instagram" aria-label="Sky Consultancy on Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mblojgjv" method="POST" data-aos="fade-up" data-aos-delay="100" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name" data-lang-key="formName">Full Name</label>
+                <input id="cf-name" type="text" name="name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="cf-company" data-lang-key="formCompany">Company Name</label>
+                <input id="cf-company" type="text" name="company" autocomplete="organization" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-phone" data-lang-key="formPhone">Contact Number</label>
+                <input
+                  id="cf-phone"
+                  type="tel"
+                  name="phone"
+                  placeholder="+60 12-345 6789"
+                  pattern="\+60 ?1[0-9]?( |-)?[0-9]{3,4}( |-)?[0-9]{4}"
+                  required
+                  title="Phone number must start with +60 and follow Malaysian format."
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cf-email" data-lang-key="formEmail">Email</label>
+                <input id="cf-email" type="email" name="email" autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-service" data-lang-key="formService">Service Required</label>
+              <select id="cf-service" name="service" required>
+                <option value="" disabled selected data-lang-key="formServicePlaceholder">Select a Service</option>
+                <option value="CIDB Contractor Registration" data-lang-key="serviceOption1">CIDB Contractor Registration</option>
+                <option value="CIDB Renewal" data-lang-key="serviceOption2">CIDB Renewal</option>
+                <option value="CIDB Grade Upgrade" data-lang-key="serviceOption3">CIDB Grade Upgrade</option>
+                <option value="CIDB Personnel" data-lang-key="serviceOption4">CIDB Personnel</option>
+                <option value="CIDB Compliance Issue" data-lang-key="serviceOption5">CIDB Compliance Issue</option>
+                <option value="Manpower / Immigration" data-lang-key="serviceOption6">Manpower / Immigration</option>
+                <option value="Other Advisory" data-lang-key="serviceOption7">Other Advisory</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-message" data-lang-key="formMessage">Message</label>
+              <textarea id="cf-message" name="message" rows="4"></textarea>
+            </div>
+
+            <input type="hidden" name="_gotcha" style="display:none">
+
+            <button type="submit" id="cfSubmitBtn">
+              <span class="btn-label" data-lang-key="formSubmit">Submit Enquiry</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-feedback form-feedback-success" id="cfSuccess" role="status" hidden>
+              <i class="fas fa-circle-check" aria-hidden="true"></i>
+              <div>
+                <strong data-lang-key="formSuccessTitle">Enquiry sent successfully.</strong>
+                <p data-lang-key="formSuccessDesc">Thank you — our team will get back to you shortly. You can also WhatsApp us directly for a faster response.</p>
+              </div>
+            </div>
+            <div class="form-feedback form-feedback-error" id="cfError" role="alert" hidden>
+              <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
+              <div>
+                <strong data-lang-key="formErrorTitle">Something went wrong.</strong>
+                <p data-lang-key="formErrorDesc">Your enquiry could not be sent. Please try again or contact us directly via WhatsApp.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Sky Consultancy Management & Services. All Rights Reserved. | Powered By ByteX Technology</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/TransLogo.png" alt="Sky Consultancy Management & Services" />
+        <p data-lang-key="footerDesc">Professional CIDB &amp; construction compliance advisory for Malaysian contractors and businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-lang-key="footerLinksTitle">Quick Links</h4>
+        <a href="#about" data-lang-key="navAbout">About Us</a>
+        <a href="#services" data-lang-key="navServices">Services</a>
+        <a href="#why-us" data-lang-key="navWhyus">Why Us</a>
+        <a href="#faq" data-lang-key="navFaq">FAQ</a>
+        <a href="#contact" data-lang-key="navContact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-lang-key="footerContactTitle">Contact</h4>
+        <a href="tel:+60125583398">+60 12-558 3398</a>
+        <a href="mailto:steven@skyconsultancymns.com">steven@skyconsultancymns.com</a>
+        <span data-lang-key="contactLocationValue">Kuala Lumpur, Malaysia</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> <span data-lang-key="footerRights">Sky Consultancy Management &amp; Services. All Rights Reserved.</span></p>
+      <p class="footer-powered" data-lang-key="footerPowered">Powered by ByteX Technology</p>
+    </div>
   </footer>
 
-  <!-- 🔷 Modal for Service Details -->
-  <div id="serviceModal" class="modal-overlay">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal()">✕</span>
-      <img id="serviceLogo" alt="serviceLogo">
-      <h3 id="modalTitle">Service Title</h3>
-      <p id="modalDescription">Service full description...</p>
-      <hr>
-      <!--services details line-->
-      <div class="modal-content-details"></div>
+  <!-- Floating WhatsApp -->
+  <a href="#" class="floating-whatsapp whatsapp-link" data-wa-base aria-label="Chat with Sky Consultancy on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
-        <ul id="modalDetails"></ul> <!-- ✅ 改为 ul 列表 -->
-      <hr>
-      <h4 id="serviceModalHint"></h4>
-      <p id="serviceModalHintDesc">tips here</p>
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="#" class="btn btn-primary whatsapp-link" data-wa-base>
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span data-lang-key="heroCtaPrimary">WhatsApp Us</span>
+    </a>
+  </div>
+
+  <!-- Back to Top -->
+  <button id="backToTop" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Service Modal -->
+  <div id="serviceModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-content">
+      <button class="close-modal" id="closeModalBtn" aria-label="Close">✕</button>
+      <p class="modal-tag" id="modalTag"></p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+
+      <div class="modal-block">
+        <h5><i class="fas fa-user-check" aria-hidden="true"></i><span id="modalWhoForLabel"></span></h5>
+        <p id="modalWhoFor"></p>
+      </div>
+
+      <div class="modal-block">
+        <h5><i class="fas fa-list-check" aria-hidden="true"></i><span id="modalSituationsLabel"></span></h5>
+        <ul id="modalSituations"></ul>
+      </div>
+
+      <div class="modal-block">
+        <h5><i class="fas fa-handshake-angle" aria-hidden="true"></i><span id="modalAssistLabel"></span></h5>
+        <ul id="modalAssist"></ul>
+      </div>
+
+      <div class="modal-block modal-notes" id="modalNotesBlock">
+        <h5><i class="fas fa-circle-info" aria-hidden="true"></i><span id="modalNotesLabel"></span></h5>
+        <p id="modalNotes"></p>
+      </div>
 
       <div class="btnInterest-Wrapper">
-        <button id="btnInterest" data-lang-key="btnInterest">
-          <i class="fab fa-whatsapp"></i> <span class="btnInterest-text">WhatsApp 询问</span>
-        </button>
+        <a id="btnInterest" class="whatsapp-link" href="#" data-wa-base>
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span id="modalCtaLabel"></span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- 🔝 Back to Top Button -->
-  <button id="backToTop" title="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <!-- Custom JS Script -->
+  <script src="src/lang.js"></script>
+  <script src="src/index.js"></script>
 
-  <!-- ✅ Custom JS Script -->
-  <script src="../src/index.js"></script>
-
-  <!-- ✅ AOS Animation Script -->
+  <!-- AOS Animation Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({ once: true, duration: 750, easing: 'ease-out-quart', offset: 80, disable: 'reduced-motion' });
   </script>
 </body>
 </html>

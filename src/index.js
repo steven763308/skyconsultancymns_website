@@ -1,281 +1,358 @@
-//preload animation
+/* ============================================================
+   Sky Consultancy — Site Script
+   Language engine, navbar, mobile nav, services, FAQ, modal,
+   contact form and WhatsApp deep-linking.
+   ============================================================ */
+
+const WHATSAPP_NUMBER = "60125583398";
+
+function buildWhatsappUrl(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+/* ---------------- Preloader ---------------- */
 window.addEventListener("load", () => {
   const pre = document.getElementById("preloader");
-
-  // ✅ 延迟 2.5 秒再开始移除动画
-  setTimeout(() => {
-    pre.classList.add("hide");
-  }, 2500); // 可改为 3000 即 3 秒
-
-  // ✅ 动画滑出后彻底移除元素
-  setTimeout(() => {
-    pre.remove();
-  }, 4000); // 此值 = 上面 2500 + 动画滑出时间 1500
+  if (!pre) return;
+  setTimeout(() => pre.classList.add("hide"), 500);
+  setTimeout(() => pre.remove(), 1100);
 });
 
-//open menu sidebar
-function toggleMenu(){
-    const nav = document.getElementById('navBar');
-    nav.classList.toggle('active');
-}
+/* ---------------- Footer year ---------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const yearEl = document.getElementById("footerYear");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
 
-//close menu sidebar
-function closeMenu(){
-    const nav = document.getElementById('navBar');
-    nav.classList.toggle('active');
+/* ---------------- Navbar scroll state ---------------- */
+const navbar = document.getElementById("navbar");
+function updateNavbarState() {
+  if (!navbar) return;
+  navbar.classList.toggle("scrolled", window.scrollY > 20);
 }
+window.addEventListener("scroll", updateNavbarState, { passive: true });
+updateNavbarState();
 
-// Static logo paths
-const logoPaths = [
-  "../img/servicesLogo/cidbLogo.png",
-  "../img/servicesLogo/jimLogo.png",
-  "../img/servicesLogo/expatriateLogo.png",
-  "../img/servicesLogo/othersLogo.png"
+/* ---------------- Mobile Nav ---------------- */
+const navBar = document.getElementById("navBar");
+const navOverlay = document.getElementById("navOverlay");
+const menuToggle = document.getElementById("menuToggle");
+const navBarClose = document.getElementById("navBarClose");
+
+function openMenu() {
+  navBar.classList.add("active");
+  navOverlay.classList.add("active");
+  menuToggle.setAttribute("aria-expanded", "true");
+  document.body.classList.add("nav-locked");
+}
+function closeMenu() {
+  navBar.classList.remove("active");
+  navOverlay.classList.remove("active");
+  menuToggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-locked");
+}
+menuToggle?.addEventListener("click", () => {
+  const isOpen = navBar.classList.contains("active");
+  isOpen ? closeMenu() : openMenu();
+});
+navBarClose?.addEventListener("click", closeMenu);
+navOverlay?.addEventListener("click", closeMenu);
+navBar?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
+
+/* ---------------- Back to top ---------------- */
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (!backToTop) return;
+  backToTop.style.display = window.scrollY > 300 ? "flex" : "none";
+}, { passive: true });
+backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+/* ---------------- Services data (structured, reusable) ---------------- */
+const SERVICES = [
+  { key: "service1", icon: "fa-file-signature", primary: true },
+  { key: "service2", icon: "fa-id-card", primary: false },
+  { key: "service3", icon: "fa-shield-halved", primary: false },
+  { key: "service4", icon: "fa-people-group", primary: false, secondary: true },
+  { key: "service5", icon: "fa-briefcase", primary: false, secondary: true },
 ];
 
-//service logo path
-document.querySelectorAll('.serviceLogo').forEach((img, index) => {
-  img.src = logoPaths[index];
+function t(lang, key) {
+  return translations[lang]?.[key] || "";
+}
+
+function collectList(lang, prefix) {
+  const items = [];
+  let i = 1;
+  while (true) {
+    const val = t(lang, `${prefix}${i}`);
+    if (!val) break;
+    items.push(val);
+    i++;
+  }
+  return items;
+}
+
+function collectBullets(lang, key) {
+  return collectList(lang, `${key}Bullet`);
+}
+
+function renderServices(lang) {
+  const grid = document.getElementById("serviceGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  SERVICES.forEach((svc, index) => {
+    const bullets = collectBullets(lang, svc.key);
+    const card = document.createElement("div");
+    card.className = `service-card${svc.primary ? " service-card-primary" : ""}${svc.secondary ? " service-card-secondary" : ""}`;
+    card.setAttribute("data-aos", "fade-up");
+    card.setAttribute("data-aos-delay", String((index % 3) * 100));
+    card.innerHTML = `
+      <div class="service-card-icon"><i class="fas ${svc.icon}" aria-hidden="true"></i></div>
+      <p class="service-card-tag">${t(lang, `${svc.key}Tag`)}</p>
+      <h3>${t(lang, `${svc.key}Title`)}</h3>
+      <p class="service-card-desc">${t(lang, `${svc.key}Desc`)}</p>
+      <ul class="service-card-bullets">${bullets.map((b) => `<li>${b}</li>`).join("")}</ul>
+      <button type="button" class="service-card-cta" data-service-index="${index}">
+        ${t(lang, `${svc.key}CardCta`)} <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    `;
+    grid.appendChild(card);
+  });
+
+  grid.querySelectorAll(".service-card-cta").forEach((btn) => {
+    btn.addEventListener("click", () => openServiceModal(Number(btn.getAttribute("data-service-index"))));
+  });
+}
+
+/* ---------------- Service Modal ---------------- */
+const serviceModal = document.getElementById("serviceModal");
+
+function openServiceModal(index) {
+  const svc = SERVICES[index];
+  if (!svc) return;
+  const lang = currentLang;
+  const key = svc.key;
+
+  document.getElementById("modalTag").textContent = t(lang, `${key}Tag`);
+  document.getElementById("modalTitle").textContent = t(lang, `${key}Title`);
+  document.getElementById("modalDescription").textContent = t(lang, `${key}Desc`);
+  document.getElementById("modalWhoForLabel").textContent = t(lang, "modalWhoForLabel");
+  document.getElementById("modalSituationsLabel").textContent = t(lang, "modalSituationsLabel");
+  document.getElementById("modalAssistLabel").textContent = t(lang, "modalAssistLabel");
+  document.getElementById("modalNotesLabel").textContent = t(lang, "modalNotesLabel");
+  document.getElementById("modalCtaLabel").textContent = t(lang, "modalCtaLabel");
+
+  const whoFor = t(lang, `${key}WhoFor`);
+  document.getElementById("modalWhoFor").textContent = whoFor;
+  document.getElementById("modalWhoFor").closest(".modal-block").hidden = !whoFor;
+
+  const situations = collectList(lang, `${key}Situations`);
+  document.getElementById("modalSituations").innerHTML = situations.map((s) => `<li>${s}</li>`).join("");
+
+  const assist = collectList(lang, `${key}Assist`);
+  document.getElementById("modalAssist").innerHTML = assist.map((s) => `<li>${s}</li>`).join("");
+
+  const notes = t(lang, `${key}Notes`);
+  const notesBlock = document.getElementById("modalNotesBlock");
+  document.getElementById("modalNotes").textContent = notes;
+  notesBlock.hidden = !notes;
+
+  const serviceTitle = t(lang, `${key}Title`);
+  const message = lang === "zh"
+    ? `您好 Sky Consultancy，我想咨询关于「${serviceTitle}」的服务。`
+    : `Hi Sky Consultancy, I would like to enquire about ${serviceTitle}.`;
+  document.getElementById("btnInterest").setAttribute("href", buildWhatsappUrl(message));
+
+  serviceModal.hidden = false;
+  document.body.classList.add("nav-locked");
+  requestAnimationFrame(() => serviceModal.classList.add("active"));
+}
+
+function closeServiceModal() {
+  serviceModal.classList.remove("active");
+  document.body.classList.remove("nav-locked");
+  setTimeout(() => {
+    if (!serviceModal.classList.contains("active")) serviceModal.hidden = true;
+  }, 350);
+}
+
+document.getElementById("closeModalBtn")?.addEventListener("click", closeServiceModal);
+serviceModal?.addEventListener("click", (e) => {
+  if (e.target === serviceModal) closeServiceModal();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && serviceModal && !serviceModal.hidden) closeServiceModal();
 });
 
-//whatsapp link array
-const whatsappLink = [
-  "https://api.whatsapp.com/send?phone=60125583398&text=CIDB%20Enquiry", //service CIDB
-  "https://api.whatsapp.com/send?phone=60125583398&text=Imigresen%20Enquiry", //service Imigresen
-  "https://api.whatsapp.com/send?phone=60125583398&text=Expatriate%20(ESD)%20Enquiry", //service ESD
-  "https://api.whatsapp.com/send?phone=60125583398&text=Others%20Service%20Enquiry%20(MyKKP%2C%20MOF%2C%20etc...)", //service Others (MyKKP, MOF)
-]
+/* ---------------- FAQ (data-driven) ---------------- */
+function renderFaq(lang) {
+  const container = document.getElementById("faqContainer");
+  if (!container) return;
+  container.innerHTML = "";
 
-// Modal function with language-loaded data
-function openModal(index) {
-  fetch("../src/lang.json")
-    .then(res => res.json())
-    .then(langData => {
-      const lang = langData[currentLang];
-      const titleKey = `service${index + 1}Title`;
-      const descHintTitle = `serviceHintTitle`;
-      const descKey = `service${index + 1}DescDetails`;
-      const detailsKey = `service${index + 1}Details`;
-      const detailsObjectKey = `service${index + 1}DetailsObject`;
-      const serHintDesc = `service${index + 1}HintDesc`;
+  let i = 1;
+  while (true) {
+    const q = t(lang, `faqQ${i}`);
+    const a = t(lang, `faqA${i}`);
+    if (!q || !a) break;
 
-      const logo = logoPaths[index];
-      const title = lang[titleKey] || "Service";
-      const hintTitle = lang[descHintTitle] || [];
-      const description = lang[descKey] || "Description not available.";
-      const details = lang[detailsKey] || [];
-      const detailsObject = lang[detailsObjectKey] || [];
-      const hintDesc = lang[serHintDesc] || [];
-
-      // 插入基本内容
-      document.getElementById("serviceLogo").src = logo;
-      document.getElementById("serviceLogo").alt = title + " Logo";
-      document.getElementById("modalTitle").innerText = title;
-      document.getElementById("serviceModalHint").innerHTML = `<i class="fas fa-lightbulb" style="margin-right: 8px; color: #ffc107;"></i>${hintTitle}`;
-      document.getElementById("modalDescription").innerText = description;
-      document.getElementById("serviceModalHintDesc").innerText = hintDesc;
-
-      // 清空内容区块
-      const detailsContainer = document.querySelector(".modal-content-details");
-      detailsContainer.innerHTML = "";
-
-      // ✅ 动态获取包含服务名的标题句
-      function getTranslatedText(key, replacements = {}) {
-        const template = lang[key] || "";
-        return template.replace(/{(\w+)}/g, (_, k) => replacements[k] || "");
-      }
-
-      if (detailsObject.length > 0) {
-        // ✅ 插入包含服务名称的标题
-        const h3 = document.createElement("h3");
-        const includeTitle = getTranslatedText("serviceIncludeTitle", { service: title }); // title 为当前服务名，如 CIDB
-        h3.innerHTML = `<i class="fas fa-file-alt" style="margin-right: 8px;"></i><span>${includeTitle}</span>`;
-        detailsContainer.appendChild(h3);
-
-        // 插入每个模块区块
-        detailsObject.forEach(block => {
-          const h4 = document.createElement("h4");
-          h4.textContent = block.title;
-          detailsContainer.appendChild(h4);
-
-          const ul = document.createElement("ul");
-          block.items.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            ul.appendChild(li);
-          });
-          detailsContainer.appendChild(ul);
-        });
-      } else {
-        // 简单 bullet list 渲染
-        const simpleList = document.getElementById("modalDetails");
-        simpleList.innerHTML = "";
-        details.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          simpleList.appendChild(li);
-        });
-      }
-
-      // 更新 WhatsApp 按钮链接
-      const btn = document.getElementById("btnInterest");
-      btn.onclick = () => {
-        window.open(whatsappLink[index], "_blank");
-      };
-
-      // 显示 modal
-      document.getElementById("serviceModal").style.display = "flex";
-    })
-    .catch(err => {
-      console.error("Language file loading failed:", err);
-    });
-}
-  
-  function closeModal() {
-    document.getElementById("serviceModal").style.display = "none";
+    const item = document.createElement("div");
+    item.className = "faq-item";
+    item.innerHTML = `
+      <button class="faq-question" aria-expanded="false" aria-controls="faqAnswer${i}">
+        <span>${q}</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faqAnswer${i}" role="region">
+        <p>${a}</p>
+      </div>
+    `;
+    container.appendChild(item);
+    i++;
   }
 
-  document.addEventListener("keydown", function(event){
-    if(event.key === "Escape"){
-      closeModal();
+  container.querySelectorAll(".faq-question").forEach((btn) => {
+    btn.addEventListener("click", () => toggleFaq(btn));
+  });
+}
+
+function toggleFaq(button) {
+  const answer = button.nextElementSibling;
+  const isOpen = answer.classList.contains("open");
+
+  if (!isOpen) {
+    answer.classList.add("open");
+    button.setAttribute("aria-expanded", "true");
+  } else {
+    answer.classList.remove("open");
+    button.setAttribute("aria-expanded", "false");
+  }
+}
+
+/* ---------------- Phone prefix (Contact form) ---------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  const phoneInput = document.getElementById("cf-phone");
+  if (!phoneInput) return;
+  const prefix = "+60 ";
+
+  phoneInput.addEventListener("focus", function () {
+    if (!phoneInput.value) phoneInput.value = prefix;
+  });
+
+  phoneInput.addEventListener("input", function () {
+    if (phoneInput.value && !phoneInput.value.startsWith(prefix)) {
+      const cursorPos = phoneInput.selectionStart;
+      phoneInput.value = prefix + phoneInput.value.replace(/^(\+)?60\s?/i, "");
+      const pos = cursorPos < prefix.length ? prefix.length : cursorPos;
+      phoneInput.setSelectionRange(pos, pos);
     }
   });
-  
-  // Show or hide back-to-top button on scroll [back to top button]
-  window.addEventListener('scroll', function () {
-    const btn = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-      btn.style.display = 'flex';
+
+  phoneInput.addEventListener("keydown", function (e) {
+    if ((e.key === "Backspace" || e.key === "Delete") && phoneInput.selectionStart <= prefix.length && phoneInput.value.startsWith(prefix)) {
+      e.preventDefault();
+    }
+  });
+});
+
+/* ---------------- Contact form submission ---------------- */
+const contactForm = document.getElementById("contactForm");
+const cfSubmitBtn = document.getElementById("cfSubmitBtn");
+const cfSuccess = document.getElementById("cfSuccess");
+const cfError = document.getElementById("cfError");
+
+contactForm?.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  cfSuccess.hidden = true;
+  cfError.hidden = true;
+
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
+  }
+
+  cfSubmitBtn.disabled = true;
+  cfSubmitBtn.classList.add("is-loading");
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      cfSuccess.hidden = false;
+      contactForm.reset();
     } else {
-      btn.style.display = 'none';
+      cfError.hidden = false;
     }
-  });
+  } catch (err) {
+    cfError.hidden = false;
+  } finally {
+    cfSubmitBtn.disabled = false;
+    cfSubmitBtn.classList.remove("is-loading");
+  }
+});
 
-  // Smooth scroll to top
-  document.getElementById('backToTop').addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+/* ---------------- WhatsApp links (site-wide) ---------------- */
+function refreshWhatsappLinks(lang) {
+  const message = lang === "zh"
+    ? "您好 Sky Consultancy，我想咨询有关 CIDB／合规服务的事宜。"
+    : "Hi Sky Consultancy, I would like to enquire about your CIDB / compliance services.";
+  const url = buildWhatsappUrl(message);
+  document.querySelectorAll("[data-wa-base]").forEach((el) => el.setAttribute("href", url));
+}
 
-  // ContactUs Phone Prefix
-  document.addEventListener("DOMContentLoaded", function () {
-    const phoneInput = document.getElementById("phone");
-    const prefix = "+60 ";
-  
-    // 初始状态强制带前缀
-    if (!phoneInput.value.startsWith(prefix)) {
-      phoneInput.value = prefix;
-    }
-  
-    // 防止删除前缀
-    phoneInput.addEventListener("input", function () {
-      if (!phoneInput.value.startsWith(prefix)) {
-        const cursorPos = phoneInput.selectionStart;
-        phoneInput.value = prefix + phoneInput.value.replace(/^(\+)?60\s?/i, "");
-        phoneInput.setSelectionRange(cursorPos < prefix.length ? prefix.length : cursorPos, cursorPos < prefix.length ? prefix.length : cursorPos);
-      }
-    });
-  
-    // 防止全选后删除
-    phoneInput.addEventListener("keydown", function (e) {
-      if (
-        (e.key === "Backspace" || e.key === "Delete") &&
-        phoneInput.selectionStart <= prefix.length
-      ) {
-        e.preventDefault();
-      }
-    });
-  });
-
-//Language Switching
+/* ---------------- Language Switching ---------------- */
 const langToggle = document.getElementById("language-toggle");
-const elements = document.querySelectorAll("[data-lang-key]");
-let translations = {};
+const langToggleLabel = document.getElementById("langToggleLabel");
+const translations = TRANSLATIONS;
 let currentLang = "en";
 
-//load language pack from json
-async function loadTranslations(){
-  try{
-    const res = await fetch ("../src/lang.json"); //lang.json actual path
-    translations = await res.json();
-    const savedLang = localStorage.getItem("lang");
+function loadTranslations() {
+  const savedLang = localStorage.getItem("lang");
 
-    //if guest previously choosen, otherwise: use default browser
-    if(savedLang){
-      currentLang = savedLang;
-    }else{
-      const browserLang = navigator.language || navigator.userLanguage;
-      currentLang = browserLang.startsWith("zh") ? "zh" : "en";
-    }
-
-    applyTranslations(currentLang);
-    updateToggleButton(); //set default text
-  }catch(err){
-    console.error("Error Loading Translation: ", err);
+  if (savedLang && translations[savedLang]) {
+    currentLang = savedLang;
+  } else {
+    const browserLang = navigator.language || navigator.userLanguage || "en";
+    currentLang = browserLang.startsWith("zh") ? "zh" : "en";
   }
+
+  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+  applyTranslations(currentLang);
+  renderServices(currentLang);
+  renderFaq(currentLang);
+  refreshWhatsappLinks(currentLang);
+  updateToggleButton();
 }
 
 function applyTranslations(lang) {
-  elements.forEach(el => {
-    const listKey = el.getAttribute("data-lang-list");
+  document.querySelectorAll("[data-lang-key]").forEach((el) => {
     const key = el.getAttribute("data-lang-key");
-
-    // ✅ 优先处理 data-lang-list（你偏好的 list 格式）
-    if (listKey && translations[lang] && Array.isArray(translations[lang][listKey])) {
-      const listItems = translations[lang][listKey]
-        .map(item => `<li>${item}</li>`)
-        .join("");
-      el.innerHTML = `<ul>${listItems}</ul>`;
-      return; // 避免继续执行 data-lang-key
-    }
-
-    // ✅ 普通翻译 或 自动识别数组为 bullet list
-    if (key && translations[lang] && translations[lang][key]) {
-      const value = translations[lang][key];
-
-      if (Array.isArray(value)) {
-        const listItems = value.map(item => `<li>${item}</li>`).join("");
-        el.innerHTML = `<ul>${listItems}</ul>`;
-      } else {
-        el.textContent = value;
-      }
-    }
+    const value = translations[lang]?.[key];
+    if (value !== undefined) el.textContent = value;
   });
 }
 
-//set button displayed language 
 function updateToggleButton() {
-  langToggle.innerHTML = currentLang === "en"
-    ? '<i class="fas fa-globe"></i> 中文'
-    : '<i class="fas fa-globe"></i> EN';
+  langToggleLabel.textContent = currentLang === "en" ? "中文" : "EN";
 }
 
-langToggle.addEventListener("click", () => {
+langToggle?.addEventListener("click", () => {
   currentLang = currentLang === "en" ? "zh" : "en";
   localStorage.setItem("lang", currentLang);
+  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
   applyTranslations(currentLang);
+  renderServices(currentLang);
+  renderFaq(currentLang);
+  refreshWhatsappLinks(currentLang);
   updateToggleButton();
 });
-
-//FAQ toggle
-function toggleFaq(button) {
-  const answer = button.nextElementSibling;
-  const icon = button.querySelector(".faq-icon");
-
-  const isOpen = answer.classList.contains("open");
-
-  // 可选：是否互斥关闭其他
-  document.querySelectorAll(".faq-answer").forEach(a => {
-    a.classList.remove("open");
-  });
-  document.querySelectorAll(".faq-icon").forEach(i => {
-    i.textContent = "+";
-  });
-
-  // 打开当前项
-  if (!isOpen) {
-    answer.classList.add("open");
-    icon.textContent = "–";
-  }
-}
 
 window.addEventListener("DOMContentLoaded", loadTranslations);
